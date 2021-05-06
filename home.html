@@ -1,11 +1,73 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="it">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title> Agenzia Viaggi da Sogno </title>
+    <link rel="stylesheet" href="stili/stile.css"/>
 </head>
 <body>
+    <h2> Agenzia Viaggi da Sogno </h2>
+    <br /> <br />
+    <section id="modulo">
+        <div class="content">
+            <h2>
+                <strong>
+                    <center>
+                        PRENOTA UNA CONSULENZA
+                        <br />
+                        E RICHIEDI IL TUO ITINERARIO
+                    </center>
+                </strong>
+            </h2>
+            <form action="datiDaInserire.php" method="post">
+                <ul>
+                    <li class="uno">
+                        <label for="nome"> Nome </label>
+                        <input type="text" name="nome" id="nome" class="testo" required />
+                    </li>
+                    <li class="due">
+                        <label for="cognome"> Cognome </label>
+                        <input type="text" surname="cognome" id="cognome" class="testo" required />
+                    </li>
+                    <li class="tre">
+                        <label for="numero di telefono"> Numero di telefono </label>
+                        <input type="tel" numTel="numero di telefono" id="numero di telefono" class="testo" required />
+                    </li>
+                    <li class="quattro">
+                        <label for="email"> Email </label>
+                        <input type="email" email="email" id="email" class="" required />
+                    </li>
+                    <li class="cinque">
+                        <label for="citta"> Citta da visitare</label>
+                        <input type="text" city="citta" id="citta" class="testo" required />
+                    </li>
+                    <li class="sei">
+                        <label for="periodo"> Periodo </label>
+                        <input type="date" periodo="periodo" id="periodo" class="testo" required />
+                        <input type="date" periodo="periodo" id="periodo" class="testo" required />
+                    </li>
+                    <li class="sette">
+
+                        <input type="submit" value="Prenota consulenza" class="pulsante" />
+                    </li>
+                </ul>
+
+            </form>
+        </div>
+
+
+    </section>
+    <br /> <br />
+    <h1> <center> Viaggi da Sogno </center></h1>
+    <h2> <center> Perché scegliere l'Agenzia Viaggi da Sogno? </center>  </h2>
+    <p>
+        <center>
+            testo descrizione sul perchè scegliere l'agenzia Viaggi da Sogno, vantaggi su viaggi, itinerari stupendi, città etc
+            <br />
+        </center>
+    </p>
+
 
 </body>
 </html>
