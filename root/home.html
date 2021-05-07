@@ -3,53 +3,69 @@
 <html lang="it">
 <head>
     <meta charset="utf-8" />
+    <!-- titolo mostrato per la home -->
     <title> Agenzia Viaggi da Sogno </title>
-    <link rel="stylesheet" href="stili/stile.css"/>
+    <!-- riferimento al foglio di stile css chiamato stile in stili relativo a tutto il progetto -->
+    <link rel="stylesheet" href="stili/stile.css" />
 </head>
 <body>
+    <!-- nome delle sezioni da cambiare? -->
+    <!-- sezione riferita alla barra principale sopra, con il logo ed a destra i vari riferimenti -->
     <section id="titolo">
+        <!-- caricamento immagine logo a sinistra con uno spazio prima del nome della agenzia -->
         <img src="logo 2.jpg" width="100px" height="100px" align="left" hspace="20px" /> <br /> <h2> Agenzia Viaggi da Sogno </h2>
     </section>
+    <!-- sezione che fa riferimento al form -->
     <section id="modulo">
+        <!-- divisione in classi-->
         <div class="content">
             <h2>
+                <!-- in grassetto per risaltare -->
                 <strong>
-                    <center>
-                        PRENOTA UNA CONSULENZA
-                        <br />
-                        E RICHIEDI IL TUO ITINERARIO!
-                    </center>
+                    PRENOTA UNA CONSULENZA
+                    <br />
+                    E RICHIEDI IL TUO ITINERARIO!
                 </strong>
             </h2>
+            <!-- inseriti i dati ti porta alla pagina chiamata "Dati correttamente inviati" -->
             <form action="datiDaInserire.html" method="post">
-                <ul>
+                <!-- lista non ordinata 
+                sono presenti in tutto sette voci (li)-->
+                <ul
+                    <!-- Tutti i campi sono richiesti!-->
+                    <!-- Nome con casella di testo per inserire il nome -->
                     <li class="uno">
                         <label for="nome"> Nome </label>
                         <input type="text" name="nome" id="nome" class="testo" required />
                     </li>
+                    <!-- Cognome con casella di testo per inserire il cognome -->
                     <li class="due">
                         <label for="cognome"> Cognome </label>
                         <input type="text" surname="cognome" id="cognome" class="testo" required />
                     </li>
+                    <!-- Numero di telefono con casella di testo (numerica) per inserire il numero -->
                     <li class="tre">
                         <label for="numero di telefono"> Numero di telefono </label>
                         <input type="tel" numTel="numero di telefono" id="telefono" class="testo" required />
                     </li>
+                    <!-- Email con casella di testo (email) per inserire l'email -->
                     <li class="quattro">
                         <label for="email"> Email </label>
                         <input type="email" email="email" id="email" class="" required />
                     </li>
+                    <!-- Destinazione con casella di testo per inserire la destinazione -->
                     <li class="cinque">
-                        <label for="citta"> Citta da visitare</label>
+                        <label for="citta"> Destinazione</label>
                         <input type="text" city="citta" id="citta" class="testo" required />
                     </li>
+                    <!-- Periodo con data di inizio e di fine con casella calendario per inserire le due date -->
                     <li class="sei">
                         <label for="periodo"> Periodo </label>
                         <input type="date" periodo="periodo" id="periodo" class="testo" required />
                         <input type="date" periodo="periodo" id="periodo" class="testo" required />
                     </li>
+                    <!-- Pulsante per inviare i dati che porta alla pagina chiamata "Dati correttamente inviati" -->
                     <li class="sette">
-
                         <input type="submit" value="Prenota consulenza" class="pulsante" />
                     </li>
                 </ul>
@@ -57,6 +73,7 @@
             </form>
         </div>
     </section>
+    <!-- sezione che fa riferimento alla parte di testo-->
     <section id="testoViaggi">
         <h1> Viaggi da Sogno </h1>
         <h2>  Perché scegliere l'Agenzia Viaggi da Sogno?   </h2>
@@ -65,10 +82,13 @@
             testo descrizione sul perchè scegliere l'agenzia Viaggi da Sogno, vantaggi su viaggi, itinerari stupendi, città
 
         </p>
+        <!-- sezione che fa riferimento alle immagini delle destinazioni -->
     </section>
     <section id="immagini">
         <h2> Scopri le nostre imperdibili mete! </h2>
+        <!-- l'immagine una è sopra -->
         <img src="logo 2.jpg" width="1471px" height="400px" align="top" />
+        <!-- le altre tre immagini sono allineate, senza spazi l'una dall'altra -->
         <img src="logo 2.jpg" width="450px" height="200px" align="left" hspace="0" />
         <img src="logo 2.jpg" width="571px" height="200px" align="left" hspace="0" />
         <img src="logo 2.jpg" width="450px" height="200px" align="left" hspace="0" />
