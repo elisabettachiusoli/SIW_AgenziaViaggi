@@ -1,4 +1,7 @@
-﻿body { font-family: sans-serif; margin: 0;}
+﻿body {
+    font-family: 'Gill Sans',  'Gill Sans MT','Trebuchet MS', sans-serif;
+    margin: 0;
+}
 .content {
     padding: 10px;
     width: 100%;
@@ -7,15 +10,15 @@
     float: left;
 }
 #titolo {
-    border-top: solid 4px #000;
+    border-top: solid 2px #000;
     padding: 15px;
-    background: #1dffff;
+    background: #0a83b8;
     color: #000;
     overflow: auto;
 }
 #modulo {
-    border-top: solid 4px #000;
-    border-bottom: solid 4px #000;
+    border-top: solid 2px #000;
+    border-bottom: solid 2px #000;
     padding: 15px;
     color: #000;
     overflow: auto;
@@ -23,6 +26,14 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+#testoViaggi {
+    border-bottom: solid 2px #000;
+    padding: 10px;
+    color: #000;
+    overflow: auto;
+    background: #FFF;
+    text-align: center;
 }
 
     #modulo ul {
@@ -47,17 +58,18 @@
     }
 
     #modulo ul li.sette {
-        padding: 20px 0;
+        padding: 20px 0; 
         text-align: center;
     }
     #modulo ul li label {
         display: block;
         padding-bottom: 5px;
+        padding-left: 550px;
         width: 100%;
-        text-align: right;
+        text-align: left;
     }
     #modulo ul li input {
-        border: solid 3px #000;
+        border: solid 1px #000;
         background: rgba(255, 127, 80, 0.74);
     }
     #modulo ul li .pulsante{
