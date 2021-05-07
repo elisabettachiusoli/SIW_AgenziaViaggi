@@ -35,6 +35,19 @@
     background: #FFF;
     text-align: center;
 }
+#dati {
+    border-bottom: solid 4px #000;
+    padding: 325px;
+    color: coral;
+    overflow: auto;
+    background-image: url(image.jpg);
+    background-size: cover;
+    background-position: center;
+}
+    #dati .titolo {
+ 
+        text-align: right;
+    }
 
     #modulo ul {
         list-style: none;
