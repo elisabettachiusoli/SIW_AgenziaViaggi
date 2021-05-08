@@ -1,6 +1,6 @@
 package it.uniroma3.siw.model;
 
-import java.time.LocalDate;
+
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,7 +25,7 @@ public class Cliente {
 	
 	@Getter
 	@Setter
-	private int numeroDiTelefono;
+	private String numeroDiTelefono;
 	
 	@Getter
 	@Setter
@@ -37,9 +37,23 @@ public class Cliente {
 	
 	@Getter
 	@Setter
-	private LocalDate periodoDaVisitare;
+	private String dataInizio;
+	
+	@Getter
+	@Setter
+	private String dataFine;
 	
 	@ManyToOne
 	private AgenziaViaggi agenziaViaggi;
-
+	
+	public Cliente(String nome, String cognome, String numeroDiTelefono, String email, String citt‡DaVisitare, String dataInizio, String dataFine)
+	{
+		this.nome=nome;
+		this.cognome=cognome;
+		this.citt‡DaVisitare=citt‡DaVisitare;
+		this.numeroDiTelefono=numeroDiTelefono;
+		this.email=email;
+		this.dataInizio=dataInizio;
+		this.dataFine=dataFine;
+	}
 }

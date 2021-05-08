@@ -24,5 +24,8 @@
 	<classpathentry kind="lib" path="C:/Users/elisa/javalib/hibernate-release-5.4.11.Final/lib/required/stax-ex-1.8.jar"/>
 	<classpathentry kind="lib" path="C:/Users/elisa/javalib/hibernate-release-5.4.11.Final/lib/required/txw2-2.3.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/elisa/javalib/h2/bin/h2-1.4.200.jar"/>
+	<classpathentry kind="lib" path="C:/Users/elisa/javalib/javax.servlet.jar"/>
+	<classpathentry kind="lib" path="C:/Users/elisa/javalib/jar_files.zip"/>
+	<classpathentry kind="lib" path="C:/Users/elisa/javalib/javax.servlet-api-4.0.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

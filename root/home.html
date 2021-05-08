@@ -2,7 +2,7 @@
 
 <html lang="it">
 <head>
-    <meta charset="utf-8" />
+    <meta charset=""ISO-8859-1"" />
     <!-- titolo mostrato per la home -->
     <title> Agenzia Viaggi da Sogno </title>
     
@@ -39,48 +39,46 @@
                 </strong>
             </h2>
             <!-- inseriti i dati ti porta alla pagina chiamata "Dati correttamente inviati" -->
-            <form action="datiDaInserire.html" method="post">
+            <form action="controller" method="post">
                 <!-- lista non ordinata 
                 sono presenti in tutto sette voci (li)-->
-                <ul
                     <!-- Tutti i campi sono richiesti!-->
+                <div classe="uno">
                     <!-- Nome con casella di testo per inserire il nome -->
-                    <li class="uno">
-                        <label for="nome"> Nome </label>
-                        <input type="text" name="nome" id="nome" class="testo" required />
-                    </li>
+                    <label for="nome"> Nome </label>
+                    <input type="text" name="nome" value="${nome}"  required />
+                </div>
+                <div classe="uno">
                     <!-- Cognome con casella di testo per inserire il cognome -->
-                    <li class="due">
-                        <label for="cognome"> Cognome </label>
-                        <input type="text" surname="cognome" id="cognome" class="testo" required />
-                    </li>
+                    <label for="cognome"> Cognome </label>
+                    <input type="text" name="cognome" value="${cognome}" required />
+                </div>
+                <div classe="uno">
                     <!-- Numero di telefono con casella di testo (numerica) per inserire il numero -->
-                    <li class="tre">
-                        <label for="numero di telefono"> Numero di telefono </label>
-                        <input type="tel" numTel="numero di telefono" id="telefono" class="testo" required />
-                    </li>
+                    <label for="numero di telefono"> Numero di telefono </label>
+                    <input type="tel" name="numTel" value="${numTel}"  required />
+                </div>
+                <div classe="uno">
                     <!-- Email con casella di testo (email) per inserire l'email -->
-                    <li class="quattro">
-                        <label for="email"> Email </label>
-                        <input type="email" email="email" id="email" class="" required />
-                    </li>
+                    <label for="email"> Email </label>
+                    <input type="email" name="email" value="${email}"  required />
+                </div>
+                <div classe="uno">
                     <!-- Destinazione con casella di testo per inserire la destinazione -->
-                    <li class="cinque">
-                        <label for="citta"> Destinazione</label>
-                        <input type="text" city="citta" id="citta" class="testo" required />
-                    </li>
+                    <label for="citta"> Destinazione</label>
+                    <input type="text" name="citta" value="${citta}" required />
+                </div>
+                <div classe="uno">
                     <!-- Periodo con data di inizio e di fine con casella calendario per inserire le due date -->
-                    <li class="sei">
-                        <label for="periodo"> Periodo </label>
-                        <input type="date" periodo="periodo" id="periodo" class="testo" required />
-                        <input type="date" periodo="periodo" id="periodo" class="testo" required />
-                    </li>
+                    <label for="periodo"> Periodo </label>
+                    <input type="date" name="periodo" value="${dataInizio}" required />
+                    <input type="date" name="periodo" value="${dataFine}"  required />
+                </div>
+                <div class="due">
                     <!-- Pulsante per inviare i dati che porta alla pagina chiamata "Dati correttamente inviati" -->
-                    <li class="sette">
-                        <input type="submit" value="Prenota consulenza" class="pulsante" />
-                    </li>
-                </ul>
-
+                    <input type="submit" name="sumbit" value="Prenota consulenza" class="pulsante" />
+                </div>
+                    
             </form>
         </div>
     </section>

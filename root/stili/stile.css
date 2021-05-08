@@ -31,53 +31,35 @@
 }
 /* Stile per il titolo del form. Il testo è allineato al centro*/
 .content {
-    padding: 10px;
     width: 100%;
     box-sizing: border-box;
     margin: 0 auto;
     float: left;
     text-align: center;
 }
-/* Stile per l'elenco del form. La lista non ha stili, essendo un form*/
-#modulo ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
-    /* Stile per le voci dell'elenco del form escluso il pulsante. 
-        Sono organizzati in due colonne, una per le label ed una per l'input*/
-    #modulo ul li.uno, #modulo ul li.due, #modulo ul li.tre, #modulo ul li.quattro, #modulo ul li.cinque, #modulo ul li.sei {
-        float: none;
-        clear: left;
-        width: 100%;
-        margin: 1%;
-        columns: 2;
-        text-align: left;
-    }
+
     /* Stile per il la posizione del pulsante del form, in basso al centro*/
-    #modulo ul li.sette {
+    .due {
         padding: 20px 0;
         text-align: center;
     }
     /* Stile per le label, centrate per avvicinarsi alla colonna di destra */
-    #modulo ul li label {
+    #modulo label {
         display: block;
-        padding-bottom: 5px;
-        margin-left: 550px;
-        width: 100%;
+        margin-left: 500px;
         text-align: left;
     }
     /* Stile per gli input, con background sfumato*/
-    #modulo ul li input {
-        border: solid 1px #000;
-        background: rgba(255, 127, 80, 0.74);
-    }
+#modulo input {
+    border: solid 1px #000;
+    margin-left: 10px;
+    background: rgba(255, 127, 80, 0.74);
+}
     /* Stile per il pulsante. Background non sfumato dello stesso colore degli input, 
             traslato più in grande, con le lettere maiuscole e con il cursore a manina per 
             indicare che è possibile cliccarci sopra
         */
-    #modulo ul li .pulsante {
+     .pulsante {
         color: #000;
         background: coral;
         border: solid 2px #000;
