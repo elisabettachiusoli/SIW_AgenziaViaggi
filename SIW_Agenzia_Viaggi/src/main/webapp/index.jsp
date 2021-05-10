@@ -2,7 +2,7 @@
 
 <html lang="it">
 <head>
-    <meta charset=""ISO-8859-1"" />
+    <meta charset="ISO-8859-1" />
     <!-- titolo mostrato per la home -->
     <title> Agenzia Viaggi da Sogno </title>
     
@@ -43,32 +43,32 @@
                 <!-- lista non ordinata 
                 sono presenti in tutto sette voci (li)-->
                     <!-- Tutti i campi sono richiesti!-->
-                <div classe="uno">
+                <div class="uno">
                     <!-- Nome con casella di testo per inserire il nome -->
                     <label for="nome"> Nome </label>
                     <input type="text" name="nome" value="${nome}"  required />
                 </div>
-                <div classe="uno">
+                <div class="uno">
                     <!-- Cognome con casella di testo per inserire il cognome -->
                     <label for="cognome"> Cognome </label>
                     <input type="text" name="cognome" value="${cognome}" required />
                 </div>
-                <div classe="uno">
+                <div class="uno">
                     <!-- Numero di telefono con casella di testo (numerica) per inserire il numero -->
                     <label for="numero di telefono"> Numero di telefono </label>
                     <input type="tel" name="numTel" value="${numTel}"  required />
                 </div>
-                <div classe="uno">
+                <div class="uno">
                     <!-- Email con casella di testo (email) per inserire l'email -->
                     <label for="email"> Email </label>
                     <input type="email" name="email" value="${email}"  required />
                 </div>
-                <div classe="uno">
+                <div class="uno">
                     <!-- Destinazione con casella di testo per inserire la destinazione -->
                     <label for="citta"> Destinazione</label>
                     <input type="text" name="citta" value="${citta}" required />
                 </div>
-                <div classe="uno">
+                <div class="uno">
                     <!-- Periodo con data di inizio e di fine con casella calendario per inserire le due date -->
                     <label for="periodo"> Periodo </label>
                     <input type="date" name="periodo" value="${dataInizio}" required />
@@ -77,6 +77,7 @@
                 <div class="due">
                     <!-- Pulsante per inviare i dati che porta alla pagina chiamata "Dati correttamente inviati" -->
                     <div><input type="submit" name="submit" value="invia" class="pulsante" />
+                    </div>
                 </div>
                     
             </form>
