@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 import it.uniroma3.siw.model.Cliente;
 
 
-@WebServlet("/controller")
+@WebServlet("/controller")   
 public class Controller extends HttpServlet {
 	
 	private static final long serialVersionUID=1L;
