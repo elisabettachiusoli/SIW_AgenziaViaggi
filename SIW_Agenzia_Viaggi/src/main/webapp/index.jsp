@@ -17,7 +17,7 @@
         <img src="logo 2.jpg" width="100px" height="100px" align="left" hspace="20px" /> <h2> Agenzia Viaggi da Sogno </h2>
     <div class="link"> <h3>
     <!-- collegamento ipertestuale alla pagina itinerari -->
-    <a href="itinerari.html"> Itinerari </a>      |
+    <a href="itinerario.jsp"> Itinerari </a>      |
     <!-- collegamento ipertestuale alla pagina guide -->
     <a href="guide.html"> Guide  </a>           |
     <!-- collegamento ipertestuale alla pagina informazioni -->
