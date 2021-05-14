@@ -1,0 +1,33 @@
+body {
+    /* Stili per i titoli: Gill Sans per h1, Gill Sans MT per h2, Trebuchet MS per h3. sans-serif per h4  */
+    font-family: 'Gill Sans', 'Gill Sans MT','Trebuchet MS', Calibri;
+    margin: 0;
+}
+
+#titolo {
+    border-top: solid 2px #000;
+    border-bottom: solid 2px #000;
+    padding: 15px;
+    color: #000;
+    text-align: center;
+    text-transform: full-width uppercase;
+    overflow: auto;
+    background-color:yellowgreen;
+}
+
+#icona {
+    width: 100%;
+    background-color: #f5bd66;
+    border-bottom: solid 2px #000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#monumenti {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
