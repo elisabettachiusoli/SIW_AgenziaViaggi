@@ -46,7 +46,7 @@
         <div class="elenco">
             <ul>
                 <li>
-                    <a href="giorno.html"> Giorno 1: </a> La bellezza di
+                    <a href="monumento.jsp"> Giorno 1: </a> La bellezza di
 
                 </li>
                 <li>
