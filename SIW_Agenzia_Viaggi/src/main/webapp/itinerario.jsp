@@ -19,7 +19,7 @@
     <section id="icona">
         <img src="stili/calendar.png" width="50px" height="50px" hspace="15px" />  Dal 20 giugno al 29 giugno
         <img src="stili/finePrenotazione.png" width="50px" height="50px" hspace="15px" />  Prenotazioni fino al 23 maggio
-        <img src="stili/guida.png" width="50px" height="50px" hspace="15px" /> Guida: <a href="guida.html"> Mario Rossi</a>
+        <img src="stili/guida.png" width="50px" height="50px" hspace="15px" /> Guida: <a href="guida.jsp"> Matteo Rossi</a>
         <img src="stili/money.png" width="50px" height="50px" hspace="15px" /> Prezzo: 300 euro
 
 

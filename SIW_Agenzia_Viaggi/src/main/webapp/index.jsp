@@ -19,7 +19,7 @@
     <!-- collegamento ipertestuale alla pagina itinerari -->
     <a href="itinerario.jsp"> Itinerari </a>      |
     <!-- collegamento ipertestuale alla pagina guide -->
-    <a href="guide.html"> Guide  </a>           |
+    <a href="guideTeam.jsp"> Guide  </a>           |
     <!-- collegamento ipertestuale alla pagina informazioni -->
     <a href="informazioni.html"> Informazioni</a>   
                        </h3>
