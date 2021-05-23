@@ -3,12 +3,32 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+     <link rel=icon href="logo 2.jpg" >
     <title>Matteo Rossi</title>
-    <link rel="stylesheet" href="stili/guida.css">
+   <link rel="stylesheet" href="stili/guida.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,100&display=swap" rel="stylesheet">
 </head>
 <body>
+<nav>
+        <!-- caricamento immagine logo a sinistra con uno spazio prima del nome della agenzia -->
+        <div class="titolo">
+            <img src="logo 2.jpg" width="80px" height="70px" align="left" hspace="20px" /> <h2> Agenzia Viaggi da Sogno </h2>
+        </div>
+        
+        <ul>
+            <li>
+                <!-- collegamento ipertestuale alla home-->
+                <a href="index.jsp"> Home </a>
+            </li>
+            <li>
+                <!-- collegamento ipertestuale alla pagina guide -->
+                <a href="itinerario.jsp"> Guide </a>
+            </li>
+        </ul>
+      
+        
+    </nav>
     <div class="wrapper">
         <div class="box">
             <div class="box-img">

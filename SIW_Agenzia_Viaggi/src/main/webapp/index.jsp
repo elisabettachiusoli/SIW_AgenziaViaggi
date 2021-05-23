@@ -3,6 +3,8 @@
 <html lang="it">
 <head>
     <meta charset="ISO-8859-1" />
+    <!-- logo -->
+    <link rel=icon href="logo 2.jpg" >
     <!-- titolo mostrato per la home -->
     <title> Agenzia Viaggi da Sogno </title>
     
@@ -10,26 +12,36 @@
     <link rel="stylesheet" href="stili/stile.css" />
 </head>
 <body>
-    <!-- nome delle sezioni da cambiare? -->
-    <!-- sezione riferita alla barra principale sopra, con il logo ed a destra i vari riferimenti -->
-    <section id="titolo">
+    <!-- navigation bar -->
+    <nav>
         <!-- caricamento immagine logo a sinistra con uno spazio prima del nome della agenzia -->
-        <img src="logo 2.jpg" width="100px" height="100px" align="left" hspace="20px" /> <h2> Agenzia Viaggi da Sogno </h2>
-    <div class="link"> <h3>
-    <!-- collegamento ipertestuale alla pagina itinerari -->
-    <a href="itinerario.jsp"> Itinerari </a>      |
-    <!-- collegamento ipertestuale alla pagina guide -->
-    <a href="guideTeam.jsp"> Guide  </a>           |
-    <!-- collegamento ipertestuale alla pagina informazioni -->
-    <a href="informazioni.html"> Informazioni</a>   
-                       </h3>
-   </div>
+        <div class="titolo">
+            <img src="logo 2.jpg" width="80px" height="70px" align="left" hspace="20px" /> <h2> Agenzia Viaggi da Sogno </h2>
+        </div>
         
-    </section>
+        <ul>
+            
+            <li>
+                <!-- collegamento ipertestuale alla pagina itinerari -->
+                <a href="itinerario.jsp"> Itinerari </a>
+            </li>
+            <li>
+                <!-- collegamento ipertestuale alla pagina guide -->
+                <a href="guideTeam.jsp"> Guide  </a>
+            </li>
+            <li>
+                <!-- collegamento ipertestuale alla pagina informazioni -->
+                <a href="informazioni.html"> Informazioni</a>
+            </li>
+        </ul>
+      
+        
+    </nav>
+ 
     <!-- sezione che fa riferimento al form -->
     <section id="modulo">
     <video autoplay muted loop  id="video-back">
-            <source src="stili/aereoplano.mp4" type="video/mp4" />
+            <source src="stili/aereo 2.mp4" type="video/mp4" />
         </video>
         <!-- divisione in classi-->
         <div class="content">
@@ -79,7 +91,7 @@
                 </div>
                 <div class="due">
                     <!-- Pulsante per inviare i dati che porta alla pagina chiamata "Dati correttamente inviati" -->
-                    <div><input type="submit" name="submit" value="invia" class="pulsante" />
+                    <div><input type="submit" name="submit" value="Prenota una consulenza" class="pulsante" />
                     </div>
                 </div>
                     
@@ -100,10 +112,10 @@
     <section id="immagini">
         <h2> Scopri le nostre imperdibili mete! </h2>
         <!-- l'immagine una è sopra -->
-        <img src="logo 2.jpg" width="1471px" height="400px" align="top" />
+        <img src="stili/berlino.jpg" width="1471px" height="400px" align="top" />
         <!-- le altre tre immagini sono allineate, senza spazi l'una dall'altra -->
-        <img src="logo 2.jpg" width="450px" height="200px" align="left" hspace="0" />
-        <img src="logo 2.jpg" width="571px" height="200px" align="left" hspace="0" />
+        <img src="stili/parigi.jpg" width="450px" height="200px" align="left" hspace="0" />
+        <img src="stili/siviglia.jpg" width="571px" height="200px" align="left" hspace="0" />
         <img src="logo 2.jpg" width="450px" height="200px" align="left" hspace="0" />
 
     </section>

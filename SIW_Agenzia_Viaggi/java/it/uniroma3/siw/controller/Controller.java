@@ -36,7 +36,7 @@ public class Controller extends HttpServlet {
 		String comando;
 		comando=request.getParameter("submit");
 		HttpSession session=request.getSession();
-		if(comando.equals("invia")) {
+		if(comando.equals("Prenota una consulenza")) {
 				cliente=new Cliente(nome, cognome, numTel, email, citta, dataInizio, dataFine);
 				session.setAttribute("cliente", cliente);
 				nextPage="/dati.jsp";

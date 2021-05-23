@@ -3,12 +3,34 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+     <!-- logo -->
+    <link rel=icon href="logo 2.jpg" >
     <!-- titolo mostrato per la pagina dell'itinerario -->
     <title> Nome Itinerario </title>
     <!-- riferimento al foglio di stile css chiamato stile in stili relativo a tutto il progetto -->
     <link rel="stylesheet" href="stili/stileItinerario.css" />
 </head>
 <body>
+<nav>
+        <!-- caricamento immagine logo a sinistra con uno spazio prima del nome della agenzia -->
+        <div class="titolo">
+            <img src="logo 2.jpg" width="80px" height="70px" align="left" hspace="20px" /> <h2> Agenzia Viaggi da Sogno </h2>
+        </div>
+        
+        <ul>
+            <li>
+                <!-- collegamento ipertestuale alla home-->
+                <a href="index.jsp"> Home </a>
+            </li>
+            <li>
+                <!-- collegamento ipertestuale alla pagina itinerari -->
+                <a href="itinerario.jsp"> Itinerari </a>
+            </li>
+ 
+        </ul>
+      
+        
+    </nav>
     <section id="titolo">
         <h1> Nome Itinerario </h1>
         <div>
