@@ -37,21 +37,37 @@ nav {
         background: rgba(0,0,0,0.5);
         border-radius: 6px;
     }
-#titolo
+    
+.parallax
 {
-    border-top: solid 2px #000;
-    border-bottom: solid 2px #000;
-    padding: 15px;
-    color: #000;
+	background: url(berlino4.jpg)
+	repeat fixed 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+.parallax-inner {
+    padding-top: 25%;
+    padding-left: 80px;
     text-align: left;
     text-transform: full-width uppercase;
-    overflow: auto;
-    background-image: url(parigi.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    font-size: 80px;
+    color: #000;
+    font-family: 'Berlin Sans FB';
+    text-transform:full-width;
 }
+h3 {
+    padding-top: 10px;
+    color: #000;
+    text-align: left;
+    font-size: 30px;
+    font-family: 'Berlin Sans FB';
+    padding-bottom: 10%;
+
+}
+
 #icona {
+	margin-top:-30px;
     width: 100%;
     background-color: #f5bd66;
     border-bottom: solid 2px #000;
