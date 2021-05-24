@@ -25,6 +25,10 @@
                 <!-- collegamento ipertestuale alla pagina guide -->
                 <a href="itinerario.jsp"> Guide </a>
             </li>
+            <li>
+                <!-- collegamento ipertestuale alla pagina informazioni -->
+                <a href="informazioni.jsp"> Informazioni</a>
+            </li>
         </ul>
       
         

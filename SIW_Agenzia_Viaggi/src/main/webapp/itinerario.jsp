@@ -26,6 +26,10 @@
                 <!-- collegamento ipertestuale alla pagina itinerari -->
                 <a href="itinerario.jsp"> Itinerari </a>
             </li>
+            <li>
+                <!-- collegamento ipertestuale alla pagina informazioni -->
+                <a href="informazioni.jsp"> Informazioni</a>
+            </li>
  
         </ul>
       

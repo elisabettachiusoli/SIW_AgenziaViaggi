@@ -32,7 +32,7 @@
             </li>
             <li>
                 <!-- collegamento ipertestuale alla pagina informazioni -->
-                <a href="informazioni.html"> Informazioni</a>
+                <a href="informazioni.jsp"> Informazioni</a>
             </li>
         </ul>
       
