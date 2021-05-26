@@ -1,0 +1,118 @@
+body {
+    /* Stili per i titoli: Gill Sans per h1, Gill Sans MT per h2, Trebuchet MS per h3. sans-serif per h4  */
+    font-family: 'Gill Sans', 'Gill Sans MT','Trebuchet MS', Calibri;
+    margin: 0;
+}
+nav {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100px;
+    padding: 10px 90px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.4);
+    z-index:1;
+}
+/* Stile per la barra principale. Il colore � il celestino, con la scritta nera*/
+    nav .titolo {
+        padding: 5px;
+        color: #FFF;
+    }
+    /* Stile per i link presenti nella barra principale. Il testo � allineato a destra*/
+    nav ul {
+        list-style:none;
+        float:right;
+        margin: -40px;
+        padding:0;
+        display:flex;
+    }
+        nav ul li a {
+            padding: 10px 30px;
+            color: #FFF;
+            text-decoration:none;
+            text-transform:uppercase;
+        }
+    nav ul li a:hover {
+        background: rgba(0,0,0,0.5);
+        border-radius: 6px;
+    }
+    
+.parallax
+{
+	background: url(image/berlino4.jpg)
+	repeat fixed 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+.parallax-inner {
+    padding-top: 25%;
+    padding-left: 80px;
+    text-align: left;
+    text-transform: full-width uppercase;
+    font-size: 80px;
+    color: #000;
+    font-family: 'Berlin Sans FB';
+    text-transform:full-width;
+}
+h3 {
+    padding-top: 10px;
+    color: #000;
+    text-align: left;
+    font-size: 30px;
+    font-family: 'Berlin Sans FB';
+    padding-bottom: 10%;
+
+}
+
+#icona {
+	margin-top:-30px;
+    width: 100%;
+    background-color: #f5bd66;
+    border-bottom: solid 2px #000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+#descrizione {
+    width: 90%;
+    margin: 15px;
+    text-align: justify;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+#programma .top {
+    text-transform: full-width;
+    text-transform: uppercase;
+    text-align: center;
+}
+    #programma .elenco {
+        margin-left: 0;
+        margin-right: 50px;
+        counter-reset: li;
+    }
+.elenco li {
+    list-style-type: none;
+    position: relative;
+    margin-bottom: 1.5em;
+    border: 6px solid #f5bd66;
+    padding: 0.6em;
+    border-radius: 4px;
+    background: #FEFEFE;
+    color: #000;
+}
+.elenco li:before {
+    position: absolute;
+    top: -0.7em;
+    padding-left:0.4em;
+    padding-right:0.4em;
+    font-size:16px;
+    font-weight:bold;
+    color: #ff6a00;
+    background: #FEFEFE;
+    border-radius: 50%;
+    counter-increment: li;
+    content: counter(li);
+}
