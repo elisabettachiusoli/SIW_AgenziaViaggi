@@ -39,7 +39,7 @@ public class Controller extends HttpServlet {
 		if(comando.equals("Prenota una consulenza")) {
 				cliente=new Cliente(nome, cognome, numTel, email, citta, dataInizio, dataFine);
 				session.setAttribute("cliente", cliente);
-				nextPage="/dati.jsp";
+				nextPage="/dati.html";
 			
 		}	
 		

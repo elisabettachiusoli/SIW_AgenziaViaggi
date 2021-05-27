@@ -131,7 +131,7 @@ nav {
     color: #000;
     text-align: right;
     overflow: auto;
-    background-image: url(image/mare.jpg);
+    background-image: url(../image/mare.jpg);
     background-size: cover;
     background-position: center;
 }

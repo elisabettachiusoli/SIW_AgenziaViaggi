@@ -39,8 +39,8 @@ public class AgenziaViaggi {
 	
 	
 	public AgenziaViaggi() {
-		this.itinerari=new ArrayList<>();
-		this.clienti=new ArrayList<>();
+		//this.itinerari=new ArrayList<>();
+		//this.clienti=new ArrayList<>();
 	}
 
 }

@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="utf-8" />
      <!-- logo -->
-    <link rel=icon href="static/image/logo.jpg" >
+    <link rel=icon th:href="@{image/logo.jpg}" >
     <!-- titolo della pagina che fa riferimento all'invio dei dati del form -->
     <title> Dati correttamente inviati </title>
     <!-- riferimento al foglio di stile css chiamato stile in stili relativo a tutto il progetto -->
-    <link rel="stylesheet" href="static/css/index.css" />
+    <link rel="stylesheet" th:href="@{css/index.css}" />
 </head>
 <body>
 <nav>
         <!-- caricamento immagine logo a sinistra con uno spazio prima del nome della agenzia -->
         <div class="titolo">
-            <img src="static/image/logo.jpg" width="80px" height="70px" align="left" hspace="20px" /> <h2> Agenzia Viaggi da Sogno </h2>
+            <img th:src="@{image/logo.jpg}"  width="80px" height="70px" align="left" hspace="20px" /> <h2> Agenzia Viaggi da Sogno </h2>
         </div>
         
         <ul>
             <li>
                 <!-- collegamento ipertestuale alla home -->
-                <a href="index.jsp"> Home </a>
+                <a href="index.html"> Home </a>
             </li>
             <li>
                 <!-- collegamento ipertestuale alla pagina itinerari -->
-                <a href="itinerario.jsp"> Itinerari </a>
+                <a href="itinerario.html"> Itinerari </a>
             </li>
             <li>
                 <!-- collegamento ipertestuale alla pagina guide -->
-                <a href="guideTeam.jsp"> Guide  </a>
+                <a href="guideTeam.html"> Guide  </a>
             </li>
             <li>
                 <!-- collegamento ipertestuale alla pagina informazioni -->
-                <a href="informazioni.jsp"> Informazioni</a>
+                <a href="informazioni.html"> Informazioni</a>
             </li>
         </ul>
       
@@ -42,7 +43,7 @@
         Da modificare?-->
     <section id="dati">
         <h1 class="titolo"> <strong> I tuoi dati sono stati inviati correttamente!!!</strong>  </h1>
-        <h2>  A breve un nostro consulente ti contatterà per definire<br /> i dettagli del tuo prossimo viaggio con noi! </h2>
+        <h2>  A breve un nostro consulente ti contatterï¿½ per definire<br /> i dettagli del tuo prossimo viaggio con noi! </h2>
     </section>
 </body>
 </html>

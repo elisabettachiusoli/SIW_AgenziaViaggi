@@ -1,42 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
      <!-- logo -->
-    <link rel=icon href="static/image/logo.jpg" >
+    <link rel=icon th:href="@{image/logo.jpg}" >
     <title>Monumento</title>
-    <link rel="stylesheet" href="static/css/monumento.css">
+    <link rel="stylesheet" th:href="@{css/monumento.css}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 <body>
 <nav>
         <!-- caricamento immagine logo a sinistra con uno spazio prima del nome della agenzia -->
         <div class="titolo">
-            <img src="static/image/logo.jpg" width="80px" height="70px" align="left" hspace="20px" /> <h2> Agenzia Viaggi da Sogno </h2>
+            <img th:src="@{image/logo.jpg}"  width="80px" height="70px" align="left" hspace="20px" /> <h2> Agenzia Viaggi da Sogno </h2>
         </div>
         
         <ul>
             <li>
                 <!-- collegamento ipertestuale alla home -->
-                <a href="index.jsp"> Home </a>
+                <a href="index.html"> Home </a>
             </li>
             <li>
                 <!-- collegamento ipertestuale alla pagina itinerari -->
-                <a href="itinerario.jsp"> Itinerari </a>
+                <a href="itinerario.html"> Itinerari </a>
             </li>
             <li>
                 <!-- collegamento ipertestuale alla pagina guide -->
-                <a href="guideTeam.jsp"> Guide  </a>
+                <a href="guideTeam.html"> Guide  </a>
             </li>
             <li>
                 <!-- collegamento ipertestuale alla pagina informazioni -->
-                <a href="informazioni.jsp"> Informazioni</a>
+                <a href="informazioni.html"> Informazioni</a>
             </li>
         </ul>     
     </nav>
    <section id="sezione">
-    <img src="static/image/berlino4.jpg" width="500" height="300" hspace="15" align="left" />
+    <img th:src="@{image/berlino4.jpg}" width="500" height="300" hspace="15" align="left" />
     <section id="titolo" >
         <h1 class="nome">Museo del Louvre</h1>
         <div>
@@ -44,9 +44,9 @@
         </div>
     </section>
     <section id="icona">
-        <img src="static/image/luogo.png" width="48" height="50" hspace="15" /> Rue de Rivoli, 75001 Paris, Francia
-        <img src="static/image/orario.png" width="50" height="50" hspace="15" /> Orari: 09:00-18:00 dal mercoled� al luned�
-        <img src="static/image/money.png" width="50" height="50" hspace="15" /> Prezzo biglietto: 8.50 euro
+        <img th:src="@{image/luogo.png}"  width="48" height="50" hspace="15" /> Rue de Rivoli, 75001 Paris, Francia
+        <img th:src="@{image/orario.png}"  width="50" height="50" hspace="15" /> Orari: 09:00-18:00 dal mercoled� al luned�
+        <img th:src="@{image/money.png}"  width="50" height="50" hspace="15" /> Prezzo biglietto: 8.50 euro
     </section>
     <section>
         <div class="descrizione">
