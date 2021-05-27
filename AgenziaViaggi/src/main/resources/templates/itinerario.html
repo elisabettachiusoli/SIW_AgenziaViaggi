@@ -2,7 +2,8 @@
 
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="utf-8" />
+<meta charset="UTF-8" />
+    
      <!-- logo -->
     <link rel=icon th:href="@{image/logo.jpg}" >
     <!-- titolo mostrato per la pagina dell'itinerario -->
@@ -20,15 +21,15 @@
         <ul>
             <li>
                 <!-- collegamento ipertestuale alla home-->
-                <a href="index.html"> Home </a>
+                <a href="/"> Home </a>
             </li>
             <li>
                 <!-- collegamento ipertestuale alla pagina itinerari -->
-                <a href="itinerario.html"> Itinerari </a>
+                <a href="itinerario"> Itinerari </a>
             </li>
             <li>
                 <!-- collegamento ipertestuale alla pagina informazioni -->
-                <a href="informazioni.html"> Informazioni</a>
+                <a href="informazioni"> Informazioni</a>
             </li>
  
         </ul>
@@ -45,7 +46,7 @@
     <section id="icona">
         <img th:src="@{image/calendar.png}" width="50px" height="50px" hspace="15px" />  Dal 20 luglio al 23 giugno
         <img th:src="@{image/finePrenotazione.png}" width="50px" height="50px" hspace="15px" />  Prenotazioni fino al 23 giugno
-        <img th:src="@{image/guidaIcona.png}" width="50px" height="50px" hspace="15px" /> Guida: <a href="guida.jsp"> Matteo Rossi</a>
+        <img th:src="@{image/guidaIcona.png}" width="50px" height="50px" hspace="15px" /> Guida: <a href="guida"> Matteo Rossi</a>
         <img th:src="@{image/money.png}" width="50px" height="50px" hspace="15px" /> Prezzo: 500 euro
 
 
@@ -70,18 +71,18 @@
         <div class="elenco">
             <ul>
                 <li>
-                    <a href="giorno.html"> Giorno 1: </a> La bellezza di
+                    <a href="giorno"> Giorno 1: </a> La bellezza di
                     <p>
-                    	<a href="monumento.html"> Monumento </a>
+                    	<a href="monumento"> Monumento </a>
                     </p>
 					
                 </li>
                 <li>
-                    <a href="giorno.html"> Giorno 2: </a> Luci di
+                    <a href="giorno"> Giorno 2: </a> Luci di
 
                 </li>
                 <li>
-                    <a href="giorno.html"> Giorno 3: </a> Visita al
+                    <a href="giorno"> Giorno 3: </a> Visita al
 
                 </li>
             </ul>

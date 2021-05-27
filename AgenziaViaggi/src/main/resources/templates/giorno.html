@@ -7,7 +7,7 @@
      <!-- logo -->
     <link rel=icon th:href="@{image/logo.jpg}" >
     <title>Giorno</title>
-    <link rel="stylesheet" href="@{css/giorno.css}">
+    <link rel="stylesheet" th:href="@{css/giorno.css}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 <body>
@@ -20,20 +20,20 @@
         <ul>
             <li>
                 <!-- collegamento ipertestuale alla home -->
-                <a href="index.html"> Home </a>
+                <a href="/"> Home </a>
             </li>
             
             <li>
                 <!-- collegamento ipertestuale alla pagina itinerari -->
-                <a href="itinerario.html"> Itinerari </a>
+                <a href="itinerario"> Itinerari </a>
             </li>
             <li>
                 <!-- collegamento ipertestuale alla pagina guide -->
-                <a href="guideTeam.html"> Guide  </a>
+                <a href="guideTeam"> Guide  </a>
             </li>
             <li>
                 <!-- collegamento ipertestuale alla pagina informazioni -->
-                <a href="informazioni.html"> Informazioni</a>
+                <a href="informazioni"> Informazioni</a>
             </li>
         </ul>
       
@@ -59,7 +59,7 @@
                 <img th:src="@{image/berlino4.jpg}"  width="500" height="300" hspace="15" align="left" />
             </div>
             <div>
-                <a href="monumento.html"> Museo del Louvre </a>
+                <a href="monumento"> Museo del Louvre </a>
             </div>
             <p>
                 Perch� visitarlo?
@@ -69,7 +69,7 @@
         <div class="2">
             <img th:src="@{image/berlino4.jpg}"  width="500" height="300" hspace="15" align="left" />
             <div class="descr">
-                <a href="monumento.html"> Cattedrale di Notre-Dame </a>
+                <a href="monumento"> Cattedrale di Notre-Dame </a>
                 <p>
                     Perch� visitarlo?
                 </p>

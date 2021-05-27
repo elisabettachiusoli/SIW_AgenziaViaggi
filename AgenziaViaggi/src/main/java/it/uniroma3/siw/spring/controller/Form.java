@@ -1,4 +1,4 @@
-package it.uniroma3.siw.spring.controller;
+/*package it.uniroma3.siw.spring.controller;
 
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
@@ -9,12 +9,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import org.springframework.stereotype.Controller;
+
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import it.uniroma3.siw.spring.model.Cliente;
 
+ 
 
-@WebServlet("/controller")   
-public class Controller extends HttpServlet {
+public class Form  {
 	
 	private static final long serialVersionUID=1L;
 	private Cliente cliente;
@@ -43,11 +48,14 @@ public class Controller extends HttpServlet {
 			
 		}	
 		
-		// gestione dell'inoltro
+		 gestione dell'inoltro
 		ServletContext application = getServletContext();
 		RequestDispatcher rd = application.getRequestDispatcher(nextPage);
 		rd.forward(request, response);
 		return; 
 
 	}
+	
+	
 }
+*/

@@ -3,12 +3,12 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <meta charset="ISO-8859-1" />
+    <meta charset="UTF-8" />
     <!-- logo -->
     <link rel=icon th:href="@{image/logo.jpg}" >
     <!-- titolo mostrato per la home -->
     <title> Agenzia Viaggi da Sogno </title>
-    
+        
     <!-- riferimento al foglio di stile css chiamato stile in stili relativo a tutto il progetto -->
     <link  th:href="@{css/index.css}"  rel="stylesheet"/>
 </head>
@@ -24,15 +24,15 @@
             
             <li>
                 <!-- collegamento ipertestuale alla pagina itinerari -->
-                <a th:href="@{itinerario.html}"> Itinerari </a>
+                <a href="itinerario">Itinerari</a>
             </li>
             <li>
                 <!-- collegamento ipertestuale alla pagina guide -->
-                <a th:href="@{guide.html}"> Guide  </a>
+                <a href="guideTeam"> Guide  </a>
             </li>
             <li>
                 <!-- collegamento ipertestuale alla pagina informazioni -->
-                <a href="informazioni.html"> Informazioni</a>
+                <a href="monumento"> Informazioni</a>
             </li>
         </ul>
       
