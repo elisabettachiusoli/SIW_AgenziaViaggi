@@ -84,6 +84,7 @@
                     <label for="citta"> Destinazione</label>
                     <input type="text" name="citta" th:field="*{cittaDaVisitare}"  />
                     <span th:if="${#fields.hasErrors('cittaDaVisitare')}" th:errors="*{cittaDaVisitare}"></span>
+                    
                 </div>
                 <div>
                     <label for="periodo"> Periodo </label>
@@ -96,6 +97,7 @@
                     <!-- Pulsante per inviare i dati che porta alla pagina chiamata "Dati correttamente inviati" -->
                     <div><input type="submit" value="Prenota una consulenza" class="pulsante"/>
                     </div>
+                    
                 </div>
                     
             </form> 

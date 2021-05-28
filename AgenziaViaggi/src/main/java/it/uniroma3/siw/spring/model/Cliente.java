@@ -2,6 +2,7 @@ package it.uniroma3.siw.spring.model;
 
 
 
+import java.io.File;
 import java.sql.Date;
 
 import javax.persistence.Entity;
@@ -9,6 +10,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+
+import org.apache.tomcat.util.codec.binary.Base64;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -26,6 +29,8 @@ public class Cliente {
 	private String cittaDaVisitare;
 	private Date dataInizio;
 	private Date dataFine;
+	private byte[] file;
+	private String base64EncodedImage;
 	
 	@ManyToOne
 	private AgenziaViaggi agenziaViaggi;
@@ -89,5 +94,6 @@ public class Cliente {
 	public void setDataFine(Date dataFine) {
 		this.dataFine = dataFine;
 	}
+
 
 }
