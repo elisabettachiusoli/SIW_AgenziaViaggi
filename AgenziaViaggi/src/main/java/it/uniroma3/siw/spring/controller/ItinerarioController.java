@@ -2,15 +2,44 @@ package it.uniroma3.siw.spring.controller;
 
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import it.uniroma3.siw.spring.model.Cliente;
+import it.uniroma3.siw.spring.service.ClienteService;
 
 @Controller
 public class ItinerarioController {
 	
+	@Autowired
+	private ClienteService clienteService;
+	@Autowired
+	private ClienteValidator clienteValidator;
+
 	
+	 @RequestMapping(value="/form", method = RequestMethod.POST)
+	    public String Form(Model model) {
+		 model.addAttribute("cliente", new Cliente());
+	        return "form.html";
+	    }
+
+	 @RequestMapping(value="/cliente", method = RequestMethod.POST)
+	    public String newCliente(@ModelAttribute("cliente") Cliente cliente, BindingResult bindingResult) {
+		 this.clienteValidator.validate(cliente, bindingResult);
+		 if (!bindingResult.hasErrors()) {
+			 this.clienteService.inserisci(cliente);
+	            return "dati.html";
+	        }
+	        return "form.html";
+	    }
+	 
 	   @RequestMapping(value="/itinerario", method = RequestMethod.GET)
 	    public String getItinerario() {
 		   

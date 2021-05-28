@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- logo -->
+    <link rel=icon th:href="@{image/logo.jpg}" >
+    <!-- titolo mostrato per la home -->
+    <title> Agenzia Viaggi da Sogno </title>
+        
+    <!-- riferimento al foglio di stile css chiamato stile in stili relativo a tutto il progetto -->
+    <link  th:href="@{css/index.css}"  rel="stylesheet"/>
+</head>
+<body>
+    <!-- navigation bar -->
+    <nav>
+        <!-- caricamento immagine logo a sinistra con uno spazio prima del nome della agenzia -->
+        <div class="titolo">
+            <img th:src="@{image/logo.jpg}" width="80px" height="70px" align="left" hspace="20px" /> <h2> Agenzia Viaggi da Sogno </h2>
+        </div>
+        
+        <ul>
+            
+            <li>
+                <!-- collegamento ipertestuale alla pagina itinerari -->
+                <a href="itinerario">Itinerari</a>
+            </li>
+            <li>
+                <!-- collegamento ipertestuale alla pagina guide -->
+                <a href="guideTeam"> Guide  </a>
+            </li>
+            <li>
+                <!-- collegamento ipertestuale alla pagina informazioni -->
+                <a href="monumento"> Informazioni</a>
+            </li>
+        </ul>
+      
+        
+    </nav>
+ 
+    <!-- sezione che fa riferimento al form -->
+    <section id="modulo">
+    <video autoplay muted loop  id="video-back">
+            <source th:src="@{video/aereo 2.mp4}" type="video/mp4" />
+        </video>
+        <!-- divisione in classi-->
+        <div class="content">
+            <h2>
+                <!-- in grassetto per risaltare -->
+                <strong>
+                    HAI BISOGNO DI AIUTO PER IL PROSSIMO VIAGGIO?
+                    <br />
+                    PRENOTA UNA CONSULENZA!
+                </strong>
+<body>
+   <form th:action="@{/cliente}" th:object="${cliente}" method="POST"> 
+
+                <div th:if="${#fields.hasGlobalErrors()}">
+  			<p th:each="err : ${#fields.globalErrors()}" th:text="${err}">...</p>
+		</div>	
+      <div>
+             <label for="nome"> Nome </label>
+              <span><input type="text" th:field="*{nome}" /> </span>
+              <span th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></span>
+             </div>
+             <div>
+				<label for="cognome"> Cognome </label>
+				<span><input type="text" th:field="*{cognome}" /> </span>
+				<span th:if="${#fields.hasErrors('cognome')}" th:errors="*{cognome}"></span>
+				</div>
+				<div>
+				<label for="numero di telefono"> Numero di telefono </label>
+				<span><input type="tel" th:field="*{numeroDiTelefono}" /> </span>
+				<span th:if="${#fields.hasErrors('numeroDiTelefono')}" th:errors="*{numeroDiTelefono}"></span>
+				 </div> 
+                <div >
+                    <label for="email"> Email </label>
+                    <input type="email" th:field="*{email}" />
+                    <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+                </div>
+
+                <div>
+                    <label for="citta"> Destinazione</label>
+                    <input type="text" name="citta" th:field="*{cittaDaVisitare}"  />
+                    <span th:if="${#fields.hasErrors('cittaDaVisitare')}" th:errors="*{cittaDaVisitare}"></span>
+                </div>
+                <div>
+                    <label for="periodo"> Periodo </label>
+                    <input type="date" name="periodo" th:field="*{dataInizio}" />
+                    <input type="date" name="periodo" th:field="*{dataFine}"  />
+                    <span th:if="${#fields.hasErrors('dataInizio')}" th:errors="*{dataInizio}"></span>
+                    <span th:if="${#fields.hasErrors('dataFine')}" th:errors="*{dataFine}"></span>
+                </div>
+                <div class="due">
+                    <!-- Pulsante per inviare i dati che porta alla pagina chiamata "Dati correttamente inviati" -->
+                    <div><input type="submit" value="Prenota una consulenza" class="pulsante"/>
+                    </div>
+                </div>
+                    
+            </form> 
+            </body>
+</html>

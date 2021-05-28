@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html xmlns:th="http://www.thymeleaf.org">
+<html lan=it xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8" />
@@ -42,63 +42,23 @@
     <!-- sezione che fa riferimento al form -->
     <section id="modulo">
     <video autoplay muted loop  id="video-back">
-            <source th:src="@{video/aereo 2.mp4}" type="video/mp4" />
+            <source th:src="@{video/aereoplano.mp4}" type="video/mp4" />
         </video>
         <!-- divisione in classi-->
         <div class="content">
             <h2>
                 <!-- in grassetto per risaltare -->
                 <strong>
-                    PRENOTA UNA CONSULENZA
+                    HAI BISOGNO DI AIUTO PER IL PROSSIMO VIAGGIO?
                     <br />
-                    E RICHIEDI IL TUO ITINERARIO!
+                    PRENOTA UNA CONSULENZA!
                 </strong>
+                <form th:action="@{/form}" method="post" >
+                <input type="submit" value="Richiedi il tuo itinerario" class="pulsante" />
+                </form>
             </h2>
             <!-- inseriti i dati ti porta alla pagina chiamata "Dati correttamente inviati" -->
-            <form th:action="@{/controller}"  method="post" >
-
-                <!-- lista non ordinata 
-                sono presenti in tutto sette voci (li)-->
-                    <!-- Tutti i campi sono richiesti!-->
-                <div class="uno">
-                    <!-- Nome con casella di testo per inserire il nome -->
-                    <label for="nome"> Nome </label>
-                    <input type="text" name="nome" th:value="*{nome}"   required />
-                </div>
-                <div class="uno">
-                    <!-- Cognome con casella di testo per inserire il cognome -->
-                    <label for="cognome"> Cognome </label>
-                    <input type="text" name="cognome" th:value="${cognome}" required />
-                </div>
-                <div class="uno">
-                    <!-- Numero di telefono con casella di testo (numerica) per inserire il numero -->
-                    <label for="numero di telefono"> Numero di telefono </label>
-                    <input type="tel" name="numTel" th:value="${numTel}"  required />
-                </div>
-                <div class="uno">
-                    <!-- Email con casella di testo (email) per inserire l'email -->
-                    <label for="email"> Email </label>
-                    <input type="email" name="email" th:value="${email}"  required />
-                </div>
-                <div class="uno">
-                    <!-- Destinazione con casella di testo per inserire la destinazione -->
-                    <label for="citta"> Destinazione</label>
-                    <input type="text" name="citta" th:value="${citta}" required />
-                </div>
-                <div class="uno">
-                    <!-- Periodo con data di inizio e di fine con casella calendario per inserire le due date -->
-                    <label for="periodo"> Periodo </label>
-                    <input type="date" name="periodo" th:value="${dataInizio}" required />
-                    <input type="date" name="periodo" th:value="${dataFine}"  required />
-                </div>
-                <div class="due">
-                    <!-- Pulsante per inviare i dati che porta alla pagina chiamata "Dati correttamente inviati" -->
-                    <div><input type="submit" name="submit" value="Prenota una consulenza" class="pulsante" />
-                    </div>
-                </div>
-                    
-            </form>
-        </div>
+           </div> 
     </section>
     <!-- sezione che fa riferimento alla parte di testo-->
     <section id="testoViaggi">

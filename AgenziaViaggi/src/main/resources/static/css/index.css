@@ -62,10 +62,25 @@ nav {
 	position: relative;
     width: 100%;
     box-sizing: border-box;
-    margin: 0 auto;
+    margin-top:60px;
     float: left;
     text-align: center;
 }
+/* Stile per il pulsante. Background non sfumato dello stesso colore degli input, 
+            traslato pi� in grande, con le lettere maiuscole e con il cursore a manina per 
+            indicare che � possibile cliccarci sopra
+        */
+ .pulsante {
+        color: #000;
+        background: coral;
+        margin-top: 80px;
+        margin-bottom: 20px;
+        border: 2px #000;
+        border-radius: 20px;
+        padding:20px 20px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
 
     /* Stile per il la posizione del pulsante del form, in basso al centro*/
     .due {
@@ -88,19 +103,13 @@ nav {
     margin-left: 10px;
     background: rgba(255, 127, 80, 0.74);
 }
-    /* Stile per il pulsante. Background non sfumato dello stesso colore degli input, 
-            traslato pi� in grande, con le lettere maiuscole e con il cursore a manina per 
-            indicare che � possibile cliccarci sopra
-        */
-     .pulsante {
-        color: #000;
-        background: coral;
-        border: 2px #000;
-        border-radius: 30px;
-        padding: 20px 25px;
-        text-transform: uppercase;
-        cursor: pointer;
-    }
+    #modulo span {
+	color:  rgb(255, 0, 0);
+	text-align: right;
+	padding-left: 10px;
+	font-size: 6px;
+}
+    
 /* Stile per il testo. Colore sfondo bianco, testo allineato al centro color nero*/
 #testoViaggi {
     border-bottom: solid 1px #000;
