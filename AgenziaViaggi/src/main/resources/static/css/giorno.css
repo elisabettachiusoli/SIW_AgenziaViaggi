@@ -14,12 +14,12 @@ nav {
     background: rgba(0,0,0,0.4);
     z-index:1;
 }
-/* Stile per la barra principale. Il colore è il celestino, con la scritta nera*/
+/* Stile per la barra principale. Il colore ï¿½ il celestino, con la scritta nera*/
     nav .titolo {
         padding: 5px;
         color: #FFF;
     }
-    /* Stile per i link presenti nella barra principale. Il testo è allineato a destra*/
+    /* Stile per i link presenti nella barra principale. Il testo ï¿½ allineato a destra*/
     nav ul {
         list-style:none;
         float:right;
