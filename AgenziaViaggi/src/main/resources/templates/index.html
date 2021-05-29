@@ -11,6 +11,7 @@
         
     <!-- riferimento al foglio di stile css chiamato stile in stili relativo a tutto il progetto -->
     <link  th:href="@{css/index.css}"  rel="stylesheet"/>
+    <link th:href="@{css/base.css}" rel="stylesheet">
 </head>
 <body>
     <!-- navigation bar -->
@@ -76,13 +77,15 @@
     <section id="immagini">
         <h2> Scopri le nostre imperdibili mete! </h2>
         <!-- l'immagine una � sopra -->
-        <img th:src="@{image/berlino4.jpg}" width="1471px" height="400px" align="top" />
+        <img th:src="@{image/berlino.jpg}" width="1471px" height="500px" align="top" />
         <!-- le altre tre immagini sono allineate, senza spazi l'una dall'altra -->
-        <img th:src="@{image/parigi.jpg}" width="450px" height="200px" align="left" hspace="0" />
-        <img th:src="@{image/siviglia.jpg}" width="571px" height="200px" align="left" hspace="0" />
-        <img th:src="@{image/edimburgo.jpg}" width="450px" height="200px" align="left" hspace="0" />
+        <img th:src="@{image/parigi.jpg}" width="460px" height="230px" align="left" hspace="0" />
+        <img th:src="@{image/siviglia.jpg}" width="585px" height="230px" align="left" hspace="0" />
+        <img th:src="@{image/edimburgo.jpg}" width="473px" height="230px" align="left" hspace="0" />
 
     </section>
+
+	<footer th:replace="fragments/base.html :: fondo"></footer>
 
 </body>
 </html>

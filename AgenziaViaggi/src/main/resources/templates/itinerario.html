@@ -10,6 +10,7 @@
     <title> Nome Itinerario </title>
     <!-- riferimento al foglio di stile css chiamato stile in stili relativo a tutto il progetto -->
     <link rel="stylesheet" th:href="@{css/itinerario.css}" />
+    <link th:href="@{css/base.css}" rel="stylesheet">
 </head>
 <body>
 <nav>
@@ -88,6 +89,7 @@
             </ul>
         </div>
     </section>
-
+    
+    <footer th:replace="fragments/base.html :: fondo"></footer>
 </body>
 </html>

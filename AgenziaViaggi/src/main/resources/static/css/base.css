@@ -1,0 +1,57 @@
+/*Contatti e mappa*/
+
+footer .contact {
+    width:98%;
+    height:auto;
+    margin:auto;
+    display:flex;
+    flex-wrap:wrap;
+    padding:1%;
+    background-color:black;
+	 border-top: solid 2px;
+    border-color: white;
+}
+
+footer .contact-map {
+    width:100%;
+    height:auto;
+    flex:50%;
+}
+
+footer .contact-map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+footer .contact-info {
+    width: 100%;
+    height: auto;
+    flex: 50%;
+    text-align:center;
+    
+}
+
+footer .contact-info h1 {
+    margin-bottom:10px;
+    color:white;
+}
+
+footer .dati h3 {
+    width: 100%;
+    height: auto;
+    flex: 50%;
+    margin-bottom: 10px;
+    color: white;
+}
+
+footer .dati p {
+    width: 100%;
+    height: auto;
+    flex: 50%;
+    margin-bottom: 10px;
+    color: white;
+}
+
+footer .logo {
+    margin-right:10px;
+}

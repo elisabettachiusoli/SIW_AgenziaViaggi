@@ -8,6 +8,7 @@
     <link rel=icon th:href="@{image/logo.jpg}" >
     <title>Giorno</title>
     <link rel="stylesheet" th:href="@{css/giorno.css}">
+    <link th:href="@{css/base.css}" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 <body>
@@ -76,6 +77,7 @@
             </div>
         </div>
     </section>
-
+	
+	<footer th:replace="fragments/base.html :: fondo"></footer>
 </body>
 </html>
