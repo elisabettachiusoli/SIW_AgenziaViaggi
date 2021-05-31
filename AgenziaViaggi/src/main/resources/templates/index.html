@@ -14,31 +14,7 @@
     <link th:href="@{css/base.css}" rel="stylesheet">
 </head>
 <body>
-    <!-- navigation bar -->
-    <nav>
-        <!-- caricamento immagine logo a sinistra con uno spazio prima del nome della agenzia -->
-        <div class="titolo">
-            <img th:src="@{image/logo.jpg}" width="80px" height="70px" align="left" hspace="20px" /> <h2> Agenzia Viaggi da Sogno </h2>
-        </div>
-        
-        <ul>
-            
-            <li>
-                <!-- collegamento ipertestuale alla pagina itinerari -->
-                <a href="itinerario">Itinerari</a>
-            </li>
-            <li>
-                <!-- collegamento ipertestuale alla pagina guide -->
-                <a href="guideTeam"> Guide  </a>
-            </li>
-            <li>
-                <!-- collegamento ipertestuale alla pagina informazioni -->
-                <a href="monumento"> Informazioni</a>
-            </li>
-        </ul>
-      
-        
-    </nav>
+<header th:replace="fragments/base.html :: intestazione"></header>
  
     <!-- sezione che fa riferimento al form -->
     <section id="modulo">
@@ -81,7 +57,7 @@
         <!-- le altre tre immagini sono allineate, senza spazi l'una dall'altra -->
         <img th:src="@{image/parigi.jpg}" width="460px" height="230px" align="left" hspace="0" />
         <img th:src="@{image/siviglia.jpg}" width="585px" height="230px" align="left" hspace="0" />
-        <img th:src="@{image/edimburgo.jpg}" width="473px" height="230px" align="left" hspace="0" />
+        <img th:src="@{image/edimburgo.jpg}" width="426px" height="230px" align="left" hspace="0" />
 
     </section>
 
