@@ -4,8 +4,13 @@ body {
     margin: 0;
     padding:0;
 }
+#video-back{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:0;
 
-    
+}
 /* Stile per il form, generalit� per tutti: immagine del mare senza ripetizioni per tutto il blocco, bordi neri e scritte nere*/
 #modulo {
     border-top: solid 2px #000;
@@ -15,13 +20,6 @@ body {
     overflow: hidden;
     position: relative;
     
-}
-#video-back{
-    position: absolute;
-    top:0;
-    left:0;
-    z-index:0;
-
 }
 /* Stile per il titolo del form. Il testo � allineato al centro*/
 .content {
@@ -49,49 +47,31 @@ body {
         cursor: pointer;
     }
 
+    /* Stile per il la posizione del pulsante del form, in basso al centro*/
+    .due {
+        padding-top: 30px;
+        padding-bottom: 5px;
+        text-align: center;
+    }
+    /* Stile per le label, centrate per avvicinarsi alla colonna di destra */
+    #modulo label {
+        display: block;
+        margin-left: 500px;
+        padding-top: 10px;
+        text-align: left;
+        text-decoration: solid;
+        font-size: 16px;
+    }
     /* Stile per gli input, con background sfumato*/
 #modulo input {
     border: solid 1px #000;
     margin-left: 10px;
     background: rgba(255, 127, 80, 0.74);
 }
- 
-/* Stile per il testo. Colore sfondo bianco, testo allineato al centro color nero*/
-#testoViaggi {
-    border-bottom: solid 1px #000;
-    padding: 10px;
-    color: #000;
-    overflow: auto;
-    background: #FFF;
-    text-align: center;
+    #modulo span {
+	color:  rgb(255, 0, 0);
+	text-align: right;
+	padding-left: 10px;
+	font-size: 6px;
 }
-/* Stile per la parte delle immagini. Colore sfondo celestino, con scritta nera in stampatello*/
-#immagini {
-    border-top: solid 1px #000;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    color: #000;
-    background: #0a83b8;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: overline
-}
-
-
-/* Stile per la pagina di invio corretto dei dati. Immagine ingrandita e centrata, testo colore nero a destra*/
-#dati {
-    border-bottom: solid 4px #000;
-    padding: 300px;
-    color: #000;
-    text-align: right;
-    overflow: auto;
-    background-image: url(../image/mare.jpg);
-    background-size: cover;
-    background-position: center;
-}
-    /* Stile per il testo della pagina Colore corallo a destra*/
-    #dati .titolo {
-        color: coral;
-        text-align: right;
-    }
+    

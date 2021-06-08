@@ -2,7 +2,6 @@ package it.uniroma3.siw.spring.controller;
 
 
 
-import java.awt.PageAttributes.MediaType;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,8 +10,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
-
 import it.uniroma3.siw.spring.model.Cliente;
 import it.uniroma3.siw.spring.service.ClienteService;
 
@@ -24,6 +21,10 @@ public class ItinerarioController {
 	@Autowired
 	private ClienteValidator clienteValidator;
 
+	@RequestMapping(value={"/ ", "/index"}, method = RequestMethod.GET)
+    public String Index(Model model) {
+        return "index.html";
+    }
 	
 	 @RequestMapping(value="/form", method = RequestMethod.POST)
 	    public String Form(Model model) {
@@ -69,5 +70,6 @@ public class ItinerarioController {
 	    public String getInfo() {
 	        return "informazioni.html";
 	    }
+	 
 
 }

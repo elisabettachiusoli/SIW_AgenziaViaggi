@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8" />
+     <!-- logo -->
+    <link rel=icon th:href="@{image/logo.jpg}" >
+    <!-- titolo della pagina che fa riferimento all'invio dei dati del form -->
+    <title> Log in </title>
+    <!-- riferimento al foglio di stile css chiamato stile in stili relativo a tutto il progetto -->
+    <link rel="stylesheet" th:href="@{css/index.css}" />
+    <link th:href="@{css/base.css}" rel="stylesheet">
+</head>
+<body>
+<header th:replace="fragments/base.html :: intestazione"></header>
+    <!-- sezione che fa riferimento al form -->
+    <section id="modulo">
+    <video autoplay muted loop  id="video-back">
+            <source th:src="@{video/aereo 2.mp4}" type="video/mp4" />
+        </video>
+         <div class="content">
+        <h2> <strong>
+                    EFFETTUA IL LOGIN PER CONTINUARE A
+                    <br />
+                    NAVIGARE SUL NOSTRO SITO!
+                </strong>
+        </h2>
+        <form th:action="@{/login}" method="POST">
+				<div>
+					<div>
+						<label>Username:</label>
+						<span><input name="username" type="text" required /></span>
+					</div>		
+					<div>
+						<label>Password:</label>
+						<span><input name="password" type="password" required /></span>
+					</div>
+					<div class="due">
+                    <!-- Pulsante per inviare i dati che porta alla pagina chiamata "Dati correttamente inviati" -->
+                    <div><input type="submit" value="Login" class="pulsante"/>
+                    </div>
+					<h2> <a href="register"> Non sei registrato? Registrati qui</a> </h2>
+				</div>
+			</form>
+         </div>
+    </section>
+			
+    
+</body>
+</html>

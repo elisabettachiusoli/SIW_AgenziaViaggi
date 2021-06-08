@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+     <meta charset="utf-8" />
+     <!-- logo -->
+    <link rel=icon th:href="@{image/logo.jpg}" >
+    <!-- titolo della pagina che fa riferimento all'invio dei dati del form -->
+    <title> Registra un nuovo account </title>
+    <!-- riferimento al foglio di stile css chiamato stile in stili relativo a tutto il progetto -->
+    <link rel="stylesheet" th:href="@{css/form.css}" />
+    <link th:href="@{css/base.css}" rel="stylesheet">
+</head>
+<body>
+<header th:replace="fragments/base.html :: intestazione"></header>
+    <!-- sezione che fa riferimento al form -->
+    <section id="modulo">
+    <video autoplay muted loop  id="video-back">
+            <source th:src="@{video/aereo 2.mp4}" type="video/mp4" />
+        </video>
+        <div class="content">    
+    	<h2 >Registrazione</h2>
+	<form th:action="@{/register}"  method="POST">
+        <label>Username</label>
+          <span>  <input type="text" placeholder="username"
+                       th:field="${credentials.username}"/> </span>
+            <span th:if="${#fields.hasErrors('credentials.username')}"
+                th:errors="${credentials.username}" ></span>
+        <label> Password</label>
+          <span>  <input type="password" placeholder="password" 
+                       th:field="${credentials.password}"/></span>
+            <span th:if="${#fields.hasErrors('credentials.password')}"
+                th:errors="${credentials.password}"></span>
+        <label> Nome</label>
+           <span> <input type="text" placeholder="nome" 
+                       th:field="${user.nome}"/></span>
+            <span th:if="${#fields.hasErrors('user.nome')}"
+                th:errors="${user.nome}"></span>
+        <label> Cognome</label>
+            <span><input type="text" placeholder="cognome" 
+                       th:field="${user.cognome}"/></span>
+            <span th:if="${#fields.hasErrors('user.cognome')}"
+                th:errors="${user.cognome}" ></span>
+        
+         <div class="due">
+                    <!-- Pulsante per inviare i dati che porta alla pagina chiamata "Dati correttamente inviati" -->
+                  <input type="submit" value="Registrati" class="pulsante"/>
+                   
+				</div>
+	</form>
+    </section>
+</body>
+</html>
