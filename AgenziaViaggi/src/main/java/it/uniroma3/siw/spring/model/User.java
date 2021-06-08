@@ -19,8 +19,6 @@ public class User {
 	private String cognome;
 	private String email;
 	
-	@ManyToOne
-	private AgenziaViaggi agenziaViaggi;
 
 	public Long getId() {
 		return id;

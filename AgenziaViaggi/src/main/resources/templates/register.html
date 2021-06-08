@@ -20,32 +20,32 @@
             <source th:src="@{video/mappa3.mp4}" type="video/mp4" />
         </video>
         <div class="content">    
-    	<h2 >Registrazione</h2>
+    	<h2 th:style="'color:white'">Registrazione</h2>
 	<form th:action="@{/register}"  method="POST">
-        <label>Username</label>
-          <span>  <input type="text" placeholder="username"
+        <label th:style="'color:white'">Username</label>
+          <span>  <input type="text"
                        th:field="${credentials.username}"/> </span>
             <span th:if="${#fields.hasErrors('credentials.username')}"
                 th:errors="${credentials.username}" ></span>
-        <label> Password</label>
-          <span>  <input type="password" placeholder="password" 
+        <label th:style="'color:white'"> Password</label>
+          <span>  <input type="password"  
                        th:field="${credentials.password}"/></span>
             <span th:if="${#fields.hasErrors('credentials.password')}"
                 th:errors="${credentials.password}"></span>
-        <label> Nome</label>
-           <span> <input type="text" placeholder="nome" 
+        <label th:style="'color:white'"> Nome</label>
+           <span> <input type="text"
                        th:field="${user.nome}"/></span>
             <span th:if="${#fields.hasErrors('user.nome')}"
                 th:errors="${user.nome}"></span>
-        <label> Cognome</label>
-            <span><input type="text" placeholder="cognome" 
+        <label th:style="'color:white'"> Cognome</label>
+            <span><input type="text" 
                        th:field="${user.cognome}"/></span>
             <span th:if="${#fields.hasErrors('user.cognome')}"
                 th:errors="${user.cognome}" ></span>
         
          <div class="due">
                     <!-- Pulsante per inviare i dati che porta alla pagina chiamata "Dati correttamente inviati" -->
-                  <input type="submit" value="Registrati" class="pulsante"/>
+                  <input  type="submit" value="Registrati" class="pulsante" th:style="'color:white'"/>
                    
 				</div>
 	</form>

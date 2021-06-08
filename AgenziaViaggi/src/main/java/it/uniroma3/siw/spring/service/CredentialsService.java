@@ -23,7 +23,7 @@ public class CredentialsService {
 	public Credentials getCredentials(Long id) {
 		Optional<Credentials> result = this.credentialsRepository.findById(id);
 		return result.orElse(null);
-	}
+	} 
 
 	@Transactional
 	public Credentials getCredentials(String username) {
@@ -33,7 +33,7 @@ public class CredentialsService {
 		
     @Transactional
     public Credentials salvaCredenziali(Credentials credentials) {
-        credentials.setRuolo(Credentials.DEFAULT_ROLE);
+        credentials.setRole(Credentials.DEFAULT_ROLE);
         return this.credentialsRepository.save(credentials);
     }
 

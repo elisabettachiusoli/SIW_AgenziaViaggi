@@ -20,7 +20,7 @@
             <source th:src="@{video/mappa3.mp4}" type="video/mp4" />
         </video>
          <div class="content">
-        <h2> <strong>
+        <h2 th:style="'color:white'"> <strong>
                     EFFETTUA IL LOGIN PER CONTINUARE A
                     <br />
                     NAVIGARE SUL NOSTRO SITO!
@@ -29,18 +29,18 @@
         <form th:action="@{/login}" method="POST">
 				<div>
 					<div>
-						<label>Username:</label>
+						<label th:style="'color:white'" >Username:</label>
 						<span><input name="username" type="text" required /></span>
 					</div>		
 					<div>
-						<label>Password:</label>
+						<label th:style="'color:white'">Password:</label>
 						<span><input name="password" type="password" required /></span>
 					</div>
 					<div class="due">
                     <!-- Pulsante per inviare i dati che porta alla pagina chiamata "Dati correttamente inviati" -->
-                    <div><input type="submit" value="Login" class="pulsante"/>
+                    <div><input type="submit" value="Login" class="pulsante" th:style="'color:white'"/>
                     </div>
-					<h2> <a href="register"> Non sei registrato? Registrati qui</a> </h2>
+					<h2 > <a href="register" th:style="'color:black'"> Non sei registrato? Registrati qui</a> </h2>
 				</div>
 			</form>
          </div>

@@ -13,4 +13,4 @@ public interface ClienteRepository extends CrudRepository<Cliente, Long> {
 	public List<Cliente> findByNomeAndCognome(String nome, String cognome);
 
 	public List<Cliente> findByNomeOrCognome(String nome, String cognome);
-}
+} 

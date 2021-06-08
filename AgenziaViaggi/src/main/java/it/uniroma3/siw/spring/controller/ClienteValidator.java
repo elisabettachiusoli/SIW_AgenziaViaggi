@@ -15,7 +15,7 @@ import it.uniroma3.siw.spring.model.Cliente;
 
 @Component
 public class ClienteValidator implements Validator {
-
+ 
 	@Override
 	public void validate(Object o, Errors errors) {
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "nome", "required");

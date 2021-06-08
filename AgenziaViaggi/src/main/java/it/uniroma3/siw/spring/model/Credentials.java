@@ -20,7 +20,7 @@ public class Credentials {
 	@Column(nullable=false)
 	private String password;
 	@Column(nullable=false)
-	private String ruolo;
+	private String role;
 	@OneToOne(cascade=CascadeType.ALL)
 	private User user;
 
@@ -45,12 +45,12 @@ public class Credentials {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getRuolo() {
-		return ruolo;
+	public String getRole() {
+		return role;
 	}
 	
-	public void setRuolo(String ruolo) {
-		this.ruolo = ruolo;
+	public void setRole(String role) {
+		this.role = role;
 	}
 	public User getUser() {
 		return user;

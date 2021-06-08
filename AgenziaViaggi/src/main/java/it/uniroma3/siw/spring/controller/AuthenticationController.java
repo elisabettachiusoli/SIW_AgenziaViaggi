@@ -24,7 +24,7 @@ public class AuthenticationController {
 	@Autowired
 	private CredentialsService credentialsService;
 	@Autowired
-	private CredentialsRepository credentialsRepositor;
+	private CredentialsRepository credentialsRepository;
 	
 	@Autowired
 	private UserValidator userValidator;
@@ -47,7 +47,7 @@ public class AuthenticationController {
 	        
 		  UserDetails userDetails = (UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 	    	Credentials credentials = credentialsService.getCredentials(userDetails.getUsername());
-	    	if (credentials.getRuolo().equals(Credentials.ADMIN_ROLE)) {
+	    	if (credentials.getRole().equals(Credentials.ADMIN_ROLE)) {
 	            return "index.html";
 	        }
 	        return "index.html";
