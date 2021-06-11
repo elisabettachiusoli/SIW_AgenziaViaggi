@@ -13,50 +13,40 @@
 </head>
 <body>
 <header th:replace="fragments/base.html :: intestazione"></header>
+<div th:if="${giorno}" th:object="${giorno}" >
     <section id="titolo">
-        <h1> Giorno 1 </h1>
+       <h1 th:int=" "Giorno" + *{numeroGiornoDiVisita}"> 1</h1>
         <div>
             Alla scoperta di ...
         </div>
     </section>
 
     <section id="icona">
-        <img th:src="@{image/luogo.png}"  width="45" height="50" hspace="15" /> Zona: quartiere Museumsinsel e Mitte
-        <img th:src="@{image/orario.png}"  width="50" height="50" hspace="15" /> Durata visita guidata: 3 ore. Partenza alle ore 08:30
-        <img th:src="@{image/money.png}" width="50" height="50" hspace="15" /> Prezzo: 40 euro
+    
+        <img th:src="@{image/luogo.png}"  width="45" height="50" hspace="15" /> <span th:text="*{zona}" > quartiere Museumsinsel e Mitte </span>
+        <img th:src="@{image/orario.png}"  width="50" height="50" hspace="15" /> <span th:text="*{durata} + "h"" > 3 </span> 
+        <img th:src="@{image/money.png}" width="50" height="50" hspace="15" /> <span th:text="*{costoGiornata} + "euro"" > 40 </span> 
     </section>
 
     <section id="monumenti">
    
-        <div class="1">
-            <div>
-                <img th:src="@{image/isolaMusei.jpg}"  width="500" height="300" hspace="15" align="left" />
-            </div>
-            <div>
-                <a href="monumento"> Isola dei Musei </a>
-            </div>
-            <p>
-                La famosa Isola dei Musei di Berlino, situata lungo il fiume Sprea, nel cuore della città, è uno dei complessi espositivi più importanti del mondo. Il complesso, dichiarato Patrimonio dell’Umanità dall’UNESCO, è formato da cinque prestigiosi musei, che accolgono collezioni archeologiche e d’arte.
-            </p>
-        </div>
-
-        <div class="2">
-            <img th:src="@{image/porta.jpg}"  width="500" height="300" hspace="15" align="left" />
-            <div class="descr">
-                <a href="monumento"> Porta di Brandeburgo </a>
-                <p>
-                    La Porta di Brandeburgo (in tedesco Brandenburger Tor) è uno dei monumenti di Berlino più iconici e importanti, simbolo della riunificazione della Germania. Costituisce la fine occidentale del viale Unter den Linden, e oltrepassandola si raggiunge il parco Tiergarten e il Reichstag. Prima della sua costruzione qui si trovava il confine della città, ma a causa della rapida crescita di Berlino venne costruito questo monumento, una porta per i cittadini per consentire loro di muoversi verso la parte “nuova” della città.
-                </p>
-            </div>
-        </div>
+       <div>
+		<ul>
+			<li th:each="giorno.monumento : ${monumenti}">
+				<a href="monumento.html" 
+				   th:href="@{'/monumento' + '/' + ${monumento.id}}" 
+				   th:text="${monumento.nome}">Penna rossa</a>
+			</li>
+		</ul>
+	</div>
     </section>
     
 
 	<div class="desc">
 		<h4>Dove mangiare:</h4> 
-		<p>Restaurant Maximilians Berlin, FriedrichstraBe 185-190</p>
+		<span th:text="*{descrizione}" > Restaurant Maximilians Berlin, FriedrichstraBe 185-190 </span> 
 	</div>
-	
+	</div>
 	<footer th:replace="fragments/base.html :: fondo"></footer>
 </body>
 </html>

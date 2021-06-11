@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/base.html :: headerfiles(title=#{title.formProdotto})"> </head>
+<body>
+	<header th:replace="fragments/base.html :: intestazione"></header>
+	<div>
+		<h4>Inserisci i dati di un prodotto</h4>
+		<div>
+		d
+		</div>
+		d
+		<div>
+		d
+		</div>
+		<div>
+		d
+		</div>
+	</div>
+	<form th:action="@{/itinerarioForm}" method="POST" th:object="${itinerario}">	
+		
+		<div>
+			<div>
+				<span>Nome:</span>
+				<span><input type="text" th:field="*{nome}" /></span>
+			</div>		
+			<div>
+				<span>Destinazione:</span>
+				<span><input type="text" th:field="*{destinazione}" /></span>
+			</div>
+			<div>
+				<span><button type="submit">Invio</button></span>
+			</div>
+		</div>
+	</form>
+
+</body>
+</html>

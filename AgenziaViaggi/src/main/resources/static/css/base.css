@@ -69,12 +69,14 @@ footer .contact-info h1 {
     color:white;
 }
 
-footer .dati h3 {
+footer .d {
     width: 100%;
     height: auto;
     flex: 50%;
     margin-bottom: 10px;
     color: white;
+    text-align:left;
+    font-sixe: 40px
 }
 
 footer .dati p {

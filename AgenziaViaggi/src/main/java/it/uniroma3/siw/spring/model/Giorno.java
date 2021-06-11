@@ -28,6 +28,8 @@ public class Giorno {
 	@Setter
 	private String zona;
 	
+	private String descrizione;
+	
 	@Getter
 	@Setter
 	private int costoGiornata;

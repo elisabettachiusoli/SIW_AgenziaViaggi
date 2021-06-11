@@ -3,7 +3,10 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT','Trebuchet MS', Calibri;
     margin: 0;
 }
-
+.icona span {
+	 font-size: 5px;
+    font-family: 'Berlin Sans FB';
+}
 .parallax
 {
 	background: url(../image/berlino4_b.jpg)

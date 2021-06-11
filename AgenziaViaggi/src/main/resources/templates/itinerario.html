@@ -7,41 +7,50 @@
      <!-- logo -->
     <link rel=icon th:href="@{image/logo.jpg}" >
     <!-- titolo mostrato per la pagina dell'itinerario -->
-    <title> Nome Itinerario </title>
+    <title> Itinerario </title>
     <!-- riferimento al foglio di stile css chiamato stile in stili relativo a tutto il progetto -->
-    <link rel="stylesheet" th:href="@{css/itinerario.css}" />
-    <link th:href="@{css/base.css}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/itinerario.css}" />
+    <link th:href="@{/css/base.css}" rel="stylesheet">
 </head>
-<body>
-<header th:replace="fragments/base.html :: intestazione"></header>
-    <section class="parallax">
-    <div class="parallax-inner">
-     A spasso per Berlino 
-            <h3> Berlino </h3>
-    </div>        
-    </section>
 
-    <section id="icona">
-        <img th:src="@{image/calendar.png}" width="50px" height="50px" hspace="15px" />  Dal 20 luglio al 23 giugno
-        <img th:src="@{image/finePrenotazione.png}" width="50px" height="50px" hspace="15px" />  Prenotazioni fino al 23 giugno
-        <img th:src="@{image/guidaIcona.png}" width="50px" height="50px" hspace="15px" /> Guida: <a href="guida"> Matteo Rossi</a>
-        <img th:src="@{image/money.png}" width="50px" height="50px" hspace="15px" /> Prezzo: 500 euro
+<body>
+	<header th:replace="fragments/base.html :: intestazione"></header>
+    <div>
+     
+     <div th:if="${itinerario}" th:object="${itinerario}" >
+     <section class="parallax">
+    <div class="parallax-inner">
+			<h2 th:text="*{nome}"> A spasso per Berlino</h2>
+			<h3 th:text="*{destinazione}">descrizione </h3>
+    </div>
+    </section>
+  <section id="icona">
+        <img th:src="@{/image/calendar.png}" width="50px" height="50px" hspace="15px" />  <span th:date="*{dataInizio}" > Dal 20 luglio al 23 giugno </span>
+        <img th:src="@{/image/finePrenotazione.png}" width="50px" height="50px" hspace="15px" />  <span th:date="*{scadenzaPrenotazione}">Prenotazioni fino al 23 giugno </span> 
+        <!-- rif <img th:src="@{image/guidaIcona.png}" width="50px" height="50px" hspace="15px" /> <a th:href="guida/*{guida_id}"> Guida</a> -->
+        <img th:src="@{/image/money.png}" width="50px" height="50px" hspace="15px" />  <span th:int="*{costoTotale}"> 500£ </span>
 
 
     </section>
     <section id="descrizione">
         <p>
-            
-                A spasso per Berlino è l'itinerario fatto apposta per le persone che programmano una vacanza alla ricerca della storia! <br />
+            <span th:text="*{descrizione}"> A spasso per Berlino è l'itinerario fatto apposta per le persone che programmano una vacanza alla ricerca della storia! <br />
                 Il viaggio è composto da 4 giornate, nella quale sarà incluso il pass per accedere ai musei.  <br />
                 Per tutto il soggiorno verrete accompagnati da una guida, in modo tale da poter essere sempre affiancati da esperti pronti a soddisfare ogni vostra curiosità.<br /> 
                 Cliccate sulle varie giornate per scoprire di più su questa fantastica avventura!
-                <br /> <br />
+                 <br /> <br />
             DOVE DORMIRE [valido per le 3 notti]: Meininger Hotel Berlin Mitte "Humboldthaus"
+                 </span>
+                
+               
         </p>
 
 
     </section>
+   		</div>
+    	<div th:unless="${itinerario}" id="programma"> Questo itinerario non esiste</div>
+    </div>
+
     <section id="programma">
         <div class="top">
             <h2> Programma </h2>
