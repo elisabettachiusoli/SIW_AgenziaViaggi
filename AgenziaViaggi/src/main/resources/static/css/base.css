@@ -34,7 +34,7 @@ header nav {
         border-radius: 6px;
     }
 footer .contact {
-    width:98%;
+    width:100%;
     height:auto;
     margin:auto;
     display:flex;
@@ -43,17 +43,20 @@ footer .contact {
     background-color:black;
 	 border-top: solid 2px;
     border-color: white;
+    z-index:2;
 }
 
 footer .contact-map {
     width:100%;
     height:auto;
     flex:50%;
+     z-index:2;
 }
 
 footer .contact-map iframe {
     width: 100%;
     height: 100%;
+     z-index:2;
 }
 
 footer .contact-info {
@@ -61,12 +64,13 @@ footer .contact-info {
     height: auto;
     flex: 50%;
     text-align:center;
-    
+    z-index:2;
 }
 
 footer .contact-info h1 {
     margin-bottom:10px;
     color:white;
+    z-index:2;
 }
 
 footer .d {
@@ -76,7 +80,8 @@ footer .d {
     margin-bottom: 10px;
     color: white;
     text-align:left;
-    font-sixe: 40px
+    font-size: 40px;
+    z-index:2;
 }
 
 footer .dati p {
@@ -85,8 +90,10 @@ footer .dati p {
     flex: 50%;
     margin-bottom: 10px;
     color: white;
+    z-index:2;
 }
 
 footer .logo {
     margin-right:10px;
+    z-index:2;
 }

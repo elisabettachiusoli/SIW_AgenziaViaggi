@@ -23,30 +23,39 @@
 
     <section id="icona">
     
-        <img th:src="@{image/luogo.png}"  width="45" height="50" hspace="15" /> <span th:text="*{zona}" > quartiere Museumsinsel e Mitte </span>
+        <img th:src="@{image/luogo.png}"  width="45" height="50" hspace="15" /> <span th:text="*{zona}"> quartiere Museumsinsel e Mitte </span>
         <img th:src="@{image/orario.png}"  width="50" height="50" hspace="15" /> <span th:text="*{durata} + "h"" > 3 </span> 
         <img th:src="@{image/money.png}" width="50" height="50" hspace="15" /> <span th:text="*{costoGiornata} + "euro"" > 40 </span> 
     </section>
 
     <section id="monumenti">
-   
-       <div>
+   <section id="programma">
+        <div class="top">
+            <h2> Programma </h2>
+        </div>
+        <div>
 		<ul>
-			<li th:each="giorno.monumento : ${monumenti}">
+			<li th:each="giorno.monumenti : ${monumenti}">
 				<a href="monumento.html" 
 				   th:href="@{'/monumento' + '/' + ${monumento.id}}" 
-				   th:text="${monumento.nome}">Penna rossa</a>
+				   th:text= "Monumento" + "${monumento.nome}">Penna rossa</a>
 			</li>
 		</ul>
+		<ul>
+		<div th:unless="${monumenti}" id="programma"> 
+		<li> Non ci sono ancora monumenti per questa giornata</li>
 	</div>
+        </div>
     </section>
-    
-
+     
 	<div class="desc">
 		<h4>Dove mangiare:</h4> 
 		<span th:text="*{descrizione}" > Restaurant Maximilians Berlin, FriedrichstraBe 185-190 </span> 
 	</div>
-	</div>
+    </section>
+   		</div>
+    	<div th:unless="${giorno}" id="programma"> Questo giorno non esiste</div>
+    </div>
 	<footer th:replace="fragments/base.html :: fondo"></footer>
 </body>
 </html>

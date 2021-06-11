@@ -32,49 +32,36 @@
 
 
     </section>
-    <section id="descrizione">
-        <p>
-            <span th:text="*{descrizione}"> A spasso per Berlino è l'itinerario fatto apposta per le persone che programmano una vacanza alla ricerca della storia! <br />
-                Il viaggio è composto da 4 giornate, nella quale sarà incluso il pass per accedere ai musei.  <br />
-                Per tutto il soggiorno verrete accompagnati da una guida, in modo tale da poter essere sempre affiancati da esperti pronti a soddisfare ogni vostra curiosità.<br /> 
-                Cliccate sulle varie giornate per scoprire di più su questa fantastica avventura!
-                 <br /> <br />
-            DOVE DORMIRE [valido per le 3 notti]: Meininger Hotel Berlin Mitte "Humboldthaus"
-                 </span>
+    <section id="descrizione" >
+            <span th:text="*{descrizione}" th:style="'color:black'">  A spasso per Berlino è l'itinerario fatto apposta per le persone che programmano una vacanza alla ricerca della storia!
+                Il viaggio è composto da 4 giornate, nella quale sarà incluso il pass per accedere ai musei.</span>
+
                 
-               
-        </p>
 
-
+    </section>
+     <section id="programma">
+        <div class="top">
+            <h2> Programma </h2>
+        </div>
+        <div class="elenco">
+		<ul>
+			<li th:each="itinerario.giorni : ${giorni}">
+				<a href="giorno.html" 
+				   th:href="@{'/giorno' + '/' + ${giorno.id}}" 
+				   th:text= "Giorno" + "${giorno.nome}">Penna rossa</a>
+			</li>
+		</ul>
+		<ul>
+		<div th:unless="${giorni}" id="programma"> 
+		<li> Non ci sono ancora giorni per questo itinerario</li>
+	</div>
+        </div>
     </section>
    		</div>
     	<div th:unless="${itinerario}" id="programma"> Questo itinerario non esiste</div>
     </div>
 
-    <section id="programma">
-        <div class="top">
-            <h2> Programma </h2>
-        </div>
-        <div class="elenco">
-            <ul>
-                <li>
-                    <a href="giorno"> Giorno 1: </a> La bellezza di
-                    <p>
-                    	<a href="monumento"> Monumento </a>
-                    </p>
-					
-                </li>
-                <li>
-                    <a href="giorno"> Giorno 2: </a> Luci di
-
-                </li>
-                <li>
-                    <a href="giorno"> Giorno 3: </a> Visita al
-
-                </li>
-            </ul>
-        </div>
-    </section>
+   
     
     <footer th:replace="fragments/base.html :: fondo"></footer>
 </body>

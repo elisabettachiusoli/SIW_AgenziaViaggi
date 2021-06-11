@@ -4,7 +4,7 @@
 	<header th:replace="fragments/base.html :: intestazione"></header>
 	<div>
 		<ul>
-			<li th:each="itinerario : ${itinerari}">
+			<li th:each="itinerario.giorni : ${giorni}">
 				<a href="itinerario.html" 
 				   th:href="@{'/itinerario' + '/' + ${itinerario.id}}" 
 				   th:text="${itinerario.nome}">Penna rossa</a>
