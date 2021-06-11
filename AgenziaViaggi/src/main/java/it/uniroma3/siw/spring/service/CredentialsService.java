@@ -15,7 +15,8 @@ import it.uniroma3.siw.spring.repository.CredentialsRepository;
 @Service
 public class CredentialsService {
 	
-   
+    @Autowired
+    protected PasswordEncoder passwordEncoder;
 	@Autowired
 	protected CredentialsRepository credentialsRepository;
 	
@@ -23,7 +24,7 @@ public class CredentialsService {
 	public Credentials getCredentials(Long id) {
 		Optional<Credentials> result = this.credentialsRepository.findById(id);
 		return result.orElse(null);
-	} 
+	}
 
 	@Transactional
 	public Credentials getCredentials(String username) {
@@ -34,6 +35,7 @@ public class CredentialsService {
     @Transactional
     public Credentials salvaCredenziali(Credentials credentials) {
         credentials.setRole(Credentials.DEFAULT_ROLE);
+        credentials.setPassword(this.passwordEncoder.encode(credentials.getPassword()));
         return this.credentialsRepository.save(credentials);
     }
 

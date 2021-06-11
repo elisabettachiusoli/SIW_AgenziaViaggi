@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+     <link rel=icon th:href="@{image/logo.jpg}" >
+    <title>Admin Home</title>
+   <link rel="stylesheet" th:href="@{css/index.css}">
+   <link th:href="@{css/base.css}" rel="stylesheet">
+   <link th:href="@{css/home.css}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,100&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header th:replace="fragments/base.html :: intestazione"></header>
+    <section>
+    <div>
+     <img  th:src="@{image/logo.jpg}" height="600" width="515" align="top" hspace="450" >
+    	<h2 align="center">Congratulazioni, il tuo Login è avvenuto con successo! </br>
+    	Ora puoi visionare e modificare i contenuti del sito </h2>
+    </div>
+    </section> 
+    <section id="el"> 
+<ul class="elenco">
+<li><a href="inserisciItinerario" th:style="'color:black'">Inserisci Itinerario</a></li>
+<li><a href="inserisciGuida" th:style="'color:black'">Inserisci Guida</a></li>
+<li><a href="inserisciGiorno" th:style="'color:black'">Inserisci Giorno</a></li>
+<li><a href="inserisciMonumento" th:style="'color:black'">Inserisci Monumento</a></li>
+<li><a href="rimuoviItinerario" th:style="'color:black'">Rimuovi Itinerario</a></li>
+<li><a href="rimuoviGuida" th:style="'color:black'">Rimuovi Guida</a></li>
+<li><a href="rimuoviGiorno" th:style="'color:black'">Rimuovi Giorno</a></li>
+<li><a href="rimuoviMonumento" th:style="'color:black'">Rimuovi Monumento</a></li>
+</ul>
+    </section>
+    <footer></footer>
+</body>
+</html>

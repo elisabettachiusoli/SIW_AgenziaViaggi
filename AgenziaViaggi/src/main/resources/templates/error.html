@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <style>div {
+		background-color:darkred;
+	  }</style>
+   </head>
+   
+   <h1>Errore!</h1>
+   <div class="errorPage">
+      <br />
+      <p>
+		Sembra che ci sia un problema con la pagina richiesta
+(
+         <span th:text="${path}" />
+         ).
+      </p>
+      <p th:text="${'Details: ' + message}" />
+      <p th:text="${'Status: ' + status}" />
+   </div>
+</html>

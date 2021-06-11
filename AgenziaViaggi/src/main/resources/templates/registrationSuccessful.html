@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+     <link rel=icon th:href="@{image/logo.jpg}" >
+    <title>Registrazione avvenuta con successo</title>
+   <link rel="stylesheet" th:href="@{css/index.css}">
+   <link th:href="@{css/base.css}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,100&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header th:replace="fragments/base.html :: intestazione"></header>
+    <section>
+    <div>
+     <img  th:src="@{image/logo.jpg}" height="600" width="515" align="top" hspace="430" >
+    	<h4 align="center">Registrazione</h4>
+		<h1 align="center">Congratulazioni ti sei registrato!</h1>
+    </div>
+ 
+    <footer></footer>
+</body>
+</html>

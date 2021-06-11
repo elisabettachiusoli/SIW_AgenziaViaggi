@@ -12,10 +12,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import it.uniroma3.siw.spring.model.Cliente;
 import it.uniroma3.siw.spring.model.Credentials;
 import it.uniroma3.siw.spring.model.User;
-import it.uniroma3.siw.spring.repository.CredentialsRepository;
 import it.uniroma3.siw.spring.service.CredentialsService;
 
 @Controller
@@ -23,8 +21,7 @@ public class AuthenticationController {
 
 	@Autowired
 	private CredentialsService credentialsService;
-	@Autowired
-	private CredentialsRepository credentialsRepository;
+
 	
 	@Autowired
 	private UserValidator userValidator;
@@ -42,16 +39,21 @@ public class AuthenticationController {
 	    public String getLogin(Model model) {
 	        return "loginForm.html";
 	    }
-	  @RequestMapping(value = "/default", method = RequestMethod.GET)
-	    public String defaultAfterLogin(Model model) {
-	        
-		  UserDetails userDetails = (UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-	    	Credentials credentials = credentialsService.getCredentials(userDetails.getUsername());
-	    	if (credentials.getRole().equals(Credentials.ADMIN_ROLE)) {
-	            return "index.html";
-	        }
-	        return "index.html";
-	    }
+		@RequestMapping(value = "/logout", method = RequestMethod.GET) 
+		public String logout(Model model) {
+			return "index";
+		}
+		
+		 @RequestMapping(value = "/default", method = RequestMethod.GET)
+		    public String defaultAfterLogin(Model model) {
+		        
+		    	UserDetails userDetails = (UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		    	Credentials credentials = credentialsService.getCredentials(userDetails.getUsername());
+		    	if (credentials.getRole().equals(Credentials.ADMIN_ROLE)) {
+		            return "admin/home";
+		        }
+		        return "home";
+		    }
 
 	  @RequestMapping(value = { "/register" }, method = RequestMethod.POST)
 	    public String registerUser(@ModelAttribute("user") User user,
@@ -70,9 +72,9 @@ public class AuthenticationController {
 	            // this also stores the User, thanks to Cascade.ALL policy
 	            credentials.setUser(user);
 	            credentialsService.salvaCredenziali(credentials);
-	            return "index.html";
+	            return "registrationSuccessful";
 	        }
-	        return "register.html";
-	    }
+	        return "register";
+	}
 	
 }

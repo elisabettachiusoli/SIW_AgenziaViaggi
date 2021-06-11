@@ -70,6 +70,10 @@ public class ItinerarioController {
 	    public String getInfo() {
 	        return "informazioni.html";
 	    }
+	   @RequestMapping(value={"/home"}, method = RequestMethod.GET)
+	    public String home(Model model) {
+	        return "home";
+	    }
 	 
 
 }
