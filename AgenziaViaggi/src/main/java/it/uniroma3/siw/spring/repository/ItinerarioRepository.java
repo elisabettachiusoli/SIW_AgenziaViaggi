@@ -9,4 +9,6 @@ import it.uniroma3.siw.spring.model.Itinerario;
 public interface ItinerarioRepository extends CrudRepository<Itinerario, Long> {
 
 	public List<Itinerario> findByNome(String nome);
+	
+	public List<Itinerario> findByNomeAndDestinazione(String nome, String destinazione);
 }

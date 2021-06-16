@@ -23,30 +23,18 @@ public class Itinerario {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	
-	@Getter
-	@Setter
 	private String nome;
-	@Getter
-	@Setter
+
 	private String destinazione;
-	
-	@Getter
-	@Setter
+
 	private String descrizione;
-	
-	@Getter
-	@Setter
+
 	private LocalDate dataInizio;
-	@Getter
-	@Setter
+
 	private LocalDate dataFine;
-	
-	@Getter
-	@Setter
+
 	private LocalDate scadenzaPrenotazione;
 	
-	@Getter
-	@Setter
 	private int costoTotale;
 	
 	@OneToMany(mappedBy="itinerario")

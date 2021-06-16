@@ -42,11 +42,7 @@ public class MainController {
 	        }
 	        return "form.html";
 	    }
-  
-	   @RequestMapping(value="/guida", method = RequestMethod.GET)
-	    public String getGuida() {
-	        return "guida.html";
-	    }
+ 
 	   
 	   @RequestMapping(value="/monumento", method = RequestMethod.GET)
 	    public String getMonumento() {
@@ -57,10 +53,7 @@ public class MainController {
 	    public String getGiorno() {
 	        return "giorno.html";
 	    }
-	   @RequestMapping(value="/guideTeam", method = RequestMethod.GET)
-	    public String getGuide() {
-	        return "guideTeam.html";
-	    }
+
 	   @RequestMapping(value="/informazioni", method = RequestMethod.GET)
 	    public String getInfo() {
 	        return "informazioni.html";

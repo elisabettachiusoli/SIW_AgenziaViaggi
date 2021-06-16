@@ -26,6 +26,11 @@ public class ItinerarioService {
 	public List<Itinerario> tutti() {
 		return (List<Itinerario>) itinerarioRepository.findAll();
 	}
+	
+	@Transactional
+	public List<Itinerario> guidePerNomeEDestinazione(String nome, String destinazione) {
+		return itinerarioRepository.findByNomeAndDestinazione(nome, destinazione);
+	}
 
 	@Transactional
 	public Itinerario itinerarioPerId(Long id) {
@@ -38,8 +43,8 @@ public class ItinerarioService {
 
 	@Transactional
 	public boolean alreadyExists(Itinerario itinerario) {
-		List<Itinerario> prodotti = this.itinerarioRepository.findByNome(itinerario.getNome());
-		if (prodotti.size() > 0)
+		List<Itinerario> itinerari = this.itinerarioRepository.findByNome(itinerario.getNome());
+		if (itinerari.size() > 0)
 			return true;
 		else 
 			return false;

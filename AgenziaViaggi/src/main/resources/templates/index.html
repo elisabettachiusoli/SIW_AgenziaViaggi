@@ -12,6 +12,8 @@
     <!-- riferimento al foglio di stile css chiamato stile in stili relativo a tutto il progetto -->
     <link  th:href="@{css/index.css}"  rel="stylesheet"/>
     <link th:href="@{css/base.css}" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,100&display=swap" rel="stylesheet">
 </head>
 <body>
 <header th:replace="fragments/base.html :: intestazione"></header>
@@ -55,9 +57,9 @@
         <!-- l'immagine una � sopra -->
         <img th:src="@{image/berlino.jpg}" width="1471px" height="500px" align="top" />
         <!-- le altre tre immagini sono allineate, senza spazi l'una dall'altra -->
-        <img th:src="@{image/parigi.jpg}" width="460px" height="230px" align="left" hspace="0" />
+        <img th:src="@{image/parigi.jpg}" width="466px" height="230px" align="left" hspace="0" />
         <img th:src="@{image/siviglia.jpg}" width="585px" height="230px" align="left" hspace="0" />
-        <img th:src="@{image/edimburgo.jpg}" width="426px" height="230px" align="left" hspace="0" />
+        <img th:src="@{image/edimburgo.jpg}" width="466px" height="230px" align="left" hspace="0" />
 
     </section>
 

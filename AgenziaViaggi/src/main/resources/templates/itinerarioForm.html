@@ -4,20 +4,12 @@
 <body>
 	<header th:replace="fragments/base.html :: intestazione"></header>
 	<div>
-		<h4>Inserisci i dati di un prodotto</h4>
-		<div>
-		d
-		</div>
-		d
-		<div>
-		d
-		</div>
-		<div>
-		d
-		</div>
+		<h4>Inserisci i dati di un itinerario</h4>
 	</div>
-	<form th:action="@{/itinerarioForm}" method="POST" th:object="${itinerario}">	
-		
+	<form th:action="@{/admin/itinerario}" method="POST" th:object="${itinerario}">
+		<div th:if="${#fields.hasGlobalErrors()}">
+  			<p th:each="err : ${#fields.globalErrors()}" th:text="${err}">...</p>
+		</div>
 		<div>
 			<div>
 				<span>Nome:</span>

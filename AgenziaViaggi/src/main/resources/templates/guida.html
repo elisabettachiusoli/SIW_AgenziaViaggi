@@ -23,7 +23,10 @@
                 <img  th:src="@{image/guida.png}"height="600">
             </div>
             <div class="box-text">
-                <h1 th:text="*{nome}" + "*{cognome}">Matteo Rossi</h1>
+            	<div th:if="${guida}" th:object="${guida}">
+	                <h1 th:text="*{nome}">Matteo</h1>
+	                <h1 th:text="*{cognome}">Rossi</h1>
+            	</div>
                 <h2>Informazioni</h2>
                 <div class="info">
                     <div class="dati">

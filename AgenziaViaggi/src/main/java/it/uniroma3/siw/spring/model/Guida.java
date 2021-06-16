@@ -19,24 +19,14 @@ public class Guida {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	
-	@Getter
-	@Setter
 	private String nome;
-	
-	@Getter
-	@Setter
+
 	private String cognome;
 	
-	@Getter
-	@Setter
 	private int numeroDiTelefono;
-	
-	@Getter
-	@Setter
+
 	private String email;
 	
-	@Getter
-	@Setter
 	private int matricola;
 	
 	@OneToMany(mappedBy="guida")
@@ -44,6 +34,62 @@ public class Guida {
 	
 	public Guida() {
 		this.itinerari=new ArrayList<>();
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getCognome() {
+		return cognome;
+	}
+
+	public void setCognome(String cognome) {
+		this.cognome = cognome;
+	}
+
+	public int getNumeroDiTelefono() {
+		return numeroDiTelefono;
+	}
+
+	public void setNumeroDiTelefono(int numeroDiTelefono) {
+		this.numeroDiTelefono = numeroDiTelefono;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public int getMatricola() {
+		return matricola;
+	}
+
+	public void setMatricola(int matricola) {
+		this.matricola = matricola;
+	}
+
+	public List<Itinerario> getItinerari() {
+		return itinerari;
+	}
+
+	public void setItinerari(List<Itinerario> itinerari) {
+		this.itinerari = itinerari;
 	}
 
 }

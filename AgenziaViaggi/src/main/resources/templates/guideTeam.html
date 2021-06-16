@@ -27,7 +27,11 @@
     <div class="column">
         <div class="card">
             <img id="img" th:src="@{image/avatar3.png}" alt="">
-            <h2><a href="guida"> Matteo Rossi </a></h2>
+            <ul>
+	            <li th:each="guida: ${guida}">
+	            	<a href="guida.html" th:href="@{'/guida' + '/' + ${guida.id}}" th:text="|${guida.nome} ${guida.cognome}|"> Matteo Rossi </a>
+	            </li>
+            </ul>
             <p class="title">Guida Turistica</p>
             <p>Breve descrizione</p>
         </div>

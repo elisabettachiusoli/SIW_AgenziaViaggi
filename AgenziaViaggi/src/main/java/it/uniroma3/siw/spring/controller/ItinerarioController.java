@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-
 import it.uniroma3.siw.spring.model.Itinerario;
 import it.uniroma3.siw.spring.service.ItinerarioService;
 
@@ -18,11 +17,11 @@ public class ItinerarioController {
 	@Autowired
 	private ItinerarioService itinerarioService;
 	
-   // @Autowired
-    //private ItinerarioValidator itinerarioValidator;
+    @Autowired
+    private ItinerarioValidator itinerarioValidator;
         
-    @RequestMapping(value="/itinerarioForm1", method = RequestMethod.GET)
-    public String addProdotto(Model model) {
+    @RequestMapping(value="/admin/itinerario", method = RequestMethod.GET)
+    public String addItinerario(Model model) {
     	model.addAttribute("itinerario", new Itinerario());
         return "itinerarioForm";
     }
@@ -34,20 +33,20 @@ public class ItinerarioController {
     }
 
     @RequestMapping(value = "/itinerario", method = RequestMethod.GET)
-    public String getItinerari(Model model) {
+    public String getItinerario(Model model) {
     		model.addAttribute("itinerari", this.itinerarioService.tutti());
-    		return "itinerari.html";
+    		return "itinerari";
     }
     
-    @RequestMapping(value = "/itinerarioForm", method = RequestMethod.POST)
-    public String addProdotto(@ModelAttribute("itinerario") Itinerario itinerario, 
+    @RequestMapping(value = "/admin/itinerario", method = RequestMethod.POST)
+    public String addItinerario(@ModelAttribute("itinerario") Itinerario itinerario, 
     									Model model, BindingResult bindingResult) {
-    	//this.prodottoValidator.validate(prodotto, bindingResult);
+    	this.itinerarioValidator.validate(itinerario, bindingResult);
         if (!bindingResult.hasErrors()) {
         	this.itinerarioService.inserisci(itinerario);
             model.addAttribute("itinerari", this.itinerarioService.tutti());
-            return "itinerari.html";
+            return "itinerari";
         }
-        return "itinerarioForm.html";
+        return "itinerarioForm";
     }
 }
