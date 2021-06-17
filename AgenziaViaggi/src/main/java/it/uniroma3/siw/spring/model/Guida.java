@@ -88,8 +88,8 @@ public class Guida {
 		return itinerari;
 	}
 
-	public void setItinerari(List<Itinerario> itinerari) {
-		this.itinerari = itinerari;
+	public void setItinerari(Itinerario itinerario1) {
+		this.itinerari.add(itinerario1);
 	}
 
 }

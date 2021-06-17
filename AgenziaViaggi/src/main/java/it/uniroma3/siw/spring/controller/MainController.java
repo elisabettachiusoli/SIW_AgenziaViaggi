@@ -44,16 +44,7 @@ public class MainController {
 	    }
  
 	   
-	   @RequestMapping(value="/monumento", method = RequestMethod.GET)
-	    public String getMonumento() {
-	    	
-	        return "monumento.html";
-	    }
-	   @RequestMapping(value="/giorno", method = RequestMethod.GET)
-	    public String getGiorno() {
-	        return "giorno.html";
-	    }
-
+	   
 	   @RequestMapping(value="/informazioni", method = RequestMethod.GET)
 	    public String getInfo() {
 	        return "informazioni.html";

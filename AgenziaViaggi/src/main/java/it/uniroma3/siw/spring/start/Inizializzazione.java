@@ -1,13 +1,24 @@
 package it.uniroma3.siw.spring.start;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
 import it.uniroma3.siw.spring.model.Credentials;
+import it.uniroma3.siw.spring.model.Giorno;
+import it.uniroma3.siw.spring.model.Guida;
+import it.uniroma3.siw.spring.model.Itinerario;
+import it.uniroma3.siw.spring.model.Monumento;
 import it.uniroma3.siw.spring.model.User;
 import it.uniroma3.siw.spring.service.CredentialsService;
+import it.uniroma3.siw.spring.service.GiornoService;
+import it.uniroma3.siw.spring.service.GuidaService;
+import it.uniroma3.siw.spring.service.ItinerarioService;
+import it.uniroma3.siw.spring.service.MonumentoService;
 import it.uniroma3.siw.spring.service.UserService;
 
 @Component
@@ -17,6 +28,17 @@ public class Inizializzazione implements ApplicationListener<ContextRefreshedEve
 	
 	@Autowired
 	private CredentialsService credentialService;
+	
+	@Autowired
+	private ItinerarioService itinerarioService;
+	
+	@Autowired
+	private GiornoService giornoService;
+	
+	@Autowired
+	private MonumentoService monumentoService;
+	@Autowired
+	private GuidaService guidaService;
 	
 	@Override
 	public void onApplicationEvent(ContextRefreshedEvent event) {
@@ -43,5 +65,59 @@ public class Inizializzazione implements ApplicationListener<ContextRefreshedEve
 		credentials2.setRole("DEFAULT");
 		credentials2.setUser(user2);
 		credentialService.saveCredentials2(credentials2);
+		
+		Giorno giorno1 = new Giorno();
+		giornoService.inserisci(giorno1);
+		
+		Monumento monumento1= new Monumento();
+		monumento1.setAnno(1999);
+		monumento1.setDescrizione("Nel complesso l’Isola dei musei di Berlino è una grandiosa opera d’arte: cinque musei di fama mondiale dell’epoca prussiana, con l’aggiunta della moderna James-Simon-Galerie, formano una straordinaria area museale");
+		monumento1.setGiorno(giorno1);
+		monumento1.setLuogo("BodestraBe 1-3, 10178 Berlin, Germania");
+		monumento1.setTitolo("L'isola dei musei");
+		monumento1.setOrario(10-18 );
+		monumento1.setPrezzoBiglietto(18);
+		monumentoService.inserisci(monumento1);
+		
+		Monumento monumento2= new Monumento();
+		monumento2.setAnno(1791);
+		monumento2.setDescrizione("È il monumento più famoso di Berlino ed è conosciuto in tutto il mondo come simbolo della città stessa e dell’intera Germania.");
+	    monumento2.setGiorno(giorno1);
+		monumento2.setLuogo("Pariser Platz");
+		monumento2.setTitolo("Porta di Brandeburgo");
+		monumentoService.inserisci(monumento2);
+		
+		Itinerario itinerario1= new Itinerario();
+		itinerario1.setCostoTotale(400);
+		Date date=new Date(13,07, 2021);
+		Date date2= new Date(20,07, 2021);
+		itinerario1.setDataFine(date2);
+		itinerario1.setDataInizio(date);
+		itinerario1.setScadenzaPrenotazione(date2);
+		itinerario1.setDestinazione("Berlino");
+		itinerario1.setGiorno(giorno1);
+		itinerario1.setNome("A spasso per Berlino");
+		itinerario1.setDescrizione("Un nuovissimo itinerario alla scoperta dei più bei monumenti di Berlino");
+		itinerarioService.inserisci(itinerario1);
+		
+		giorno1.setCostoGiornata(40);
+		giorno1.setDescrizione("Restaurant Maximilians Berlin, FriedrichstraBe 185-190 ");
+		giorno1.setDurata(3);
+		giorno1.setItinerario(itinerario1);
+		giorno1.setNumeroGiornoDiVisita(1);
+		giorno1.setZona("quartiere Museumsinsel e Mitte");
+		giorno1.setMonumento(monumento1);
+		giorno1.setMonumento(monumento2);
+		giornoService.inserisci(giorno1);
+		
+		Guida guida1=new Guida();
+		guida1.setCognome("Rossi");
+		guida1.setNome("Matteo");
+		guida1.setEmail("matteo.rossi@gmail.com");
+		guida1.setItinerari(itinerario1);
+		guida1.setMatricola(0526);
+		guida1.setNumeroDiTelefono(33947);
+		guidaService.inserisci(guida1);
+		
 	}
 }

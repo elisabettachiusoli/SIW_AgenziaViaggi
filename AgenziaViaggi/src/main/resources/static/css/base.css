@@ -8,7 +8,7 @@ header nav {
     padding: 10px 90px;
     box-sizing: border-box;
     background: rgba(0,0,0,0.4);
-    z-index:1;
+    z-index:5;
 }
 /* Stile per la barra principale. Il colore � il celestino, con la scritta nera*/
    header nav .titolo {
@@ -43,20 +43,20 @@ footer .contact {
     background-color:black;
 	 border-top: solid 2px;
     border-color: white;
-    z-index:2;
+    z-index:6;
 }
 
 footer .contact-map {
     width:100%;
     height:auto;
     flex:50%;
-     z-index:2;
+     z-index:6;
 }
 
 footer .contact-map iframe {
     width: 100%;
     height: 100%;
-     z-index:2;
+     z-index:6;
 }
 
 footer .contact-info {
@@ -64,13 +64,13 @@ footer .contact-info {
     height: auto;
     flex: 50%;
     text-align:center;
-    z-index:2;
+    z-index:6;
 }
 
 footer .contact-info h1 {
     margin-bottom:10px;
     color:white;
-    z-index:2;
+    z-index:6;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -82,7 +82,7 @@ footer .d {
     color: white;
     text-align:left;
     font-size: 40px;
-    z-index:2;
+    z-index:6;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -98,5 +98,5 @@ footer .dati p {
 
 footer .logo {
     margin-right:10px;
-    z-index:2;
+    z-index:6;
 }

@@ -29,6 +29,7 @@ public class ItinerarioController {
     @RequestMapping(value = "/itinerario/{id}", method = RequestMethod.GET)
     public String getItinerario(@PathVariable("id") Long id, Model model) {
     	model.addAttribute("itinerario", this.itinerarioService.itinerarioPerId(id));
+    	model.addAttribute("giorni",  this.itinerarioService.itinerarioPerId(id).getGiorno());
     	return "itinerario";
     }
 

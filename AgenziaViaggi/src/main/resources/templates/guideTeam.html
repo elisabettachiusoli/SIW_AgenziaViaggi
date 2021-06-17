@@ -18,13 +18,13 @@
     <div class="column">
         <div class="card">
             <img id="img" th:src="@{image/avatar3.png}" alt="">
-            <ul>
-	            <li th:each="guida: ${guida}">
+            <div>
+            <ul class="title">
+	            <li  th:style="'list-style:none'" th:each="guida: ${guida}">
 	            	<a href="guida.html" th:href="@{'/guida' + '/' + ${guida.id}}" th:text="${guida.nome} + ' ' + ${guida.cognome}"> Matteo Rossi </a>
 	            </li>
             </ul>
-            <p class="title">Guida Turistica</p>
-            <p>Breve descrizione</p>
+            </div>
         </div>
     </div>   
     <footer th:replace="fragments/base.html :: fondo"></footer>

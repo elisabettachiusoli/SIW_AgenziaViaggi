@@ -5,7 +5,7 @@
 <meta charset="UTF-8" />
     
      <!-- logo -->
-    <link rel=icon th:href="@{image/logo.jpg}" >
+    <link rel=icon th:href="@{/image/logo.jpg}" >
     <!-- titolo mostrato per la pagina dell'itinerario -->
     <title> Itinerario </title>
     <!-- riferimento al foglio di stile css chiamato stile in stili relativo a tutto il progetto -->
@@ -25,10 +25,10 @@
     </div>
     </section>
   <section id="icona">
-        <img th:src="@{/image/calendar.png}" width="50px" height="50px" hspace="15px" />  <span th:date="*{dataInizio}" > Dal 20 luglio al 23 giugno </span>
-        <img th:src="@{/image/finePrenotazione.png}" width="50px" height="50px" hspace="15px" />  <span th:date="*{scadenzaPrenotazione}">Prenotazioni fino al 23 giugno </span> 
+        <img th:src="@{/image/calendar.png}" width="50px" height="50px" hspace="15px" />  <span th:text=" 'Dal ' +*{dataInizio}+ ' al ' + *{dataFine}"> Dal 20 luglio al 23 luglio </span>
+        <img th:src="@{/image/finePrenotazione.png}" width="50px" height="50px" hspace="15px" />  <span th:text="*{scadenzaPrenotazione}">Prenotazioni fino al 23 giugno </span> 
         <!-- rif <img th:src="@{image/guidaIcona.png}" width="50px" height="50px" hspace="15px" /> <a th:href="guida/*{guida_id}"> Guida</a> -->
-        <img th:src="@{/image/money.png}" width="50px" height="50px" hspace="15px" />  <span th:int="*{costoTotale}"> 500£ </span>
+        <img th:src="@{/image/money.png}" width="50px" height="50px" hspace="15px" />  <span th:text="*{costoTotale} + ' euro'"> 500£ </span>
 
 
     </section>
@@ -45,10 +45,10 @@
         </div>
         <div class="elenco">
 		<ul>
-			<li th:each="itinerario.giorni : ${giorni}">
+			<li th:each="giorno : ${giorni}">
 				<a href="giorno.html" 
 				   th:href="@{'/giorno' + '/' + ${giorno.id}}" 
-				   th:text= "Giorno" + "${giorno.nome}">Penna rossa</a>
+				   th:text= "Giorno + ' ' + ${giorno.numeroGiornoDiVisita}"> Giorno</a>
 			</li>
 		</ul>
 		<ul>

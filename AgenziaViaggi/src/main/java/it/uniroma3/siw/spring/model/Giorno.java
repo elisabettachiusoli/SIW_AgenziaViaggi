@@ -20,22 +20,18 @@ public class Giorno {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	
-	@Getter
-	@Setter
+
 	private int numeroGiornoDiVisita;
 	
-	@Getter
-	@Setter
+
 	private String zona;
 	
 	private String descrizione;
 	
-	@Getter
-	@Setter
+
 	private int costoGiornata;
 	
-	@Getter
-	@Setter
+
 	private int durata;
 	
 	@ManyToOne
@@ -47,5 +43,62 @@ public class Giorno {
 	
 	public Giorno() {
 		this.monumenti=new ArrayList<>();
+	}
+
+	public Long getId() {
+		return id;
+	}
+	public String getDescrizione() {
+		return descrizione;
+	}
+
+	public void setDescrizione(String descrizione) {
+		this.descrizione = descrizione;
+	}
+
+	public int getNumeroGiornoDiVisita() {
+		return numeroGiornoDiVisita;
+	}
+
+	public void setNumeroGiornoDiVisita(int numeroGiornoDiVisita) {
+		this.numeroGiornoDiVisita = numeroGiornoDiVisita;
+	}
+
+	public int getDurata() {
+		return durata;
+	}
+
+	public void setDurata(int durata) {
+		this.durata = durata;
+	}
+
+	public int getCostoGiornata() {
+		return costoGiornata;
+	}
+
+	public void setCostoGiornata(int costoGiornata) {
+		this.costoGiornata = costoGiornata;
+	}
+
+	public String getZona() {
+		return zona;
+	}
+
+	public void setZona(String zona) {
+		this.zona = zona;
+	}
+	public Itinerario getItinerario() {
+		return itinerario;
+	}
+
+	public void setItinerario(Itinerario itinerario) {
+		this.itinerario = itinerario;
+	}
+	public List<Monumento> getMonumento() {
+		return monumenti;
+	}
+
+	public void setMonumento(Monumento monumento) {
+		this.monumenti.add(monumento);
 	}
 }

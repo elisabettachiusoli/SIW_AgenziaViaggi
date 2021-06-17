@@ -4,7 +4,7 @@
 
 <head th:fragment="headerfiles(title)">
 	<meta charset="UTF-8" />
-	<link th:href="@{css/base.css}" rel="stylesheet">
+	<link th:href="@{/css/base.css}" rel="stylesheet">
 	<title th:text="${title}"></title>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,100&display=swap" rel="stylesheet">
 </head>
@@ -21,7 +21,7 @@
         <ul>
              <li>
                 <!-- collegamento ipertestuale alla pagina itinerari -->
-                <a th:href href="@{/}">Home</a>
+                <a th:href href="@{/index}">Home</a>
             </li>
             <li>
                 <!-- collegamento ipertestuale alla home --> 

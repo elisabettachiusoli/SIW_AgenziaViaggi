@@ -3,6 +3,7 @@ package it.uniroma3.siw.spring.model;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -29,11 +30,11 @@ public class Itinerario {
 
 	private String descrizione;
 
-	private LocalDate dataInizio;
+	private Date dataInizio;
 
-	private LocalDate dataFine;
+	private Date dataFine;
 
-	private LocalDate scadenzaPrenotazione;
+	private Date scadenzaPrenotazione;
 	
 	private int costoTotale;
 	
@@ -80,21 +81,21 @@ public class Itinerario {
 		this.destinazione = destinazione;
 	}
 	
-	public LocalDate getDataInizio() {
+	public Date getDataInizio() {
 		return dataInizio;
 	}
 	
-	public void setDataInizio(LocalDate dataInizio) {
-		this.dataInizio = dataInizio;
+	public void setDataInizio(Date date) {
+		this.dataInizio = date;
 	}
-	public LocalDate getDataFine() {
+	public Date getDataFine() {
 		return dataFine;
 	}
 	
-	public void setDataFine(LocalDate dataFine) {
+	public void setDataFine(Date dataFine) {
 		this.dataFine = dataFine;
 	}
-	public LocalDate getScadenzaPrenotazione() {
+	public Date getScadenzaPrenotazione() {
 		return scadenzaPrenotazione;
 	}
 	
@@ -105,7 +106,7 @@ public class Itinerario {
 		return costoTotale;
 	}
 	
-	public void setScadenzaPrenotazione(LocalDate scadenzaPrenotazione) {
+	public void setScadenzaPrenotazione(Date scadenzaPrenotazione) {
 		this.scadenzaPrenotazione = scadenzaPrenotazione;
 	}
 	public List<Giorno> getGiorno() {

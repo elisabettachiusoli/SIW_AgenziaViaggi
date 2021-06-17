@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+  <!-- logo -->
+    <link rel=icon th:href="@{/image/logo.jpg}" >
+    <!-- titolo mostrato per la pagina dell'itinerario -->
+    <title> Itinerario </title>
+    <!-- riferimento al foglio di stile css chiamato stile in stili relativo a tutto il progetto -->
+    <link rel="stylesheet" th:href="@{/css/itinerario.css}" />
+    <link th:href="@{/css/base.css}" rel="stylesheet">
+</head>
 <body>
 	<header th:replace="fragments/base.html :: intestazione"></header>
+	<div>  <img th:src="@{/image/sfondoMappa.png}" width="1500px" height="500px">
+	</div>
 	<div>
 		<ul>
-			<li th:each="itinerario.giorni : ${giorni}">
+			<li th:each="itinerario : ${itinerario}">
 				<a href="itinerario.html" 
 				   th:href="@{'/itinerario' + '/' + ${itinerario.id}}" 
 				   th:text="${itinerario.nome}">Berlino</a>
