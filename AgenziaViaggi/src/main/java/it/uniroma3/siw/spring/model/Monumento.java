@@ -23,6 +23,8 @@ public class Monumento {
 	private int orario;
 
 	private String luogo;
+	
+	private String file;
 
 	private int prezzoBiglietto;
 	
@@ -37,11 +39,6 @@ public class Monumento {
 
 	public Long getId() {
 		return id;
-	}
-
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 
@@ -112,5 +109,15 @@ public class Monumento {
 
 	public void setGiorno(Giorno giorno) {
 		this.giorno = giorno;
+	}
+
+
+	public String getFile() {
+		return file;
+	}
+
+
+	public void setFile(String file) {
+		this.file = file;
 	}
 }

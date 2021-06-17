@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width">
      <!-- logo -->
     <link rel=icon th:href="@{/image/logo.jpg}" >
-    <title>Isola dei Musei</title>
+    <title>Monumento</title>
     <link rel="stylesheet" th:href="@{/css/monumento.css}">
     <link th:href="@{/css/base.css}" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -14,7 +14,7 @@
 	<header th:replace="fragments/base.html :: intestazione"></header>
       <div th:if="${monumento}" th:object="${monumento}" >
    <section id="sezione">
-    <img th:src="@{/image/isolaMusei.jpg}" width="500" height="300" hspace="3" align="left" />
+    <img th:src="@{*{file}}" width="500" height="300" hspace="3" align="left" />
     <section id="titolo" >
         <h1 class="nome" th:text="*{titolo}">Isola dei Musei</h1>
         <div>

@@ -5,17 +5,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
      <!-- logo -->
-    <link rel=icon th:href="@{image/logo.jpg}" >
+    <link rel=icon th:href="@{/image/logo.jpg}" >
     <title>Giorno</title>
-    <link rel="stylesheet" th:href="@{css/giorno.css}">
-    <link th:href="@{css/base.css}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/giorno.css}">
+    <link th:href="@{/css/base.css}" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 <body>
 <header th:replace="fragments/base.html :: intestazione"></header>
 <div th:if="${giorno}" th:object="${giorno}" >
     <section id="titolo">
-       <h1 th:int=" "Giorno" + *{numeroGiornoDiVisita}"> 1</h1>
+       <h1 th:text=" 'Giorno' + *{numeroGiornoDiVisita}"> </h1>
         <div>
             Alla scoperta di ...
         </div>
@@ -23,9 +23,9 @@
 
     <section id="icona">
     
-        <img th:src="@{image/luogo.png}"  width="45" height="50" hspace="15" /> <span th:text="*{zona}"> quartiere Museumsinsel e Mitte </span>
-        <img th:src="@{image/orario.png}"  width="50" height="50" hspace="15" /> <span th:text="*{durata} + "h"" > 3 </span> 
-        <img th:src="@{image/money.png}" width="50" height="50" hspace="15" /> <span th:text="*{costoGiornata} + "euro"" > 40 </span> 
+        <img th:src="@{/image/luogo.png}"  width="45" height="50" hspace="15" /> <span th:text="*{zona}"> quartiere Museumsinsel e Mitte </span>
+        <img th:src="@{/image/orario.png}"  width="45" height="50" hspace="15" /> <span th:text="*{durata} + 'h'" > 3 </span> 
+        <img th:src="@{/image/money.png}" width="45" height="50" hspace="15" /> <span th:text="*{costoGiornata} + ' euro'" > 40 </span> 
     </section>
 
     <section id="monumenti">
@@ -35,10 +35,10 @@
         </div>
         <div>
 		<ul>
-			<li th:each="giorno.monumenti : ${monumenti}">
+			<li th:each="monumento : ${monumenti}">
 				<a href="monumento.html" 
 				   th:href="@{'/monumento' + '/' + ${monumento.id}}" 
-				   th:text= "Monumento" + "${monumento.nome}">Monumento</a>
+				   th:text= "'Monumento '+ ${monumento.titolo}">Monumento</a>
 			</li>
 		</ul>
 		<ul>

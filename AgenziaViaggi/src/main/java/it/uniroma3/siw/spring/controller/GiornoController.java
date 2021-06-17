@@ -29,6 +29,7 @@ public class GiornoController {
     @RequestMapping(value = "/giorno/{id}", method = RequestMethod.GET)
     public String getGiorno(@PathVariable("id") Long id, Model model) {
     	model.addAttribute("giorno", this.giornoService.giornoPerId(id));
+    	model.addAttribute("monumenti", this.giornoService.giornoPerId(id).getMonumento());
     	return "giorno";
     }
 

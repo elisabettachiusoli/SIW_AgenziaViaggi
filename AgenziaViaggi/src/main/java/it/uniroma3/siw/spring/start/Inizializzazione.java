@@ -75,8 +75,9 @@ public class Inizializzazione implements ApplicationListener<ContextRefreshedEve
 		monumento1.setGiorno(giorno1);
 		monumento1.setLuogo("BodestraBe 1-3, 10178 Berlin, Germania");
 		monumento1.setTitolo("L'isola dei musei");
-		monumento1.setOrario(10-18 );
+		monumento1.setOrario(10);
 		monumento1.setPrezzoBiglietto(18);
+		monumento1.setFile("https://images.musement.com/cover/0050/79/berlin-museum-island-jpg_header-4978821.jpeg?q=50&fit=crop&auto=format&w=1024&h=400");
 		monumentoService.inserisci(monumento1);
 		
 		Monumento monumento2= new Monumento();
@@ -85,12 +86,13 @@ public class Inizializzazione implements ApplicationListener<ContextRefreshedEve
 	    monumento2.setGiorno(giorno1);
 		monumento2.setLuogo("Pariser Platz");
 		monumento2.setTitolo("Porta di Brandeburgo");
+		monumento2.setFile("https://mywowo.net/media/images/cache/berlino_porta_brandeburgo_01_presentazione_jpg_1200_630_cover_85.jpg");
 		monumentoService.inserisci(monumento2);
 		
 		Itinerario itinerario1= new Itinerario();
 		itinerario1.setCostoTotale(400);
-		Date date=new Date(13,07, 2021);
-		Date date2= new Date(20,07, 2021);
+		Date date=new Date(13-07-2021);
+		Date date2= new Date(20-07-2021);
 		itinerario1.setDataFine(date2);
 		itinerario1.setDataInizio(date);
 		itinerario1.setScadenzaPrenotazione(date2);
