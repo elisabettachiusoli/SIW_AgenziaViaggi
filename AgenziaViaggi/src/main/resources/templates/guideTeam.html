@@ -17,36 +17,16 @@
     <section>
     <div class="column">
         <div class="card">
-            <img id="img" th:src="@{image/avatar2.png}"  alt="">
-            <h2><a href="#">Camilla Moretti</a></h2>
-            <p class="title">Guida Turistica</p>
-            <p>Breve descrizione</p>
-        </div>
-    </div>
-
-    <div class="column">
-        <div class="card">
             <img id="img" th:src="@{image/avatar3.png}" alt="">
             <ul>
 	            <li th:each="guida: ${guida}">
-	            	<a href="guida.html" th:href="@{'/guida' + '/' + ${guida.id}}" th:text="|${guida.nome} ${guida.cognome}|"> Matteo Rossi </a>
+	            	<a href="guida.html" th:href="@{'/guida' + '/' + ${guida.id}}" th:text="${guida.nome} + ' ' + ${guida.cognome}"> Matteo Rossi </a>
 	            </li>
             </ul>
             <p class="title">Guida Turistica</p>
             <p>Breve descrizione</p>
         </div>
-    </div>
-
-    <div class="column">
-        <div class="card">
-            <img id="img" th:src="@{image/avatar1.png}" alt="">
-            <h2><a href="#">Alessandra Fiorentino</a></h2>
-            <p class="title">Guida Turistica</p>
-            <p>Breve descrizione</p>
-        </div>
-    </div>
-    </section>
-    
+    </div>   
     <footer th:replace="fragments/base.html :: fondo"></footer>
 </body>
 </html>

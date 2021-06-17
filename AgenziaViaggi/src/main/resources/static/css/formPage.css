@@ -3,6 +3,8 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding:0;
+    background-image: url("../image/sfondoMappa.png");
+    background-size: cover;
 }
 
 /* Stile per il form, generalit� per tutti: immagine del mare senza ripetizioni per tutto il blocco, bordi neri e scritte nere*/

@@ -1,6 +1,7 @@
 body {
-    background-color: #0a83b8;
     font-family: 'Roboto', sans-serif;
+    background-image: url("../image/sfondoMappa.png");
+    background-size: cover;
 }
 
 .column {
