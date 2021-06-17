@@ -20,7 +20,7 @@ public class ItinerarioController {
     @Autowired
     private ItinerarioValidator itinerarioValidator;
         
-    @RequestMapping(value="/admin/itinerario", method = RequestMethod.GET)
+    @RequestMapping(value="/admin/addItinerario", method = RequestMethod.GET)
     public String addItinerario(Model model) {
     	model.addAttribute("itinerario", new Itinerario());
         return "itinerarioForm";
@@ -32,9 +32,9 @@ public class ItinerarioController {
     	return "itinerario";
     }
 
-    @RequestMapping(value = "/itinerario", method = RequestMethod.GET)
-    public String getItinerario(Model model) {
-    		model.addAttribute("itinerari", this.itinerarioService.tutti());
+    @RequestMapping(value = "/itinerari", method = RequestMethod.GET)
+    public String getItinerari(Model model) {
+    		model.addAttribute("itinerario", this.itinerarioService.tutti());
     		return "itinerari";
     }
     
@@ -44,7 +44,7 @@ public class ItinerarioController {
     	this.itinerarioValidator.validate(itinerario, bindingResult);
         if (!bindingResult.hasErrors()) {
         	this.itinerarioService.inserisci(itinerario);
-            model.addAttribute("itinerari", this.itinerarioService.tutti());
+            model.addAttribute("itinerario", this.itinerarioService.tutti());
             return "itinerari";
         }
         return "itinerarioForm";

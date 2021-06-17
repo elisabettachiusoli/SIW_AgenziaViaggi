@@ -22,7 +22,7 @@ public class MonumentoController {
     @Autowired
     private MonumentoValidator monumentoValidator;
         
-    @RequestMapping(value="/admin/monumento", method = RequestMethod.GET)
+    @RequestMapping(value="/admin/addMonumento", method = RequestMethod.GET)
     public String addMonumento(Model model) {
     	model.addAttribute("monumento", new Monumento());
         return "monumentoForm";
@@ -36,7 +36,7 @@ public class MonumentoController {
 
     @RequestMapping(value = "/monumenti", method = RequestMethod.GET)
     public String getMonumenti(Model model) {
-    		model.addAttribute("monumenti", this.monumentoService.tutti());
+    		model.addAttribute("monumento", this.monumentoService.tutti());
     		return "monumenti";
     }
     
@@ -46,7 +46,7 @@ public class MonumentoController {
     	this.monumentoValidator.validate(monumento, bindingResult);
         if (!bindingResult.hasErrors()) {
         	this.monumentoService.inserisci(monumento);
-            model.addAttribute("monumenti", this.monumentoService.tutti());
+            model.addAttribute("monumento", this.monumentoService.tutti());
             return "monumenti";
         }
         return "monumentoForm";

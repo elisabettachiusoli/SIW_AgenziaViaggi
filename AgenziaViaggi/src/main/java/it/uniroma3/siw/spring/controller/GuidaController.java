@@ -21,7 +21,7 @@ public class GuidaController {
     @Autowired
     private GuidaValidator guidaValidator;
         
-    @RequestMapping(value="/admin/guida", method = RequestMethod.GET)
+    @RequestMapping(value="/admin/addGuida", method = RequestMethod.GET)
     public String addGuida(Model model) {
     	model.addAttribute("guida", new Guida());
         return "guidaForm";
@@ -35,7 +35,7 @@ public class GuidaController {
 
     @RequestMapping(value = "/guideTeam", method = RequestMethod.GET)
     public String getGuide(Model model) {
-    		model.addAttribute("guide", this.guidaService.tutti());
+    		model.addAttribute("guida", this.guidaService.tutti());
     		return "guideTeam";
     }
     
@@ -45,7 +45,7 @@ public class GuidaController {
     	this.guidaValidator.validate(guida, bindingResult);
         if (!bindingResult.hasErrors()) {
         	this.guidaService.inserisci(guida);
-            model.addAttribute("guide", this.guidaService.tutti());
+            model.addAttribute("guida", this.guidaService.tutti());
             return "guideTeam";
         }
         return "guidaForm";

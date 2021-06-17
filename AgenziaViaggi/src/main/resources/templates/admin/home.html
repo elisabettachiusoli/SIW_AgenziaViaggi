@@ -14,22 +14,22 @@
 	<header th:replace="fragments/base.html :: intestazione"></header>
     <section>
     <div>
-     <img  th:src="@{image/logo.jpg}" height="600" width="515" align="top" hspace="450" >
+     <img  th:src="@{image/logo.jpg}" height="610" width="565" align="top" hspace="450" >
     	<h2 align="center">Congratulazioni, il tuo Login è avvenuto con successo! </br>
     	Ora puoi visionare e modificare i contenuti del sito </h2>
     </div>
     </section> 
     <section id="el"> 
-<ul class="elenco">
-<li><a href="inserisciItinerario" th:style="'color:black'">Inserisci Itinerario</a></li>
-<li><a href="inserisciGuida" th:style="'color:black'">Inserisci Guida</a></li>
-<li><a href="inserisciGiorno" th:style="'color:black'">Inserisci Giorno</a></li>
-<li><a href="inserisciMonumento" th:style="'color:black'">Inserisci Monumento</a></li>
-<li><a href="rimuoviItinerario" th:style="'color:black'">Rimuovi Itinerario</a></li>
-<li><a href="rimuoviGuida" th:style="'color:black'">Rimuovi Guida</a></li>
-<li><a href="rimuoviGiorno" th:style="'color:black'">Rimuovi Giorno</a></li>
-<li><a href="rimuoviMonumento" th:style="'color:black'">Rimuovi Monumento</a></li>
-</ul>
+		<ul class="elenco">
+			<li><a href="@{/admin/addItinerario}" th:style="'color:black'">Inserisci Itinerario</a></li>
+			<li><a href="@{/admin/addGuida}" th:style="'color:black'">Inserisci Guida</a></li>
+			<li><a href="@{/admin/addGiorno}" th:style="'color:black'">Inserisci Giorno</a></li>
+			<li><a href="@{/admin/addMonumento}" th:style="'color:black'">Inserisci Monumento</a></li>
+			<li><a href="@{/admin/rimuoviItinerario}" th:style="'color:black'">Rimuovi Itinerario</a></li>
+			<li><a href="@{/admin/rimuoviGuida}" th:style="'color:black'">Rimuovi Guida</a></li>
+			<li><a href="@{/admin/rimuoviGiorno}" th:style="'color:black'">Rimuovi Giorno</a></li>
+			<li><a href="@{/admin/rimuoviMonumento}" th:style="'color:black'">Rimuovi Monumento</a></li>
+		</ul>
     </section>
     <footer></footer>
 </body>
