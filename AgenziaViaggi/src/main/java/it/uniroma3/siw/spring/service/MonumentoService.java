@@ -28,8 +28,8 @@ public class MonumentoService {
 	}
 	
 	@Transactional
-	public List<Monumento> guidePerNome(String nome) {
-		return monumentoRepository.findByNome(nome);
+	public List<Monumento> guidePerTitolo(String titolo) {
+		return monumentoRepository.findByTitolo(titolo);
 	}
 
 	@Transactional
@@ -43,7 +43,7 @@ public class MonumentoService {
 
 	@Transactional
 	public boolean alreadyExists(Monumento monumento) {
-		List<Monumento> monumenti = this.monumentoRepository.findByNome(monumento.getNome());
+		List<Monumento> monumenti = this.monumentoRepository.findByTitolo(monumento.getTitolo());
 		if (monumenti.size() > 0)
 			return true;
 		else 

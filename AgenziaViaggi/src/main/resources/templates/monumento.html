@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 <body>
-<header th:replace="fragments/base.html :: intestazione"></header>
+	<header th:replace="fragments/base.html :: intestazione"></header>
       <div th:if="${monumento}" th:object="${monumento}" >
    <section id="sezione">
     <img th:src="@{image/isolaMusei.jpg}" width="500" height="300" hspace="3" align="left" />
@@ -36,8 +36,8 @@
     </section>
     </section> 
     </div>
-    	<div th:unless="${monumento}" id="programma"> Questo monumento non esiste</div>
-    </div>
+	<div th:unless="${monumento}" id="programma"> Questo monumento non esiste</div>
+
     <footer th:replace="fragments/base.html :: fondo"></footer>
 </body>
 </html>

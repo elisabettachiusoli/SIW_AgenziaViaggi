@@ -32,11 +32,16 @@ public class CredentialsService {
 		return result.orElse(null);
 	}
 		
-    @Transactional
-    public Credentials salvaCredenziali(Credentials credentials) {
+	@Transactional
+    public Credentials saveCredentials(Credentials credentials) {
         credentials.setRole(Credentials.DEFAULT_ROLE);
         credentials.setPassword(this.passwordEncoder.encode(credentials.getPassword()));
         return this.credentialsRepository.save(credentials);
     }
-
+    
+    @Transactional
+    public Credentials saveCredentials2(Credentials credentials) {
+        credentials.setPassword(this.passwordEncoder.encode(credentials.getPassword()));
+        return this.credentialsRepository.save(credentials);
+    }
 }

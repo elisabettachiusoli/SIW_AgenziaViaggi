@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lan=it xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <!-- logo -->
+    <link rel=icon th:href="@{image/logo.png}">
+    <!-- titolo mostrato per la pagina dell'itinerario -->
+    <title>Elenco Monumenti</title>
+
+    <link th:href="@{/css/base.css}" rel="stylesheet">
+
+</head>
+<body>
+    <header th:replace="fragments/base.html :: intestazione"></header>
+    <ul class="push" >
+			<li th:each="monumento : ${monumento}">
+				<a href="monumento.html" 
+				   th:href="@{'/monumento' + '/' + ${monumento.id}}" 
+				   th:text="${monumento.titolo} +':'" th:style="'color:black'"> Monumenti</a>
+				   <img th:src="@{'/image/' + *{monumento.titolo} + *{monumento.id} + '.jpg'}" width="300px" height="100px"
+			hspace="15px" vspace="15px" align="right" />
+				   </li>
+	</ul>
+		 <footer></footer>
+</body>
+</html> 

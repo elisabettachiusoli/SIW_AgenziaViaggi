@@ -14,7 +14,7 @@ public class Monumento {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 
-	private String nome;
+	private String titolo;
 
 	private int anno;
 
@@ -45,13 +45,13 @@ public class Monumento {
 	}
 
 
-	public String getNome() {
-		return nome;
+	public String getTitolo() {
+		return titolo;
 	}
 
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setTitolo(String titolo) {
+		this.titolo = titolo;
 	}
 
 

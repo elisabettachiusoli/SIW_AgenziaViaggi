@@ -21,7 +21,7 @@ public class Credentials {
 	private String password;
 	@Column(nullable=false)
 	private String role;
-	@OneToOne(cascade=CascadeType.ALL)
+	@OneToOne(cascade=CascadeType.MERGE)
 	private User user;
 
 	public Long getId() {

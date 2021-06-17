@@ -8,5 +8,5 @@ import it.uniroma3.siw.spring.model.Monumento;
 
 public interface MonumentoRepository extends CrudRepository<Monumento, Long> {
 	
-	public List<Monumento> findByNome(String nome);
+	public List<Monumento> findByTitolo(String titolo);
 }
