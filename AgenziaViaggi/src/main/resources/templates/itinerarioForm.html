@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments/base.html :: headerfiles(title=#{title.formProdotto})"> </head>
+<head> 
+	<meta charset="utf-8" />
+    <!-- logo -->
+    <link rel=icon th:href="@{/image/logo.png}">
+    <!-- titolo mostrato per la pagina dell'itinerario -->
+    <title>Inserisci Itinerario</title>
+    <!-- riferimento al foglio di stile css chiamato stile in stili relativo a tutto il progetto -->
+    <link rel="stylesheet" th:href="@{/css/formPage.css}" />
+    <link th:href="@{/css/base.css}" rel="stylesheet">
+</head>
 <body>
 	<header th:replace="fragments/base.html :: intestazione"></header>
+	<section id="modulo">
+		<video autoplay muted loop  id="video-back">
+            <source th:src="@{video/mappa3.mp4}" type="video/mp4" />
+        </video>
+	<div class="content">
 	<div>
-		<h4>Inserisci i dati di un itinerario</h4>
+		<h1>Inserisci i dati di un itinerario</h1>
 	</div>
 	<form th:action="@{/admin/itinerario}" method="POST" th:object="${itinerario}">
 		<div th:if="${#fields.hasGlobalErrors()}">
@@ -12,17 +26,23 @@
 		</div>
 		<div>
 			<div>
-				<span>Nome:</span>
+				<label>Nome:</label>
 				<span><input type="text" th:field="*{nome}" /></span>
 			</div>		
 			<div>
-				<span>Destinazione:</span>
+				<label>Destinazione:</label>
 				<span><input type="text" th:field="*{destinazione}" /></span>
 			</div>
 			<div>
-				<span><button type="submit">Invio</button></span>
+				<label>Descrizione:</label>
+				<span><input type="text" th:field="*{descrizione}" /></span>
+			</div>
+			<div>
+				<span><button type="submit" class="pulsante">Invio</button></span>
 			</div>
 		</div>
+	</div>
+	</section>
 	</form>
 
 </body>
