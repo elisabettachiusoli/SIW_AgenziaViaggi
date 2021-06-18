@@ -50,5 +50,10 @@ public class MonumentoService {
 			return false;
 	}
 
+	public void eliminaMonumento(Monumento monumento) {
+		monumentoRepository.delete(monumento);
+		
+	}
+
 
 }

@@ -26,7 +26,14 @@
             </ul>
             </div>
         </div>
-    </div>   
+    </div> 
+    <div th:unless="${guida}" id="programma"> Questa guida non esiste</div>
+     <div class="column">
+     <div class="card" th:style="'margin-top:60px'">
+     Al momento non è presente nessuna guida
+     </div>
+     </div>
+    </div> 
     <footer th:replace="fragments/base.html :: fondo"></footer>
 </body>
 </html>

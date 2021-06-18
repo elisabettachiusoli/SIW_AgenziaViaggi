@@ -61,4 +61,14 @@ public class GiornoService {
 		
 	}
 
+	public void eliminaGiorno(Giorno giorno) {
+		List<Monumento> monumenti=giorno.getMonumento();
+		for(Monumento monumento:monumenti) {
+			monumento.setGiorno(null);
+			monumentoRepository.save(monumento);
+		}
+		giornoRepository.delete(giorno);
+		
+	}
+
 }

@@ -52,8 +52,13 @@
 		<h4>Dove mangiare:</h4> 
 		<span th:text="*{descrizione}" > Restaurant Maximilians Berlin, FriedrichstraBe 185-190 </span> 
 	</div>
+	
     </section>
+    	<form th:action="@{'/admin/eliminaGiorno' + '/' + ${id}}" method="POST">
+		<span><button type="submit" class="button">Elimina Giorno</button></span>
+	</form>
    		</div>
+   	
     	<div th:unless="${giorno}" id="programma"> Questo giorno non esiste</div>
     </div>
 	<footer th:replace="fragments/base.html :: fondo"></footer>

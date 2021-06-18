@@ -8,6 +8,7 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import it.uniroma3.siw.spring.model.Giorno;
 import it.uniroma3.siw.spring.model.Guida;
 import it.uniroma3.siw.spring.model.Itinerario;
 import it.uniroma3.siw.spring.repository.GuidaRepository;
@@ -19,7 +20,9 @@ public class ItinerarioService {
 	@Autowired
 	private ItinerarioRepository itinerarioRepository;
 	@Autowired
-	private GuidaRepository guidaRepository; 
+	private GuidaRepository guidaRepository;
+	@Autowired	
+	private GiornoService giornoService; 
 	
 	@Transactional
 	public Itinerario inserisci(Itinerario itinerario) {
@@ -63,6 +66,11 @@ public class ItinerarioService {
 	
 	@Transactional
 	public void eliminaItinerario(Itinerario itinerario) {
+		List<Giorno> giorni=itinerario.getGiorno();
+		for(Giorno giorno : giorni) {
+			giornoService.eliminaGiorno(giorno);
+		}
+		
 		itinerarioRepository.delete(itinerario);
 	}
 }
