@@ -85,3 +85,38 @@ h3 {
     counter-increment: li;
     content: counter(li);
 }
+.push ul {
+list-style: none;
+font-family: "Lucida Sans";
+
+}
+.push li {
+position: relative;
+padding: 20px 0 20px 40px;
+color: #FFCE085;
+font-variant: small-caps;
+font-weight: bold;
+cursor: pointer;
+}
+.push li:before {
+position: absolute;
+width: 7px;
+height: 7px;
+border-radius: 50%;
+background: #FFCE08;
+content: "";
+left: 0;
+transition: .3s ease-in-out;
+top: 27px;
+}
+.push li:after {
+position: absolute;
+border-left: 1px dotted #D29D25;
+width: 1px;
+bottom: -12px;
+content: "";
+left: 3px;
+top: 48px;
+}
+.push li:hover:before{box-shadow: 0 0 0 10px #D29D25}
+.push li:last-child:after {content: none;}
