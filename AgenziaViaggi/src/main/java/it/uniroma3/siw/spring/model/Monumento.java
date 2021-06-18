@@ -50,8 +50,15 @@ public class Monumento {
 	public void setTitolo(String titolo) {
 		this.titolo = titolo;
 	}
+	public String getNome() {
+		return titolo;
+	}
 
 
+	public void setNome(String titolo) {
+		this.titolo = titolo;
+	}
+	
 	public int getAnno() {
 		return anno;
 	}

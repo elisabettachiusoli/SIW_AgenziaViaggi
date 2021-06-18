@@ -95,6 +95,16 @@ footer .dati p {
     z-index:2;
     font-family: 'Roboto', sans-serif;
 }
+.button {
+  background-color: rgba(255, 127, 80, 0.74);
+  border-radius: 20px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 
 footer .logo {
     margin-right:10px;

@@ -22,7 +22,7 @@
 	<form th:action="@{/admin/monumento}" method="POST" th:object="${monumento}">	
 		<div>
 			<div>
-				<label>Nome:</label>
+				<label>Titolo:</label>
 				<span><input type="text" th:field="*{titolo}" /></span>
 			</div>	
 			<div>
@@ -39,11 +39,11 @@
 			<div>
 			<div>
 				<label>Orario:</label>
-				<span><input type="text" th:field="*{orario}" /></span>			
+				<span><input type="number" th:field="*{orario}" /></span>			
 			<div>
 			<div>
 				<label>Prezzo biglietto:</label>
-				<span><input type="text" th:field="*{prezzoBiglietto}" /></span>			
+				<span><input type="number" th:field="*{prezzoBiglietto}" /></span>			
 			<div>
 			<div>
 				<label>Link immagine del monumento:</label>

@@ -20,8 +20,7 @@ public class GiornoValidator implements Validator {
     
     @Override
 	public void validate(Object o, Errors errors) {
-		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "nome", "required");
-		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "cognome", "required");
+		
 
 		if (!errors.hasErrors()) {
 			logger.debug("confermato: valori non nulli");

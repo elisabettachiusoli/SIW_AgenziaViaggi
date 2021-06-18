@@ -7,8 +7,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import it.uniroma3.siw.spring.model.Itinerario;
+import it.uniroma3.siw.spring.service.GuidaService;
 import it.uniroma3.siw.spring.service.ItinerarioService;
 
 @Controller
@@ -19,10 +21,13 @@ public class ItinerarioController {
 	
     @Autowired
     private ItinerarioValidator itinerarioValidator;
+    @Autowired
+	private GuidaService guidaService;
         
     @RequestMapping(value="/admin/addItinerario", method = RequestMethod.GET)
     public String addItinerario(Model model) {
     	model.addAttribute("itinerario", new Itinerario());
+    	model.addAttribute("guide", this.guidaService.tutti());
         return "itinerarioForm";
     }
 
@@ -30,6 +35,7 @@ public class ItinerarioController {
     public String getItinerario(@PathVariable("id") Long id, Model model) {
     	model.addAttribute("itinerario", this.itinerarioService.itinerarioPerId(id));
     	model.addAttribute("giorni",  this.itinerarioService.itinerarioPerId(id).getGiorno());
+    	model.addAttribute("guida",  this.itinerarioService.itinerarioPerId(id).getGuida());
     	return "itinerario";
     }
 
@@ -40,11 +46,12 @@ public class ItinerarioController {
     }
     
     @RequestMapping(value = "/admin/itinerario", method = RequestMethod.POST)
-    public String addItinerario(@ModelAttribute("itinerario") Itinerario itinerario, 
+    public String addItinerario(@ModelAttribute("itinerario") Itinerario itinerario, @RequestParam("guidaSelezionata") final Long idGuida,
     									Model model, BindingResult bindingResult) {
     	this.itinerarioValidator.validate(itinerario, bindingResult);
         if (!bindingResult.hasErrors()) {
         	this.itinerarioService.inserisci(itinerario);
+        	this.itinerarioService.aggiungiGuida(this.guidaService.guidaPerId(idGuida), itinerario);
             model.addAttribute("itinerario", this.itinerarioService.tutti());
             return "itinerari";
         }

@@ -30,7 +30,7 @@ public class MonumentoController {
 
     @RequestMapping(value = "/monumento/{id}", method = RequestMethod.GET)
     public String getMonumento(@PathVariable("id") Long id, Model model) {
-    	model.addAttribute("monumento", this.monumentoService.guidaPerId(id));
+    	model.addAttribute("monumento", this.monumentoService.monumentoPerId(id));
     	return "monumento";
     }
 

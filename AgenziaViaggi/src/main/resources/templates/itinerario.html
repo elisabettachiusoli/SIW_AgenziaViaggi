@@ -27,8 +27,9 @@
   <section id="icona">
         <img th:src="@{/image/calendar.png}" width="50px" height="50px" hspace="15px" />  <span th:text=" 'Dal ' +*{dataInizio}+ ' al ' + *{dataFine}"> Dal 20 luglio al 23 luglio </span>
         <img th:src="@{/image/finePrenotazione.png}" width="50px" height="50px" hspace="15px" />  <span th:text="*{scadenzaPrenotazione}">Prenotazioni fino al 23 giugno </span> 
-        <!-- rif <img th:src="@{image/guidaIcona.png}" width="50px" height="50px" hspace="15px" /> <a th:href="guida/*{guida_id}"> Guida</a> -->
+        <img th:src="@{/image/guidaIcona.png}" width="50px" height="50px" hspace="15px" /> <a th:each="guida : ${guida}"  th:href="'guida/' + *{guida.id}" th:text="*{guida.nome} + ' ' + *{guida.cognome}"> Guida</a> 
         <img th:src="@{/image/money.png}" width="50px" height="50px" hspace="15px" />  <span th:text="*{costoTotale} + ' euro'"> 500£ </span>
+        
 
 
     </section>

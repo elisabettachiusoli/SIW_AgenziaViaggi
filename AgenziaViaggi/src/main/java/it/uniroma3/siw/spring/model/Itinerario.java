@@ -30,11 +30,11 @@ public class Itinerario {
 
 	private String descrizione;
 
-	private Date dataInizio;
+	private String dataInizio;
 
-	private Date dataFine;
+	private String dataFine;
 
-	private Date scadenzaPrenotazione;
+	private String scadenzaPrenotazione;
 	
 	private int costoTotale;
 	
@@ -81,21 +81,21 @@ public class Itinerario {
 		this.destinazione = destinazione;
 	}
 	
-	public Date getDataInizio() {
+	public String getDataInizio() {
 		return dataInizio;
 	}
 	
-	public void setDataInizio(Date date) {
+	public void setDataInizio(String date) {
 		this.dataInizio = date;
 	}
-	public Date getDataFine() {
+	public String getDataFine() {
 		return dataFine;
 	}
 	
-	public void setDataFine(Date dataFine) {
+	public void setDataFine(String dataFine) {
 		this.dataFine = dataFine;
 	}
-	public Date getScadenzaPrenotazione() {
+	public String getScadenzaPrenotazione() {
 		return scadenzaPrenotazione;
 	}
 	
@@ -106,7 +106,7 @@ public class Itinerario {
 		return costoTotale;
 	}
 	
-	public void setScadenzaPrenotazione(Date scadenzaPrenotazione) {
+	public void setScadenzaPrenotazione(String scadenzaPrenotazione) {
 		this.scadenzaPrenotazione = scadenzaPrenotazione;
 	}
 	public List<Giorno> getGiorno() {
@@ -115,6 +115,13 @@ public class Itinerario {
 	
 	public void setGiorno(Giorno giorno) {
 		this.giorni.add(giorno);
+	}
+	public void setGuida(Guida guida) {
+		this.guida=guida;
+		
+	}
+	public Object getGuida() {
+		return this.guida;
 	}
 
 

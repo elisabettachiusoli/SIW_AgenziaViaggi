@@ -89,18 +89,27 @@ public class Inizializzazione implements ApplicationListener<ContextRefreshedEve
 		monumento2.setFile("https://mywowo.net/media/images/cache/berlino_porta_brandeburgo_01_presentazione_jpg_1200_630_cover_85.jpg");
 		monumentoService.inserisci(monumento2);
 		
+		Guida guida1=new Guida();
+		guida1.setCognome("Rossi");
+		guida1.setNome("Matteo");
+		guida1.setEmail("matteo.rossi@gmail.com");
+		guida1.setMatricola(0526);
+		guida1.setNumeroDiTelefono(33947);
+
+		
 		Itinerario itinerario1= new Itinerario();
 		itinerario1.setCostoTotale(400);
-		Date date=new Date(13-07-2021);
-		Date date2= new Date(20-07-2021);
-		itinerario1.setDataFine(date2);
-		itinerario1.setDataInizio(date);
-		itinerario1.setScadenzaPrenotazione(date2);
+		itinerario1.setDataFine("13-07-2021");
+		itinerario1.setDataInizio("20-07-2021");
+		itinerario1.setScadenzaPrenotazione("13-05-2021");
 		itinerario1.setDestinazione("Berlino");
 		itinerario1.setGiorno(giorno1);
 		itinerario1.setNome("A spasso per Berlino");
 		itinerario1.setDescrizione("Un nuovissimo itinerario alla scoperta dei più bei monumenti di Berlino");
-		itinerarioService.inserisci(itinerario1);
+		itinerario1.setGuida(guida1);
+		guida1.setItinerari(itinerario1);
+        itinerarioService.inserisci(itinerario1);
+		guidaService.inserisci(guida1);
 		
 		giorno1.setCostoGiornata(40);
 		giorno1.setDescrizione("Restaurant Maximilians Berlin, FriedrichstraBe 185-190 ");
@@ -112,14 +121,8 @@ public class Inizializzazione implements ApplicationListener<ContextRefreshedEve
 		giorno1.setMonumento(monumento2);
 		giornoService.inserisci(giorno1);
 		
-		Guida guida1=new Guida();
-		guida1.setCognome("Rossi");
-		guida1.setNome("Matteo");
-		guida1.setEmail("matteo.rossi@gmail.com");
-		guida1.setItinerari(itinerario1);
-		guida1.setMatricola(0526);
-		guida1.setNumeroDiTelefono(33947);
-		guidaService.inserisci(guida1);
+		
+		
 		
 	}
 }

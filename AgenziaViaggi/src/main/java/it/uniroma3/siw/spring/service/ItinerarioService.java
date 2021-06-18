@@ -8,14 +8,18 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import it.uniroma3.siw.spring.model.Guida;
 import it.uniroma3.siw.spring.model.Itinerario;
+import it.uniroma3.siw.spring.repository.GuidaRepository;
 import it.uniroma3.siw.spring.repository.ItinerarioRepository;
 
 @Service
 public class ItinerarioService {
 	
 	@Autowired
-	private ItinerarioRepository itinerarioRepository; 
+	private ItinerarioRepository itinerarioRepository;
+	@Autowired
+	private GuidaRepository guidaRepository; 
 	
 	@Transactional
 	public Itinerario inserisci(Itinerario itinerario) {
@@ -48,5 +52,17 @@ public class ItinerarioService {
 			return true;
 		else 
 			return false;
+	}
+	
+	public void aggiungiGuida(Guida guida, Itinerario itinerario) {
+		itinerario.setGuida(guida);
+		guida.setItinerari(itinerario);
+        this.itinerarioRepository.save(itinerario);
+        this.guidaRepository.save(guida);
+	}
+	
+	@Transactional
+	public void eliminaItinerario(Itinerario itinerario) {
+		itinerarioRepository.delete(itinerario);
 	}
 }

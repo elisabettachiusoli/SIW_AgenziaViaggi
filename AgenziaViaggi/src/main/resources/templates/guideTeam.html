@@ -5,22 +5,22 @@
 <head>
     <meta charset="utf-8" />
      <!-- logo -->
-    <link rel=icon th:href="@{image/logo.jpg}" >
+    <link rel=icon th:href="@{/image/logo.jpg}" >
     <title>Team</title>
-    <link rel="stylesheet" th:href="@{css/guideTeam.css}">
-    <link th:href="@{css/base.css}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/guideTeam.css}">
+    <link th:href="@{/css/base.css}" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,100&display=swap" rel="stylesheet">
 </head>
 <body>
 <header th:replace="fragments/base.html :: intestazione"></header>
     <section>
-    <div class="column">
+    <div class="column" th:each="guida: ${guida}">
         <div class="card">
-            <img id="img" th:src="@{image/avatar3.png}" alt="">
+            <img id="img" th:src="@{/image/avatar3.png}" alt="">
             <div>
             <ul class="title">
-	            <li  th:style="'list-style:none'" th:each="guida: ${guida}">
+	            <li th:style="'list-style:none'" >
 	            	<a href="guida.html" th:href="@{'/guida' + '/' + ${guida.id}}" th:text="${guida.nome} + ' ' + ${guida.cognome}"> Matteo Rossi </a>
 	            </li>
             </ul>

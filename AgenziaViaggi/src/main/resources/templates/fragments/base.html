@@ -39,14 +39,7 @@
                 <!-- collegamento ipertestuale alla pagina informazioni -->
                 <a th:href="@{/informazioni}"> Informazioni</a>
             </li>
-            <li>
-                <!-- collegamento ipertestuale alla pagina informazioni -->
-                <a th:href="@{/login}"> Login</a>
-            </li>
-             <li>
-                <!-- collegamento ipertestuale alla pagina informazioni -->
-                <a th:href="@{/register}"> Registrati</a>
-            </li>
+           
         </ul>  
     </nav>
     
@@ -68,6 +61,12 @@
 				<p>+39 06 5733 2100</p>
 				<span class="d" th:style="'font-sixe:30px'">Email</span>
 				<p>viaggidasogno@gmail.com</p>
+			</div>
+			<div>
+
+               <a th:href="@{/login}" class="button">Accedi</a>
+				<p>o</p>
+				<a th:href="@{/register}" class="button">Registrati</a>
 			</div>
 			<div class="logo">
 				<img th:src="@{/image/logo.jpg}" height="60" width="60" align="right">

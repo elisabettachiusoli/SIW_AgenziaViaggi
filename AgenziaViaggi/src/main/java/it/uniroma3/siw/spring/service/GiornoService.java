@@ -9,13 +9,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import it.uniroma3.siw.spring.model.Giorno;
+import it.uniroma3.siw.spring.model.Itinerario;
+import it.uniroma3.siw.spring.model.Monumento;
 import it.uniroma3.siw.spring.repository.GiornoRepository;
+import it.uniroma3.siw.spring.repository.ItinerarioRepository;
+import it.uniroma3.siw.spring.repository.MonumentoRepository;
 
 @Service
 public class GiornoService {
 
 	@Autowired
-	private GiornoRepository giornoRepository; 
+	private GiornoRepository giornoRepository;
+	@Autowired
+	private ItinerarioRepository itinerarioRepository;
+	@Autowired
+	private MonumentoRepository monumentoRepository; 
 	
 	@Transactional
 	public Giorno inserisci(Giorno giorno) {
@@ -35,6 +43,22 @@ public class GiornoService {
 			return optional.get();
 		else 
 			return null;
+	}
+
+	public void aggiungiItinerario(Giorno giorno, Itinerario itinerario) {
+		giorno.setItinerario(itinerario);
+		itinerario.setGiorno(giorno);
+        this.giornoRepository.save(giorno);
+        this.itinerarioRepository.save(itinerario);
+		
+	}
+
+	public void aggiungiMonumento(Giorno giorno, Monumento monumento) {
+		giorno.setMonumento(monumento);
+        this.giornoRepository.save(giorno);
+        monumento.setGiorno(giorno);
+        this.monumentoRepository.save(monumento);
+		
 	}
 
 }

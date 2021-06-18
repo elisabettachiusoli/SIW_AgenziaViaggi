@@ -5,6 +5,7 @@
      <link rel=icon th:href="@{image/logo.jpg}" >
     <title>User Home</title>
    <link rel="stylesheet" th:href="@{css/index.css}">
+   <link rel="stylesheet" th:href="@{css/home.css}">
    <link th:href="@{css/base.css}" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,100&display=swap" rel="stylesheet">
@@ -13,10 +14,31 @@
 	<header th:replace="fragments/base.html :: intestazione"></header>
     <section>
     <div>
-     <img  th:src="@{image/logo.jpg}" height="600" width="565" align="top" hspace="480" >
+     <img  th:src="@{image/logo.jpg}" height="600" width="550" align="top" hspace="420" >
     	<h2 align="center">Congratulazioni, il tuo Login è avvenuto con successo! </br>
     	Ora puoi visionare i contenuti del sito </h2>
     </div>
+     <section>
+    <div id="el">
+		<ul class="elenco">
+			<li>
+				<a th:href="@{/itinerari}">Elenco itinerari</a>
+	   		</li>
+	   		<li>
+				<a th:href="@{/guide}">Elenco guide</a>
+	   		</li>
+	   		<li>
+				<a th:href="@{/giorni}">Elenco giorni</a>
+	   		</li>
+	   		<li>
+				<a th:href="@{/monumenti}">Elenco monumenti</a>
+	   		</li>
+	   		<li>
+				<a th:href="@{/logout}">Logout</a>
+	   		</li>
+		</ul>
+    </div>
+    </section>
     </section>
     <footer></footer>
 </body>

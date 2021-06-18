@@ -30,6 +30,7 @@ public class GuidaController {
     @RequestMapping(value = "/guida/{id}", method = RequestMethod.GET)
     public String getGuida(@PathVariable("id") Long id, Model model) {
     	model.addAttribute("guida", this.guidaService.guidaPerId(id));
+    	model.addAttribute("itinerari", this.guidaService.guidaPerId(id).getItinerari());
     	return "guida";
     }
 

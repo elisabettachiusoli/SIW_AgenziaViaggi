@@ -35,6 +35,8 @@
                         <p th:text="*{matricola}">052684</p>
                         <h3>Lingue parlate</h3>
                         <p>Italiano, inglese, spagnolo, tedesco</p>
+                         <h3 >Itinerari:</h3>
+                        <p th:each="itinerario: ${itinerari}" th:text="${itinerario.nome}">itinerari</p>
                 </div>
             </div>
         </div>

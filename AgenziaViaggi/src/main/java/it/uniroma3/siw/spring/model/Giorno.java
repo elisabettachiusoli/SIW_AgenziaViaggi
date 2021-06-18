@@ -101,4 +101,6 @@ public class Giorno {
 	public void setMonumento(Monumento monumento) {
 		this.monumenti.add(monumento);
 	}
+	
+	
 }

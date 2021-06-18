@@ -17,42 +17,38 @@
 	<div>
 		<h1>Inserisci i dati di un itinerario</h1>
 	</div>
-	<form th:action="@{/admin/itinerario}" method="POST" th:object="${itinerario}">
-		<div th:if="${#fields.hasGlobalErrors()}">
-  			<p th:each="err : ${#fields.globalErrors()}" th:text="${err}">...</p>
-		</div>
+	<form th:action="@{/admin/giorno}" method="POST" th:object="${giorno}">
+		
 		<div>
 			<div>
-				<label>Nome:</label>
-				<span><input type="text" th:field="*{nome}" /></span>
+				<label>Numero giorno di visita:</label>
+				<span><input type="text" th:field="*{numeroGiornoDiVisita}" /></span>
 			</div>		
 			<div>
-				<label>Destinazione:</label>
-				<span><input type="text" th:field="*{destinazione}" /></span>
+				<label>Zona:</label>
+				<span><input type="text" th:field="*{zona}" /></span>
 			</div>
 			<div>
 				<label>Descrizione:</label>
 				<span><input type="text" th:field="*{descrizione}" /></span>
 			</div>
 			<div>
-				<label>Inizio periodo:</label>
-				<span><input type="date" th:field="*{dataInizio}" /></span>
+				<label>Costo:</label>
+				<span><input type="int" th:field="*{costoGiornata}" /></span>
 			</div>
 			<div>
-				<label>Fine periodo:</label>
-				<span><input type="date" th:field="*{dataFine}" /></span>
+				<label>Durata:</label>
+				<span><input type="int" th:field="*{durata}" /></span>
 			</div>
 			<div>
-				<label>Scadenza prenotazione:</label>
-				<span><input type="date" th:field="*{scadenzaPrenotazione}" /></span>
-			</div>
-				<div>
-				<label>Costo totale:</label>
-				<span><input type="number" th:field="*{costoTotale}" /></span>
+			<select name="itinerarioSelezionato" >
+        <option th:each="itinerario : ${itinerari}" th:value="${itinerario.id}" th:text="${itinerario.nome}"> 
+        </option>
+			</select>
 			</div>
 			<div>
-			<select name="guidaSelezionata" >
-        <option th:each="guida : ${guide}" th:value="${guida.id}" th:text="${guida.nome} + ' ' + ${guida.cognome} "> 
+			<select name="monumentoSelezionato" multiple="multiple">
+        <option th:each="monumento : ${monumenti}" th:value="${monumento.id}" th:text="${monumento.titolo}" > 
         </option>
 			</select>
 			</div>

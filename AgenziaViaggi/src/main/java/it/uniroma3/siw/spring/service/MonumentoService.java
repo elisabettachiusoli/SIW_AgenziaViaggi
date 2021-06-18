@@ -28,12 +28,12 @@ public class MonumentoService {
 	}
 	
 	@Transactional
-	public List<Monumento> guidePerTitolo(String titolo) {
+	public List<Monumento> monumentoPerTitolo(String titolo) {
 		return monumentoRepository.findByTitolo(titolo);
 	}
 
 	@Transactional
-	public Monumento guidaPerId(Long id) {
+	public Monumento monumentoPerId(Long id) {
 		Optional<Monumento> optional = monumentoRepository.findById(id);
 		if (optional.isPresent())
 			return optional.get();
@@ -49,4 +49,6 @@ public class MonumentoService {
 		else 
 			return false;
 	}
+
+
 }

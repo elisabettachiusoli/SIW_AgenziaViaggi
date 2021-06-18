@@ -18,10 +18,7 @@
 	<div>
 		<h1>Inserisci i dati di una guida</h1>
 	</div>
-	<form th:action="@{/admin/guida}" method="POST" th:object="${guida}">
-		<div th:if="${#fields.hasGlobalErrors()}">
-  			<p th:each="err : ${#fields.globalErrors()}" th:text="${err}">...</p>
-		</div>		
+	<form th:action="@{/admin/guida}" method="POST" th:object="${guida}">	
 		<div>
 			<div>
 				<label>Nome:</label>
