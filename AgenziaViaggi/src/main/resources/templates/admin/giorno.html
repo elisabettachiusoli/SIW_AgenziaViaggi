@@ -34,7 +34,7 @@
             <h2> Programma </h2>
         </div>
         <div>
-		<ul>
+		<ul class="older">
 			<li th:each="monumento : ${monumenti}">
 				<a href="monumento.html" 
 				   th:href="@{'/monumento' + '/' + ${monumento.id}}" 

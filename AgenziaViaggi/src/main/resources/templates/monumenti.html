@@ -7,7 +7,7 @@
     <link rel=icon th:href="@{image/logo.png}">
     <!-- titolo mostrato per la pagina dell'itinerario -->
     <title>Elenco Monumenti</title>
-
+<link th:href="@{/css/monumenti.css}" rel="stylesheet">
     <link th:href="@{/css/base.css}" rel="stylesheet">
 
 </head>
@@ -16,7 +16,8 @@
     <header th:replace="fragments/base.html :: intestazione"></header>
     <div>  <img th:src="@{/image/sfondoMappa.png}" width="1500px" height="500px">
 	</div>
-    <ul class="push" >
+	<div class="push">
+    <ul  >
 			<li th:each="monumento : ${monumento}">
 				<a href="monumento.html" 
 				   th:href="@{'/monumento' + '/' + ${monumento.id}}" 
@@ -25,6 +26,7 @@
 			hspace="15px" vspace="15px" align="right" />
 				   </li>
 	</ul>
+	</div>
 		 <footer></footer>
 </body>
 </html> 

@@ -2,7 +2,6 @@ body {
     /* Stili per i titoli: Gill Sans per h1, Gill Sans MT per h2, Trebuchet MS per h3. sans-serif per h4  */
     font-family: 'Gill Sans', 'Gill Sans MT','Trebuchet MS', Calibri;
     margin: 0;
-    background-color: #f5bd66;
 }
 
 #sezione {
@@ -37,3 +36,38 @@ body {
     margin-left: 20px;
     margin-top:0px;
 }
+.push ul {
+list-style: none;
+font-family: "Lucida Sans";
+
+}
+.push li {
+position: relative;
+padding: 20px 0 20px 40px;
+color:#fcba30;
+font-variant: small-caps;
+font-weight: bold;
+cursor: pointer;
+}
+.push li:before {
+position: absolute;
+width: 7px;
+height: 7px;
+border-radius: 50%;
+background: #fcba30;
+content: "";
+left: 0;
+transition: .3s ease-in-out;
+top: 27px;
+}
+.push li:after {
+position: absolute;
+border-left: 1px dotted #f05d22;
+width: 1px;
+bottom: -12px;
+content: "";
+left: 3px;
+top: 48px;
+}
+.push li:hover:before{box-shadow: 0 0 0 10px #f05d22}
+.push li:last-child:after {content: none;}
