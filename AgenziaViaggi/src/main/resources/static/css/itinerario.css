@@ -1,20 +1,20 @@
 body {
-    /* Stili per i titoli: Gill Sans per h1, Gill Sans MT per h2, Trebuchet MS per h3. sans-serif per h4  */
-    font-family: 'Gill Sans', 'Gill Sans MT','Trebuchet MS', Calibri;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
 }
+
 .icona span {
 	 font-size: 5px;
     font-family: 'Berlin Sans FB';
 }
-.parallax
-{
+
+.parallax {
 	background: url(../image/berlino4_b.jpg)
 	repeat fixed 100%;
 	background-repeat: no-repeat;
-	background-size: cover;
-	
+	background-size: cover;	
 }
+
 .parallax-inner {
     padding-top: 25%;
     padding-left: 80px;
@@ -25,6 +25,7 @@ body {
     font-family: 'Berlin Sans FB';
     text-transform:full-width;
 }
+
 h3 {
     padding-top: 10px;
     color: #000;
@@ -32,7 +33,6 @@ h3 {
     font-size: 30px;
     font-family: 'Berlin Sans FB';
     padding-bottom: 10%;
-
 }
 
 #icona {
@@ -44,6 +44,7 @@ h3 {
     padding-bottom: 10px;
     text-align: left;
 }
+
 #descrizione {
     width: 90%;
     margin: 15px;
@@ -57,11 +58,13 @@ h3 {
     text-transform: uppercase;
     text-align: center;
 }
-    #programma .elenco {
-        margin-left: 0;
-        margin-right: 50px;
-        counter-reset: li;
-    }
+
+#programma .elenco {
+    margin-left: 0;
+    margin-right: 50px;
+    counter-reset: li;
+}
+
 .elenco li {
     list-style-type: none;
     position: relative;
@@ -72,6 +75,7 @@ h3 {
     background: #FEFEFE;
     color: #000;
 }
+
 .elenco li:before {
     position: absolute;
     top: -0.7em;
@@ -85,38 +89,44 @@ h3 {
     counter-increment: li;
     content: counter(li);
 }
-.push ul {
-list-style: none;
-font-family: "Lucida Sans";
 
+.push ul {
+	list-style: none;
+	font-family: 'Roboto', sans-serif;
+	margin-top:100px;
 }
 .push li {
-position: relative;
-padding: 20px 0 20px 40px;
-color: rgb(0, 255, 255);
-font-variant: small-caps;
-font-weight: bold;
-cursor: pointer;
+	position: relative;
+	padding: 20px 0 20px 40px;
+	color: rgb(0, 128, 255);
+	font-variant: small-caps;
+	font-weight: bold;
+	cursor: pointer;
+	font-size: 20px;
+	margin-left: 30px;
 }
+
 .push li:before {
-position: absolute;
-width: 7px;
-height: 7px;
-border-radius: 50%;
-background: rgb(0, 255, 255);
-content: "";
-left: 0;
-transition: .3s ease-in-out;
-top: 27px;
+	position: absolute;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: rgb(0, 128, 255);
+	content: "";
+	left: 0;
+	transition: .3s ease-in-out;
+	top: 27px;
 }
+
 .push li:after {
-position: absolute;
-border-left: 1px dotted #1ccfc9;
-width: 1px;
-bottom: -12px;
-content: "";
-left: 3px;
-top: 48px;
+	position: absolute;
+	border-left: 1px dotted #1ccfc9;
+	width: 1px;
+	bottom: -12px;
+	content: "";
+	left: 3px;
+	top: 48px;
 }
-.push li:hover:before{box-shadow: 0 0 0 10px #1ccfc9}
+
+.push li:hover:before {box-shadow: 0 0 0 10px #1ccfc9}
 .push li:last-child:after {content: none;}

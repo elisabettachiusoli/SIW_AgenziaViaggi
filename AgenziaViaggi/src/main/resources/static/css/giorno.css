@@ -1,6 +1,5 @@
 body {
-    /* Stili per i titoli: Gill Sans per h1, Gill Sans MT per h2, Trebuchet MS per h3. sans-serif per h4  */
-    font-family: 'Gill Sans', 'Gill Sans MT','Trebuchet MS', Calibri;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
 }
 
@@ -39,6 +38,7 @@ body {
     padding-top: 20px;
     padding-bottom: 10px;
 }
+
 @import url(http://fonts.googleapis.com/css?family=Fredericka+the+Great|EB+Garamond);
 .older {
   list-style: none;
@@ -61,6 +61,7 @@ body {
   font-family: 'EB Garamond', serif;
   font-size: 20px;
 }
+
 .older a:before {
   display: inline-block;
   content: counter(li);
@@ -76,6 +77,7 @@ body {
   -webkit-transition: .4s linear;
   transition: .4s linear;
 }
+
 .older a:hover:before {
   color:#8bc63e;
   -webkit-transform: scale(1.1);

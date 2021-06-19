@@ -9,17 +9,18 @@
     <!-- riferimento al foglio di stile css chiamato stile in stili relativo a tutto il progetto -->
     <link rel="stylesheet" th:href="@{/css/itinerario.css}" />
     <link th:href="@{/css/base.css}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,100&display=swap" rel="stylesheet">
 </head>
 <body>
 	<header th:replace="fragments/base.html :: intestazione"></header>
-	<div>  <img th:src="@{/image/sfondoMappa.png}" width="1500px" height="500px">
+	<div>  <img th:src="@{/image/aereo.png}" width="700" height="500" align="right" hspace="60">
 	</div>
 	<div class="push">
 		<ul>
 			<li th:each="itinerario : ${itinerario}">
 				<a href="itinerario.html" 
 				   th:href="@{'/itinerario' + '/' + ${itinerario.id}}" 
-				   th:text="${itinerario.nome}">Berlino</a>
+				   th:text="${itinerario.nome}" th:style="'color:black'">Berlino</a>
 			</li>
 		</ul>
 	</div>

@@ -1,11 +1,8 @@
 body {
-    /* Stili per i titoli: Gill Sans per h1, Gill Sans MT per h2, Trebuchet MS per h3. sans-serif per h4  */
-    font-family: 'Gill Sans', 'Gill Sans MT','Trebuchet MS', sans-serif;
     margin: 0;
     padding:0;
     font-family: 'Roboto', sans-serif;
 }
-
     
 /* Stile per il form, generalit� per tutti: immagine del mare senza ripetizioni per tutto il blocco, bordi neri e scritte nere*/
 #modulo {
@@ -17,6 +14,7 @@ body {
     position: relative;
     
 }
+
 #video-back{
     position: absolute;
     top:0;
@@ -24,6 +22,7 @@ body {
     z-index:0;
 
 }
+
 /* Stile per il titolo del form. Il testo � allineato al centro*/
 .content {
 	z-index:1;
@@ -34,23 +33,22 @@ body {
     float: left;
     text-align: center;
 }
-/* Stile per il pulsante. Background non sfumato dello stesso colore degli input, 
-            traslato pi� in grande, con le lettere maiuscole e con il cursore a manina per 
-            indicare che � possibile cliccarci sopra
-        */
- .pulsante {
-        color: #000;
-        background: coral;
-        margin-top: 80px;
-        margin-bottom: 20px;
-        border: 2px #000;
-        border-radius: 20px;
-        padding:20px 20px;
-        text-transform: uppercase;
-        cursor: pointer;
-    }
 
-    /* Stile per gli input, con background sfumato*/
+/* Stile per il pulsante. Background non sfumato dello stesso colore degli input,  traslato più in grande, con le lettere maiuscole e 
+con il cursore a manina per indicare che è possibile cliccarci sopra */
+.pulsante {
+    color: #000;
+    background: coral;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    border: 2px #000;
+    border-radius: 20px;
+    padding:20px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* Stile per gli input, con background sfumato*/
 #modulo input {
     border: solid 1px #000;
     margin-left: 10px;
@@ -66,6 +64,7 @@ body {
     background: #FFF;
     text-align: center;
 }
+
 /* Stile per la parte delle immagini. Colore sfondo celestino, con scritta nera in stampatello*/
 #immagini {
     border-top: solid 1px #000;
@@ -79,7 +78,6 @@ body {
     text-decoration: overline
 }
 
-
 /* Stile per la pagina di invio corretto dei dati. Immagine ingrandita e centrata, testo colore nero a destra*/
 #dati {
     border-bottom: solid 4px #000;
@@ -91,13 +89,14 @@ body {
     background-size: cover;
     background-position: center;
 }
-    /* Stile per il testo della pagina Colore corallo a destra*/
-    #dati .titolo {
-        color: coral;
-        text-align: right;
-    }
+
+/* Stile per il testo della pagina Colore corallo a destra*/
+#dati .titolo {
+    color: coral;
+    text-align: right;
+}
     
-    .button {
+.button {
   background-color: coral;
   border-radius: 20px;
   color: black;

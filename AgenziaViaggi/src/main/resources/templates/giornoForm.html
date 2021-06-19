@@ -9,6 +9,7 @@
     <!-- riferimento al foglio di stile css chiamato stile in stili relativo a tutto il progetto -->
     <link rel="stylesheet" th:href="@{/css/formPage.css}" />
     <link th:href="@{/css/base.css}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,100&display=swap" rel="stylesheet">
 </head>
 <body>
 	<header th:replace="fragments/base.html :: intestazione"></header>
@@ -41,15 +42,15 @@
 				<span><input type="int" th:field="*{durata}" /></span>
 			</div>
 			<div>
+			<label>Seleziona itinerario:</label>
 			<select name="itinerarioSelezionato" >
-        <option th:each="itinerario : ${itinerari}" th:value="${itinerario.id}" th:text="${itinerario.nome}"> 
-        </option>
+        		<option th:each="itinerario : ${itinerari}" th:value="${itinerario.id}" th:text="${itinerario.nome}"></option>
 			</select>
 			</div>
 			<div>
+			<label>Seleziona monumento:</label>
 			<select name="monumentoSelezionato" multiple="multiple">
-        <option th:each="monumento : ${monumenti}" th:value="${monumento.id}" th:text="${monumento.titolo}" > 
-        </option>
+        		<option th:each="monumento : ${monumenti}" th:value="${monumento.id}" th:text="${monumento.titolo}" ></option>
 			</select>
 			</div>
 			<div>

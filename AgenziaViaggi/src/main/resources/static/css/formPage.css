@@ -1,5 +1,4 @@
 body {
-    /* Stili per i titoli: Gill Sans per h1, Gill Sans MT per h2, Trebuchet MS per h3. sans-serif per h4  */
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding:0;
@@ -13,7 +12,7 @@ body {
     padding: 100px;
     color: black;
     overflow: hidden;
-    position: relative;    
+    position: relative;  
 }
 
 #video-back{
@@ -21,7 +20,6 @@ body {
     top:0;
     left:0;
     z-index:0;
-
 }
 
 /* Stile per il titolo del form. Il testo � allineato al centro*/
@@ -30,51 +28,59 @@ body {
 	position: relative;
     width: 100%;
     box-sizing: border-box;
-    margin-top:60px;
+    margin-top:10px;
     float: left;
     text-align: center;
 }
-/* Stile per il pulsante. Background non sfumato dello stesso colore degli input, 
-            traslato pi� in grande, con le lettere maiuscole e con il cursore a manina per 
-            indicare che � possibile cliccarci sopra
-        */
- .pulsante {
-        color: black;
-        background:coral;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        border: 2px black;
-        border-radius: 20px;
-        padding:20px 20px;
-        text-transform: uppercase;
-        cursor: pointer;
-    }
 
-    /* Stile per il la posizione del pulsante del form, in basso al centro*/
-    .due {
-        padding-top: 30px;
-        padding-bottom: 5px;
-        text-align: center;
-    }
-    /* Stile per le label, centrate per avvicinarsi alla colonna di destra */
-    #modulo label {
-        display: block;
-        margin-left: 500px;
-        padding-top: 10px;
-        text-align: left;
-        text-decoration: solid;
-        font-size: 22px;
-    }
-    /* Stile per gli input, con background sfumato*/
+/* Stile per il pulsante. Background non sfumato dello stesso colore degli input, traslato più in grande, con le lettere maiuscole e con 
+il cursore a manina per indicare che è possibile cliccarci sopra*/
+.pulsante {
+    color: black;
+    background:coral;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 2px black;
+    border-radius: 20px;
+    padding:20px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* Stile per il la posizione del pulsante del form, in basso al centro*/
+.due {
+    padding-top: 30px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+/* Stile per le label, centrate per avvicinarsi alla colonna di destra */
+#modulo label {
+    display: block;
+    margin-left: 500px;
+    padding-top: 10px;
+    text-align: left;
+    text-decoration: solid;
+    font-size: 22px;
+}
+
+/* Stile per gli input, con background sfumato*/
 #modulo input {
     border: solid 1px black;
     margin-left: 10px;
     background: coral;
 }
-    #modulo span {
+
+#modulo span {
 	color: coral;
 	text-align: right;
 	padding-left: 10px;
 	font-size: 9px;
+}
+
+#modulo select {
+    border: solid 1px black;
+    margin-left: 10px;
+    background: coral;
 }
     

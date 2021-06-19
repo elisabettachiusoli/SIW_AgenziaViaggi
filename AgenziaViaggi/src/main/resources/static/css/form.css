@@ -1,16 +1,16 @@
 body {
-    /* Stili per i titoli: Gill Sans per h1, Gill Sans MT per h2, Trebuchet MS per h3. sans-serif per h4  */
-    font-family: 'Gill Sans', 'Gill Sans MT','Trebuchet MS', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding:0;
 }
+
 #video-back{
     position: absolute;
     top:0;
     left:0;
     z-index:0;
-
 }
+
 /* Stile per il form, generalit� per tutti: immagine del mare senza ripetizioni per tutto il blocco, bordi neri e scritte nere*/
 #modulo {
     border-top: solid 2px #000;
@@ -18,9 +18,9 @@ body {
     padding: 100px;
     color: #000;
     overflow: hidden;
-    position: relative;
-    
+    position: relative;    
 }
+
 /* Stile per il titolo del form. Il testo � allineato al centro*/
 .content {
 	z-index:1;
@@ -31,47 +31,48 @@ body {
     float: left;
     text-align: center;
 }
-/* Stile per il pulsante. Background non sfumato dello stesso colore degli input, 
-            traslato pi� in grande, con le lettere maiuscole e con il cursore a manina per 
-            indicare che � possibile cliccarci sopra
-        */
- .pulsante {
-        color: #000;
-        background: coral;
-        margin-top: 80px;
-        margin-bottom: 20px;
-        border: 2px #000;
-        border-radius: 20px;
-        padding:20px 20px;
-        text-transform: uppercase;
-        cursor: pointer;
-    }
 
-    /* Stile per il la posizione del pulsante del form, in basso al centro*/
-    .due {
-        padding-top: 30px;
-        padding-bottom: 5px;
-        text-align: center;
-    }
-    /* Stile per le label, centrate per avvicinarsi alla colonna di destra */
-    #modulo label {
-        display: block;
-        margin-left: 500px;
-        padding-top: 10px;
-        text-align: left;
-        text-decoration: solid;
-        font-size: 16px;
-    }
-    /* Stile per gli input, con background sfumato*/
-#modulo input {
-    border: solid 1px #000;
-    margin-left: 10px;
-    background: rgba(255, 127, 80, 0.74);
+/* Stile per il pulsante. Background non sfumato dello stesso colore degli input,  traslato più in grande, con le lettere maiuscole e 
+con il cursore a manina per indicare che è possibile cliccarci sopra */
+ .pulsante {
+    color: #000;
+    background: coral;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border: 2px #000;
+    border-radius: 20px;
+    padding:20px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
 }
-    #modulo span {
+
+/* Stile per il la posizione del pulsante del form, in basso al centro*/
+.due {
+    padding-top: 30px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+    
+/* Stile per le label, centrate per avvicinarsi alla colonna di destra */
+#modulo label {
+    display: block;
+    margin-left: 500px;
+    padding-top: 10px;
+    text-align: left;
+    text-decoration: solid;
+    font-size: 16px;
+}
+    
+/* Stile per gli input, con background sfumato*/
+#modulo input {
+	border: solid 1px #000;
+	margin-left: 10px;
+	background: rgba(255, 127, 80, 0.74);
+}
+    
+#modulo span {
 	color:  rgb(255, 0, 0);
 	text-align: right;
 	padding-left: 10px;
 	font-size: 6px;
-}
-    
+}    

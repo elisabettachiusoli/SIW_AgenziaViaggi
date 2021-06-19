@@ -21,18 +21,13 @@
             <div>
             <ul class="title">
 	            <li th:style="'list-style:none'" >
-	            	<a href="guida.html" th:href="@{'/guida' + '/' + ${guida.id}}" th:text="${guida.nome} + ' ' + ${guida.cognome}"> Matteo Rossi </a>
+	            	<a href="guida.html" th:href="@{'/guida' + '/' + ${guida.id}}" th:text="${guida.nome} + ' ' + ${guida.cognome}" th:style="'color:black'"> Matteo Rossi </a>
 	            </li>
             </ul>
             </div>
         </div>
     </div> 
     <div th:unless="${guida}" id="programma"> Questa guida non esiste</div>
-     <div class="column">
-     <div class="card" th:style="'margin-top:60px'">
-     Al momento non è presente nessuna guida
-     </div>
-     </div>
     </div> 
     <footer th:replace="fragments/base.html :: fondo"></footer>
 </body>

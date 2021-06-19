@@ -9,12 +9,13 @@
     <title>Elenco Monumenti</title>
 <link th:href="@{/css/monumenti.css}" rel="stylesheet">
     <link th:href="@{/css/base.css}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,100&display=swap" rel="stylesheet">
 
 </head>
 <body>
 
     <header th:replace="fragments/base.html :: intestazione"></header>
-    <div>  <img th:src="@{/image/sfondoMappa.png}" width="1500px" height="500px">
+    
 	</div>
 	<div class="push">
     <ul  >
@@ -22,7 +23,7 @@
 				<a href="monumento.html" 
 				   th:href="@{'/monumento' + '/' + ${monumento.id}}" 
 				   th:text="${monumento.titolo} +':'" th:style="'color:black'"> Monumenti</a>
-				   <img th:src="@{*{monumento.file}}" width="300px" height="100px"
+				   <img th:src="@{*{monumento.file}}" width="200px" height="100px"
 			hspace="15px" vspace="15px" align="right" />
 				   </li>
 	</ul>
