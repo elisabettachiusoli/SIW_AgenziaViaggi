@@ -2,6 +2,8 @@ body {
     font-family: 'Roboto', sans-serif;
     background-image: url("../image/sfondoMappa.png");
     background-size: cover;
+    margin:0;
+    padding:0;
 }
 
 .column {

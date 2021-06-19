@@ -24,8 +24,8 @@
      <div th:if="${itinerario}" th:object="${itinerario}" >
      <section class="parallax">
     <div class="parallax-inner">
-			<h2 th:text="*{nome}"> A spasso per Berlino</h2>
-			<h3 th:text="*{destinazione}">descrizione </h3>
+			<h1 th:text="*{nome}"> A spasso per Berlino</h1>
+			<h3 th:text="*{destinazione}">Berlino </h3>
     </div>
     </section>
   <section id="icona">
@@ -62,7 +62,7 @@
 	</div>
         </div>
         <form th:action="@{'/admin/eliminaItinerario' + '/' + ${id}}" method="POST">
-		<span><button type="submit" class="button">Elimina Itinerario</button></span>
+		<span><button type="submit" class="button2">Elimina Itinerario</button></span>
 	</form>
     </section>
    		</div>

@@ -18,7 +18,7 @@
 <header th:replace="fragments/base.html :: intestazione"></header>
 <div th:if="${giorno}" th:object="${giorno}" >
     <section id="titolo">
-       <h1 th:text=" 'Giorno' + *{numeroGiornoDiVisita}"> </h1>
+       <h1 th:style="'font-size:40px'" th:text=" 'Giorno' + *{numeroGiornoDiVisita}"> </h1>
         <div>
             Alla scoperta di ...
         </div>
@@ -27,14 +27,14 @@
     <section id="icona">
     
         <img th:src="@{/image/luogo.png}"  width="45" height="50" hspace="15" /> <span th:text="*{zona}"> quartiere Museumsinsel e Mitte </span>
-        <img th:src="@{/image/orario.png}"  width="45" height="50" hspace="15" /> <span th:text="*{durata} + 'h'" > 3 </span> 
-        <img th:src="@{/image/money.png}" width="45" height="50" hspace="15" /> <span th:text="*{costoGiornata} + ' euro'" > 40 </span> 
+        <img th:src="@{/image/orario.png}"  width="50" height="50" hspace="15" /> <span th:text="*{durata} + 'h'" > 3 </span> 
+        <img th:src="@{/image/money.png}" width="50" height="50" hspace="15" /> <span th:text="*{costoGiornata} + ' euro'" > 40 </span> 
     </section>
 
     <section id="monumenti">
    <section id="programma">
         <div >
-            <h2> Programma </h2>
+            <h2> Programma: </h2>
         </div>
         <div>
 		<ul class="older">
@@ -52,7 +52,7 @@
     </section>
      
 	<div class="desc">
-		<h4>Dove mangiare:</h4> 
+		<h4 th:style="'font-size:20px'">Dove mangiare:</h4> 
 		<span th:text="*{descrizione}" > Restaurant Maximilians Berlin, FriedrichstraBe 185-190 </span> 
 	</div>
     </section>
