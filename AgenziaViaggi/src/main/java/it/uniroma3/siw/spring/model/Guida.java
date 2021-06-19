@@ -3,35 +3,38 @@ package it.uniroma3.siw.spring.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-import lombok.Getter;
-import lombok.Setter;
-
 @Entity
 public class Guida {
-	
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
-	
+
+	@Column
 	private String nome;
 
+	@Column
 	private String cognome;
-	
+
+	@Column
 	private int numeroDiTelefono;
 
+	@Column
 	private String email;
-	
+
+	@Column
 	private int matricola;
-	
+
 	@OneToMany(mappedBy="guida")
 	private List<Itinerario> itinerari;
-	
+
 	public Guida() {
 		this.itinerari=new ArrayList<>();
 	}
@@ -91,5 +94,4 @@ public class Guida {
 	public void setItinerari(Itinerario itinerario1) {
 		this.itinerari.add(itinerario1);
 	}
-
 }

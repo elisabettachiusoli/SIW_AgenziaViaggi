@@ -6,7 +6,6 @@ import java.util.Optional;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
 import it.uniroma3.siw.spring.model.Guida;
@@ -17,11 +16,13 @@ import it.uniroma3.siw.spring.repository.ItinerarioRepository;
 
 @Service
 public class GuidaService {
+
 	@Autowired
 	private GuidaRepository guidaRepository;
+
 	@Autowired
 	private ItinerarioRepository itinerarioRepository; 
-	
+
 	@Transactional
 	public Guida inserisci(Guida guida) {
 		return guidaRepository.save(guida);
@@ -31,7 +32,7 @@ public class GuidaService {
 	public List<Guida> tutti() {
 		return (List<Guida>) guidaRepository.findAll();
 	}
-	
+
 	@Transactional
 	public List<Guida> guidePerNomeECognome(String nome, String cognome) {
 		return guidaRepository.findByNomeAndCognome(nome, cognome);
@@ -61,7 +62,6 @@ public class GuidaService {
 			itinerario.setGuida(null);
 			itinerarioRepository.save(itinerario);
 		}
-		guidaRepository.delete(guida);
-		
+		guidaRepository.delete(guida);		
 	}
 }

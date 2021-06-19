@@ -16,14 +16,16 @@ import it.uniroma3.siw.spring.repository.ItinerarioRepository;
 
 @Service
 public class ItinerarioService {
-	
+
 	@Autowired
 	private ItinerarioRepository itinerarioRepository;
+
 	@Autowired
 	private GuidaRepository guidaRepository;
+
 	@Autowired	
 	private GiornoService giornoService; 
-	
+
 	@Transactional
 	public Itinerario inserisci(Itinerario itinerario) {
 		return itinerarioRepository.save(itinerario);
@@ -33,7 +35,7 @@ public class ItinerarioService {
 	public List<Itinerario> tutti() {
 		return (List<Itinerario>) itinerarioRepository.findAll();
 	}
-	
+
 	@Transactional
 	public List<Itinerario> guidePerNomeEDestinazione(String nome, String destinazione) {
 		return itinerarioRepository.findByNomeAndDestinazione(nome, destinazione);
@@ -56,21 +58,21 @@ public class ItinerarioService {
 		else 
 			return false;
 	}
-	
+
 	public void aggiungiGuida(Guida guida, Itinerario itinerario) {
 		itinerario.setGuida(guida);
 		guida.setItinerari(itinerario);
-        this.itinerarioRepository.save(itinerario);
-        this.guidaRepository.save(guida);
+		this.itinerarioRepository.save(itinerario);
+		this.guidaRepository.save(guida);
 	}
-	
+
 	@Transactional
 	public void eliminaItinerario(Itinerario itinerario) {
 		List<Giorno> giorni=itinerario.getGiorno();
 		for(Giorno giorno : giorni) {
 			giornoService.eliminaGiorno(giorno);
 		}
-		
+
 		itinerarioRepository.delete(itinerario);
 	}
 }

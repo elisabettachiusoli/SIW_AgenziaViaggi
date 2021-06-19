@@ -14,9 +14,10 @@ import it.uniroma3.siw.spring.repository.MonumentoRepository;
 
 @Service
 public class MonumentoService {
+
 	@Autowired
 	private MonumentoRepository monumentoRepository; 
-	
+
 	@Transactional
 	public Monumento inserisci(Monumento monumento) {
 		return monumentoRepository.save(monumento);
@@ -26,7 +27,7 @@ public class MonumentoService {
 	public List<Monumento> tutti() {
 		return (List<Monumento>) monumentoRepository.findAll();
 	}
-	
+
 	@Transactional
 	public List<Monumento> monumentoPerTitolo(String titolo) {
 		return monumentoRepository.findByTitolo(titolo);
@@ -52,8 +53,6 @@ public class MonumentoService {
 
 	public void eliminaMonumento(Monumento monumento) {
 		monumentoRepository.delete(monumento);
-		
+
 	}
-
-
 }

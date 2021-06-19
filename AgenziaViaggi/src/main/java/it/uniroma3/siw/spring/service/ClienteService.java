@@ -13,15 +13,15 @@ import it.uniroma3.siw.spring.repository.ClienteRepository;
 
 @Service
 public class ClienteService {
-	
+
 	@Autowired
 	private ClienteRepository clienteRepository; 
-	
+
 	@Transactional
 	public Cliente inserisci(Cliente cliente) {
 		return clienteRepository.save(cliente);
 	}
-	 
+
 	@Transactional
 	public List<Cliente> ClientiPerNomeAndCognome(String nome, String cognome) {
 		return clienteRepository.findByNomeAndCognome(nome, cognome);
@@ -40,6 +40,4 @@ public class ClienteService {
 		else 
 			return null;
 	}
-
-
 }

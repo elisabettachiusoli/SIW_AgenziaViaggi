@@ -20,11 +20,13 @@ public class GiornoService {
 
 	@Autowired
 	private GiornoRepository giornoRepository;
+
 	@Autowired
 	private ItinerarioRepository itinerarioRepository;
+
 	@Autowired
 	private MonumentoRepository monumentoRepository; 
-	
+
 	@Transactional
 	public Giorno inserisci(Giorno giorno) {
 		return giornoRepository.save(giorno);
@@ -34,7 +36,6 @@ public class GiornoService {
 	public List<Giorno> tutti() {
 		return (List<Giorno>) giornoRepository.findAll();
 	}
-	
 
 	@Transactional
 	public Giorno giornoPerId(Long id) {
@@ -48,17 +49,15 @@ public class GiornoService {
 	public void aggiungiItinerario(Giorno giorno, Itinerario itinerario) {
 		giorno.setItinerario(itinerario);
 		itinerario.setGiorno(giorno);
-        this.giornoRepository.save(giorno);
-        this.itinerarioRepository.save(itinerario);
-		
+		this.giornoRepository.save(giorno);
+		this.itinerarioRepository.save(itinerario);		
 	}
 
 	public void aggiungiMonumento(Giorno giorno, Monumento monumento) {
 		giorno.setMonumento(monumento);
-        this.giornoRepository.save(giorno);
-        monumento.setGiorno(giorno);
-        this.monumentoRepository.save(monumento);
-		
+		this.giornoRepository.save(giorno);
+		monumento.setGiorno(giorno);
+		this.monumentoRepository.save(monumento);		
 	}
 
 	public void eliminaGiorno(Giorno giorno) {
@@ -67,8 +66,6 @@ public class GiornoService {
 			monumento.setGiorno(null);
 			monumentoRepository.save(monumento);
 		}
-		giornoRepository.delete(giorno);
-		
+		giornoRepository.delete(giorno);		
 	}
-
 }
