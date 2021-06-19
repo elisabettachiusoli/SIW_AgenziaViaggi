@@ -20,7 +20,7 @@ public class Monumento {
 	@Column
 	private int anno;
 
-	@Column
+	@Column(length=3000)
 	private String descrizione;
 
 	@Column

@@ -25,7 +25,7 @@ public class Itinerario {
 	@Column(nullable=false)
 	private String destinazione;
 
-	@Column
+	@Column(length=3000)
 	private String descrizione;
 
 	@Column

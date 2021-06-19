@@ -70,7 +70,7 @@ public class Inizializzazione implements ApplicationListener<ContextRefreshedEve
 
 		Monumento monumento1= new Monumento();
 		monumento1.setAnno(1999);
-		monumento1.setDescrizione("Nel complesso l’Isola dei musei di Berlino è una grandiosa opera d’arte: cinque musei di fama mondiale dell’epoca prussiana, con l’aggiunta della moderna James-Simon-Galerie, formano una straordinaria area museale");
+		monumento1.setDescrizione("Nel complesso l’Isola dei musei di Berlino è una grandiosa opera d'arte: cinque musei di fama mondiale dell'epoca prussiana, con l’aggiunta della moderna James-Simon-Galerie, formano una straordinaria area museale che nel 1999 è stata insignita del titolo di patrimonio mondiale dell’umanità dall'UNESCO.");
 		monumento1.setGiorno(giorno1);
 		monumento1.setLuogo("BodestraBe 1-3, 10178 Berlin, Germania");
 		monumento1.setTitolo("L'isola dei musei");
@@ -116,7 +116,7 @@ public class Inizializzazione implements ApplicationListener<ContextRefreshedEve
 		giorno1.setDurata(3);
 		giorno1.setItinerario(itinerario1);
 		giorno1.setNumeroGiornoDiVisita(1);
-		giorno1.setZona("quartiere Museumsinsel e Mitte");
+		giorno1.setZona("Quartiere Museumsinsel e Mitte");
 		giorno1.setMonumento(monumento1);
 		giorno1.setMonumento(monumento2);
 		giornoService.inserisci(giorno1);		
