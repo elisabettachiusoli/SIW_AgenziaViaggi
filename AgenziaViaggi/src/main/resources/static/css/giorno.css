@@ -11,12 +11,12 @@ body {
     text-align: center;
     text-transform: full-width uppercase;
     overflow: auto;
-    background-color:yellowgreen;
+    background-color:#0a83b8;
 }
 
 #icona {
     width: 100%;
-    background-color: #f5bd66;
+    background-color: rgba(255, 127, 80, 0.74);
     border-bottom: solid 2px #000;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -48,10 +48,11 @@ body {
   counter-reset: li;
 }
 .older li {
-  border-bottom: dashed 1px yellowgreen;
+  border-bottom: dashed 1px #FFF;
   margin-top: 10px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   padding: 5px;
+  background-color: rgba(10, 131, 184, 0.63);
 }
 .older a {
   text-decoration: none;
@@ -80,7 +81,7 @@ body {
 }
 
 .older a:hover:before {
-  color:#8bc63e;
+  color: #FFF;
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
