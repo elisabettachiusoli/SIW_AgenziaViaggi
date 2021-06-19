@@ -47,7 +47,11 @@
 				<span th:if="${#fields.hasErrors('numeroDiTelefono')}" th:errors="*{numeroDiTelefono}"></span>
 			</div>
 			<div>
-				<span><button type="submit" class="pulsante">Invia</button></span>
+				<label>Carica foto:</label>
+				<span><input type="text" th:field="*{file}" /></span>			
+			<div>
+			<div>
+				<span><button type="submit" class="pulsante">Conferma Guida</button></span>
 			</div>
 		</div>
 		</div>

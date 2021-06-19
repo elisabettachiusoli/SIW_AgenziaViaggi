@@ -31,6 +31,9 @@ public class Guida {
 
 	@Column
 	private int matricola;
+	
+	@Column
+	private String file;
 
 	@OneToMany(mappedBy="guida")
 	private List<Itinerario> itinerari;
@@ -93,5 +96,13 @@ public class Guida {
 
 	public void setItinerari(Itinerario itinerario1) {
 		this.itinerari.add(itinerario1);
+	}
+	
+	public String getFile() {
+		return file;
+	}
+
+	public void setFile(String file) {
+		this.file = file;
 	}
 }

@@ -17,7 +17,7 @@
     <section>
     <div class="column" th:each="guida: ${guida}">
         <div class="card">
-            <img id="img" th:src="@{/image/avatar3.png}" alt="">
+            <img th:src="@{*{guida.file}}" id="img" alt="">
             <div>
             <ul class="title">
 	            <li th:style="'list-style:none'" >

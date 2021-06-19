@@ -94,6 +94,7 @@ public class Inizializzazione implements ApplicationListener<ContextRefreshedEve
 		guida1.setEmail("matteo.rossi@gmail.com");
 		guida1.setMatricola(0526);
 		guida1.setNumeroDiTelefono(33947);
+		guida1.setFile("https://image.freepik.com/free-photo/young-man-traveling-around-world_23-2148195185.jpg");
 
 
 		Itinerario itinerario1= new Itinerario();
