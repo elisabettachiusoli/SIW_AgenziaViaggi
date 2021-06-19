@@ -1,7 +1,5 @@
 package it.uniroma3.siw.spring.controller;
 
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -43,6 +41,7 @@ public class AuthenticationController {
 	public String getLogin(Model model) {
 		return "loginForm.html";
 	}
+	
 	@RequestMapping(value = "/logout", method = RequestMethod.GET) 
 	public String logout(Model model) {
 		return "index";
@@ -50,7 +49,6 @@ public class AuthenticationController {
 
 	@RequestMapping(value = "/default", method = RequestMethod.GET)
 	public String defaultAfterLogin(Model model) {
-
 		UserDetails userDetails = (UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		Credentials credentials = credentialsService.getCredentials(userDetails.getUsername());
 		if (credentials.getRole().equals(Credentials.ADMIN_ROLE)) {
@@ -81,5 +79,4 @@ public class AuthenticationController {
 		}
 		return "register";
 	}
-
 }

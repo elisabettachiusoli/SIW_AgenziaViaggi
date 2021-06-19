@@ -13,12 +13,13 @@ import it.uniroma3.siw.spring.service.MonumentoService;
 
 @Component
 public class MonumentoValidator implements Validator {
+
 	@Autowired
 	private MonumentoService monumentoService;
-	
-    private static final Logger logger = LoggerFactory.getLogger(MonumentoValidator.class);
-    
-    @Override
+
+	private static final Logger logger = LoggerFactory.getLogger(MonumentoValidator.class);
+
+	@Override
 	public void validate(Object o, Errors errors) {
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "nome", "required");
 

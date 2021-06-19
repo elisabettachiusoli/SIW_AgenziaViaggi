@@ -13,12 +13,13 @@ import it.uniroma3.siw.spring.service.GuidaService;
 
 @Component
 public class GuidaValidator implements Validator {
+
 	@Autowired
 	private GuidaService guidaService;
-	
-    private static final Logger logger = LoggerFactory.getLogger(GuidaValidator.class);
-    
-    @Override
+
+	private static final Logger logger = LoggerFactory.getLogger(GuidaValidator.class);
+
+	@Override
 	public void validate(Object o, Errors errors) {
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "nome", "required");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "cognome", "required");

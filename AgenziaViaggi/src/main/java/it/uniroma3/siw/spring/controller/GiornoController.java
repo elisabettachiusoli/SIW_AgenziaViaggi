@@ -24,61 +24,60 @@ import it.uniroma3.siw.spring.service.MonumentoService;
 public class GiornoController {
 	@Autowired
 	private GiornoService giornoService;
+	
 	@Autowired
 	private ItinerarioService itinerarioService;
-	
-    @Autowired
-    private GiornoValidator giornoValidator;
-    @Autowired
+
+	@Autowired
 	private MonumentoService monumentoService;
-    @Autowired
+	
+	@Autowired
 	private CredentialsService credentialsService;
-        
-    @RequestMapping(value="/admin/addGiorno", method = RequestMethod.GET)
-    public String addGiorno(Model model) {
-    	model.addAttribute("giorno", new Giorno());
-    	model.addAttribute("itinerari", this.itinerarioService.tutti());
-    	model.addAttribute("monumenti", this.monumentoService.tutti());
-        return "giornoForm";
-    }
 
-    @RequestMapping(value = "/giorno/{id}", method = RequestMethod.GET)
-    public String getGiorno(@PathVariable("id") Long id, Model model) {
+	@RequestMapping(value="/admin/addGiorno", method = RequestMethod.GET)
+	public String addGiorno(Model model) {
+		model.addAttribute("giorno", new Giorno());
+		model.addAttribute("itinerari", this.itinerarioService.tutti());
+		model.addAttribute("monumenti", this.monumentoService.tutti());
+		return "giornoForm";
+	}
+
+	@RequestMapping(value = "/giorno/{id}", method = RequestMethod.GET)
+	public String getGiorno(@PathVariable("id") Long id, Model model) {
 		UserDetails userDetails = (UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-    	Credentials credentials = credentialsService.getCredentials(userDetails.getUsername());
-    	model.addAttribute("giorno", this.giornoService.giornoPerId(id));
-    	model.addAttribute("monumenti", this.giornoService.giornoPerId(id).getMonumento());
-    	if (credentials.getRole().equals(Credentials.ADMIN_ROLE)) {
-            return "admin/giorno";
-        }
-        return "giorno";
-    }
+		Credentials credentials = credentialsService.getCredentials(userDetails.getUsername());
+		model.addAttribute("giorno", this.giornoService.giornoPerId(id));
+		model.addAttribute("monumenti", this.giornoService.giornoPerId(id).getMonumento());
+		if (credentials.getRole().equals(Credentials.ADMIN_ROLE)) {
+			return "admin/giorno";
+		}
+		return "giorno";
+	}
 
-    
-    @RequestMapping(value = "/admin/giorno", method = RequestMethod.POST)
-    public String addGuida(@ModelAttribute("giorno") Giorno giorno,  @RequestParam("itinerarioSelezionato") final Long idItinerario, 
-    		                           @RequestParam("monumentoSelezionato") final List<Long> idMonumento,
-    									Model model, BindingResult bindingResult) {
-    	this.giornoValidator.validate(giorno, bindingResult);
-        if (!bindingResult.hasErrors()) {
-        	this.giornoService.inserisci(giorno);
-        	this.giornoService.aggiungiItinerario(giorno, this.itinerarioService.itinerarioPerId(idItinerario));
-        	for( Long id: idMonumento) {
-        	this.giornoService.aggiungiMonumento(giorno, this.monumentoService.monumentoPerId(id));
-        	}
-            model.addAttribute("giorno", this.giornoService.tutti());
-            model.addAttribute("itinerario", this.itinerarioService.tutti());
-            return "itinerari";
-        }
-        return "giornoForm";
-    }
-    
-    @RequestMapping(value="/admin/eliminaGiorno/{id}", method=RequestMethod.POST)
+
+	@RequestMapping(value = "/admin/giorno", method = RequestMethod.POST)
+	public String addGuida(@ModelAttribute("giorno") Giorno giorno,  @RequestParam("itinerarioSelezionato") final Long idItinerario, 
+			@RequestParam("monumentoSelezionato") final List<Long> idMonumento,
+			Model model, BindingResult bindingResult) {
+		if (!bindingResult.hasErrors()) {
+			this.giornoService.inserisci(giorno);
+			this.giornoService.aggiungiItinerario(giorno, this.itinerarioService.itinerarioPerId(idItinerario));
+			for( Long id: idMonumento) {
+				this.giornoService.aggiungiMonumento(giorno, this.monumentoService.monumentoPerId(id));
+			}
+			model.addAttribute("giorno", this.giornoService.tutti());
+			model.addAttribute("itinerario", this.itinerarioService.tutti());
+			return "itinerari";
+		}
+		return "giornoForm";
+	}
+
+	@RequestMapping(value="/admin/eliminaGiorno/{id}", method=RequestMethod.POST)
 	public String eliminaGiorno(Model model, @PathVariable("id") Long idGiorno) {
 		Giorno giorno = giornoService.giornoPerId(idGiorno);
 		giornoService.eliminaGiorno(giorno);
 		model.addAttribute("giorno", this.giornoService.tutti());
-		 model.addAttribute("itinerario", this.itinerarioService.tutti());
+		model.addAttribute("itinerario", this.itinerarioService.tutti());
 		return "itinerari";
 	}
 }

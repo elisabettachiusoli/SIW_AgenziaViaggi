@@ -14,12 +14,13 @@ import it.uniroma3.siw.spring.service.ItinerarioService;
 
 @Component
 public class ItinerarioValidator implements Validator {
+
 	@Autowired
 	private ItinerarioService itinerarioService;
-	
-    private static final Logger logger = LoggerFactory.getLogger(ItinerarioValidator.class);
-    
-    @Override
+
+	private static final Logger logger = LoggerFactory.getLogger(ItinerarioValidator.class);
+
+	@Override
 	public void validate(Object o, Errors errors) {
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "nome", "required");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "destinazione", "required");
