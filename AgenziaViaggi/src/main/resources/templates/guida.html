@@ -36,7 +36,9 @@
                         <h3>Lingue parlate</h3>
                         <p>Italiano, inglese, spagnolo, tedesco</p>
                          <h3 >Itinerari:</h3>
-                        <p th:each="itinerario: ${itinerari}" th:text="${itinerario.nome}">itinerari</p>
+                        <p th:each="itinerario: ${itinerari}">  <a href="monumento.html" 
+				   th:href="@{'/itinerario' + '/' + ${itinerario.id}}" 
+				   th:text= "${itinerario.nome}">Monumento</a></p>
                 </div>
             </div>
         </div>

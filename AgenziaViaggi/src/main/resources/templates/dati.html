@@ -23,6 +23,7 @@
     <section id="dati">
     <div th:if="${cliente}" th:object="${cliente}">
 		<h1>	Grazie <span th:text="*{nome}">nome cliente</span> per esserti affidato a noi!   </h1>
+		<h2> Il tuo codice di prenotazione della consulenza è <span th:text="*{id}">id cliente</span> </h2>
         <h2>  I tuoi dati sono stati inviati correttamente.<br /> 
          A breve un nostro consulente ti contatterà per definire<br />
           i dettagli del tuo prossimo viaggio con noi! </h2>
