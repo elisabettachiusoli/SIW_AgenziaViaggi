@@ -56,8 +56,10 @@ public class MonumentoService {
 	}
 
 	public void eliminaMonumento(Monumento monumento) {
+		if(monumento.getGiorno()!=null) {
 		monumento.getGiorno().getMonumento().remove(monumento);
 		giornoRepository.save(monumento.getGiorno());
+		}
 		monumentoRepository.delete(monumento);
 
 	}

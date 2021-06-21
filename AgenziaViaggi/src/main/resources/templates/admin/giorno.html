@@ -20,7 +20,7 @@
 <header th:replace="fragments/base.html :: intestazione"></header>
 <div th:if="${giorno}" th:object="${giorno}" >
     <section id="titolo">
-       <h1 th:text=" 'Giorno' + *{numeroGiornoDiVisita}"> </h1>
+       <h1 th:text=" 'Giorno ' + *{numeroGiornoDiVisita}"> </h1>
         <div>
             Alla scoperta di ...
         </div>
