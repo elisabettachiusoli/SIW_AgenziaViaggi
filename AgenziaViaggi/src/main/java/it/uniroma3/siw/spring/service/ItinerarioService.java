@@ -6,13 +6,16 @@ import java.util.Optional;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
 import it.uniroma3.siw.spring.model.Giorno;
 import it.uniroma3.siw.spring.model.Guida;
 import it.uniroma3.siw.spring.model.Itinerario;
+import it.uniroma3.siw.spring.model.Monumento;
 import it.uniroma3.siw.spring.repository.GuidaRepository;
 import it.uniroma3.siw.spring.repository.ItinerarioRepository;
+import it.uniroma3.siw.spring.repository.MonumentoRepository;
 
 @Service
 public class ItinerarioService {
@@ -24,7 +27,7 @@ public class ItinerarioService {
 	private GuidaRepository guidaRepository;
 
 	@Autowired	
-	private GiornoService giornoService; 
+	private MonumentoRepository monumentoRepository; 
 
 	@Transactional
 	public Itinerario inserisci(Itinerario itinerario) {
@@ -58,7 +61,7 @@ public class ItinerarioService {
 		else 
 			return false;
 	}
-
+	@Transactional
 	public void aggiungiGuida(Guida guida, Itinerario itinerario) {
 		itinerario.setGuida(guida);
 		guida.setItinerari(itinerario);
@@ -68,11 +71,17 @@ public class ItinerarioService {
 
 	@Transactional
 	public void eliminaItinerario(Itinerario itinerario) {
+		Guida guida=itinerario.getGuida();
+		guida.removeItinerario(itinerario);
+		guidaRepository.save(guida);
 		List<Giorno> giorni=itinerario.getGiorno();
-		for(Giorno giorno : giorni) {
-			giornoService.eliminaGiorno(giorno);
+		for(Giorno giorno:giorni) {
+		List<Monumento> monumenti=giorno.getMonumento();
+		for(Monumento monumento:monumenti) {
+			monumento.setGiorno(null);
+			monumentoRepository.save(monumento);
 		}
-
+		}
 		itinerarioRepository.delete(itinerario);
 	}
 }

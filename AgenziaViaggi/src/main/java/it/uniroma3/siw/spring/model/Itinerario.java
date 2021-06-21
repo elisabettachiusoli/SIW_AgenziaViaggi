@@ -40,13 +40,13 @@ public class Itinerario {
 	@Column
 	private int costoTotale;
 
-	@OneToMany(mappedBy="itinerario")
+	@OneToMany(mappedBy="itinerario", cascade=CascadeType.REMOVE)
 	private List<Giorno> giorni;
 
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne
 	private AgenziaViaggi agenziaViaggi;
 
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade=CascadeType.PERSIST)
 	private Guida guida;
 
 	public Itinerario() {
@@ -129,7 +129,7 @@ public class Itinerario {
 		this.guida=guida;		
 	}
 
-	public Object getGuida() {
+	public Guida getGuida() {
 		return this.guida;
 	}
 }

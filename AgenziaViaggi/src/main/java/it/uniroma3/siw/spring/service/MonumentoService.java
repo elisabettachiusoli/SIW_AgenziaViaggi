@@ -6,9 +6,11 @@ import java.util.Optional;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
 import it.uniroma3.siw.spring.model.Monumento;
+import it.uniroma3.siw.spring.repository.GiornoRepository;
 import it.uniroma3.siw.spring.repository.MonumentoRepository;
 
 
@@ -16,7 +18,9 @@ import it.uniroma3.siw.spring.repository.MonumentoRepository;
 public class MonumentoService {
 
 	@Autowired
-	private MonumentoRepository monumentoRepository; 
+	private MonumentoRepository monumentoRepository;
+	@Autowired	
+	private GiornoRepository giornoRepository; 
 
 	@Transactional
 	public Monumento inserisci(Monumento monumento) {
@@ -52,6 +56,8 @@ public class MonumentoService {
 	}
 
 	public void eliminaMonumento(Monumento monumento) {
+		monumento.getGiorno().getMonumento().remove(monumento);
+		giornoRepository.save(monumento.getGiorno());
 		monumentoRepository.delete(monumento);
 
 	}

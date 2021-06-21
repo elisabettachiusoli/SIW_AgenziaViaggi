@@ -3,6 +3,7 @@ package it.uniroma3.siw.spring.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -35,7 +36,7 @@ public class Guida {
 	@Column
 	private String file;
 
-	@OneToMany(mappedBy="guida")
+	@OneToMany
 	private List<Itinerario> itinerari;
 
 	public Guida() {
@@ -96,6 +97,9 @@ public class Guida {
 
 	public void setItinerari(Itinerario itinerario1) {
 		this.itinerari.add(itinerario1);
+	}
+	public void removeItinerario(Itinerario itinerario) {
+		this.itinerari.remove(itinerario);
 	}
 	
 	public String getFile() {

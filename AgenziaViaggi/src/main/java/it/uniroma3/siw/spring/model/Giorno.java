@@ -36,7 +36,7 @@ public class Giorno {
 	@ManyToOne
 	private Itinerario itinerario;
 
-	@OneToMany(mappedBy="giorno")
+	@OneToMany
 	private List<Monumento> monumenti;
 
 	public Giorno() {
