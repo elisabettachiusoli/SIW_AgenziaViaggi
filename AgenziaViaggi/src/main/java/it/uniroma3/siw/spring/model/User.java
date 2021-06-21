@@ -1,9 +1,13 @@
 package it.uniroma3.siw.spring.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -19,6 +23,9 @@ public class User {
 	private String cognome;
 
 	private String email;
+	
+	@OneToMany(cascade=CascadeType.ALL)
+	private List<Cliente> clienti;
 
 	public Long getId() {
 		return id;
@@ -51,4 +58,11 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}	
+	
+	public void setClienti(Cliente cliente) {
+		clienti.add(cliente);
+	}
+	public List<Cliente> getClienti() {
+		return this.clienti;	
+	}
 }

@@ -1,4 +1,4 @@
-package it.uniroma3.siw.spring.start;
+/*package it.uniroma3.siw.spring.start;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
@@ -122,3 +122,4 @@ public class Inizializzazione implements ApplicationListener<ContextRefreshedEve
 		giornoService.inserisci(giorno1);		
 	}
 }
+*/

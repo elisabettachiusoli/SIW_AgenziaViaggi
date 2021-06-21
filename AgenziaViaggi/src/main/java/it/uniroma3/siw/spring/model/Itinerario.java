@@ -41,7 +41,7 @@ public class Itinerario {
 	private int costoTotale;
 
 	@OneToMany(mappedBy="itinerario", cascade=CascadeType.REMOVE)
-	private List<Giorno> giorni;
+	private List<Giorno> giorno;
 
 	@ManyToOne
 	private AgenziaViaggi agenziaViaggi;
@@ -50,7 +50,7 @@ public class Itinerario {
 	private Guida guida;
 
 	public Itinerario() {
-		this.giorni=new ArrayList<>();
+		this.giorno=new ArrayList<>();
 	}
 
 	public Long getId() {
@@ -118,11 +118,11 @@ public class Itinerario {
 	}
 
 	public List<Giorno> getGiorno() {
-		return giorni;
+		return giorno;
 	}
 
 	public void setGiorno(Giorno giorno) {
-		this.giorni.add(giorno);
+		this.giorno.add(giorno);
 	}
 
 	public void setGuida(Guida guida) {

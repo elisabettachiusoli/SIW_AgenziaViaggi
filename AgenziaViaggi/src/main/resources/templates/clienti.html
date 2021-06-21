@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    
+    <!-- logo -->
+    <link rel=icon th:href="@{/image/logo.jpg}" >
+    <title>Giorno</title>
+    
+    <link rel="stylesheet" th:href="@{/css/giorno.css}">
+    <link th:href="@{/css/base.css}" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header th:replace="fragments/base.html :: intestazione"></header>
+<section id="titolo" th:style="'background-color: coral'">
+       <h1 >Clienti che hanno richiesto una consulenza</h1>
+</section>
+<div th:each="cliente : ${clienti}" >
+    
+ 
+	<div class="desc" th:style="'margin-left: 10px'">
+		<h4 th:text="'Codice prenotazione: ' + *{cliente.id}" > id</h4> 
+		<span th:text="*{cliente.nome} + ' ' + *{cliente.cognome} " > nome cognome</span> </br>
+		 <span> Email: </span><span th:text="*{cliente.email}"> email </span> </br>
+		 <span> Numero di telefono: </span> <span th:text="*{cliente.numeroDiTelefono}" > num </span> </br>
+		 <span> Città da visitare: </span><span th:text="*{cliente.cittaDaVisitare}"> citta </span> </br>
+		 <span> Periodo: </span> <span th:text="'dal ' + *{cliente.dataInizio} + ' al ' + *{cliente.dataFine}" > num </span> </br>
+	</div>
+	<form th:action="@{'/admin/eliminaCliente' + '/' + ${cliente.id}}" method="POST">
+		<span><button type="submit" class="button2">Consulenza avvenuta</button></span>
+	</form>
+
+</div>
+   	
+    	<div th:unless="${clienti}" id="programma"> Nessun cliente ha richiesto una consulenza</div>
+    </div>
+	<footer th:replace="fragments/base.html :: fondo"></footer>
+</body>
+</html>

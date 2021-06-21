@@ -40,4 +40,9 @@ public class ClienteService {
 		else 
 			return null;
 	}
+	@Transactional
+	public void eliminaCliente(Cliente cliente) {
+		clienteRepository.delete(cliente);
+		
+	}
 }

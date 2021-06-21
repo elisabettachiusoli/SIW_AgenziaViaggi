@@ -30,15 +30,7 @@ public class MainController {
 		return "form.html";
 	}
 
-	@RequestMapping(value="/cliente", method = RequestMethod.POST)
-	public String newCliente(@ModelAttribute("cliente") Cliente cliente, BindingResult bindingResult) {
-		this.clienteValidator.validate(cliente, bindingResult);
-		if (!bindingResult.hasErrors()) {
-			this.clienteService.inserisci(cliente);
-			return "dati.html";
-		}
-		return "form.html";
-	}
+
 
 	@RequestMapping(value="/informazioni", method = RequestMethod.GET)
 	public String getInfo() {
