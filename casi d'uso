@@ -1,0 +1,74 @@
+Caso d’uso UC1: Effettuare l'accesso al Sistema – Attore primario: un Utente. 
+1. Un Utente vuole accedere al Sistema. 
+2. L'Utente inserisce il suo username e la sua password. Il Sistema verifica la correttezza dei 
+dati immessi e autentica l'Utente. Il Sistema mostra l'elenco delle attività che l'Utente può svolgere. 
+Estensione 2a: L'Utente non è registrato al Sistema. Il sistema non lo autentica e non mostra l'elenco delle attività.
+
+Caso d'uso UC2: Effettuare la navigazione per guide, itinerari, giorni e monumenti – Attore primario: un Utente. 
+Un Utente può usare il Sistema per navigare tra guide, itinerari, giorni e monumenti in diversi modi, come segue: 
+(i) può visualizzare tutti gli itinerari ed a partire da un itinerario può esaminare i giorni inseriti, visualizzando anche informazioni sui monumenti visitati in quel giorno.
+(ii) può visualizzare l'elenco delle guide ed a partire da ciascuna guida può visualizzare gli itinerari a cui la guida partecipa.
+
+Caso d'uso UC3: Aggiungere un itinerario – Attore primario: un Amministratore. 
+1. Un Amministratore vuole aggiungere un itinerario al Sistema.
+2. L'Amministratore inserisce il suo username e la sua password. Il Sistema verifica la correttezza dei dati immessi e autentica l'Amministratore. Il Sistema mostra l'elenco delle attività che l'Amministratore può svolgere.
+3. L'Amministratore sceglie l'attività 'inserisci itinerario'.
+4. L'Amministratore inserisce le informazioni dell'itinerario, nonchè seleziona la guida ed uno o più giorni).
+5. L'Amministratore conferma la sua volontà di creare un nuovo itinerario. Il Sistema registra la creazione e mostra l'elenco degli itinerari aggiornato. 
+6. L'Amministratore può poi proseguire nell’uso del Sistema.
+
+Caso d'uso UC4: Rimuovere un itinerario – Attore primario: un Amministratore. 
+1. Un Amministratore vuole rimuovere un itinerario dal Sistema.
+2. L'Amministratore inserisce il suo username e la sua password. Il Sistema verifica la correttezza dei dati immessi e autentica l'Amministratore. Il Sistema mostra l'elenco delle attività che l'Amministratore può svolgere.
+3. L'Amministratore sceglie l'attività 'elenco itinerari'. Il Sistema mostra l'elenco degli itinerari al momento presenti. L'Amministratore seleziona l'itinerario che intende eliminare.
+4.L'Amministratore sceglie l'attività 'elimina itinerario'. Il Sistema registra l'avvenuta rimozione e mostra l'elenco degli itinerari aggiornato. 
+5. L'Amministratore può poi proseguire nell’uso del Sistema.
+
+Caso d'uso UC5: Aggiungere un giorno – Attore primario: un Amministratore. 
+1. Un Amministratore vuole aggiungere un giorno al Sistema.
+2. L'Amministratore inserisce il suo username e la sua password. Il Sistema verifica la correttezza dei dati immessi e autentica l'Amministratore. Il Sistema mostra l'elenco delle attività che l'Amministratore può svolgere.
+3. L'Amministratore sceglie l'attività 'inserisci giorno'.
+4. L'Amministratore inserisce le informazioni del giorno, nonché seleziona uno o più monumenti.
+5. L'Amministratore conferma la sua volontà di creare un nuovo giorno. Il Sistema registra la creazione e mostra l'elenco degli itinerari. 
+6. L'Amministratore può poi proseguire nell’uso del Sistema.
+
+Caso d'uso UC6: Rimuovere un giorno – Attore primario: un Amministratore. 
+1. Un Amministratore vuole rimuovere un giorno al Sistema.
+2. L'Amministratore inserisce il suo username e la sua password. Il Sistema verifica la correttezza dei dati immessi e autentica l'Amministratore. Il Sistema mostra l'elenco delle attività che l'Amministratore può svolgere.
+3. L'Amministratore sceglie l'attività 'elenco itinerari'. Il Sistema mostra l'elenco degli itinerari al momento presenti.  L'Amministratore seleziona l'itinerario del giorno che intende eliminare.
+4. L'Amministratore seleziona il giorno che vuole eliminare.
+5.L'Amministratore sceglie l'attività 'elimina giorno'. Il Sistema registra l'avvenuta rimozione e mostra l'elenco degli itinerari. 
+6. L'Amministratore può poi proseguire nell’uso del Sistema.
+
+Caso d'uso UC7: Aggiungere una guida – Attore primario: un Amministratore. 
+1. Un Amministratore vuole aggiungere una guida al Sistema.
+2. L'Amministratore inserisce il suo username e la sua password. Il Sistema verifica la correttezza dei dati immessi e autentica l'Amministratore. Il Sistema mostra l'elenco delle attività che l'Amministratore può svolgere.
+3. L'Amministratore sceglie l'attività 'inserisci guida'.
+4. L'Amministratore inserisce i dati della guida.
+5. L'Amministratore conferma la sua volontà di creare una nuova guida.  Il Sistema registra la creazione e mostra l'elenco delle guide aggiornato. 
+6. L'Amministratore può poi proseguire nell’uso del Sistema.
+
+Caso d'uso UC8: Rimuovere una guida – Attore primario: un Amministratore. 
+1. Un Amministratore vuole rimuovere una guida  dal Sistema.
+2. L'Amministratore inserisce il suo username e la sua password. Il Sistema verifica la correttezza dei dati immessi e autentica l'Amministratore. Il Sistema mostra l'elenco delle attività che l'Amministratore può svolgere.
+3. L'Amministratore sceglie l'attività 'elenco guide'. Il Sistema mostra l'elenco delle guide al momento presenti.  L'Amministratore seleziona la guida che intende eliminare.
+4.L'Amministratore sceglie l'attività 'elimina guida'. Il Sistema registra l'avvenuta rimozione e mostra l'elenco delle guide aggiornato. 
+5. L'Amministratore può poi proseguire nell’uso del Sistema.
+
+Caso d'uso UC9: Aggiungere un monumento – Attore primario: un Amministratore. 
+1. Un Amministratore vuole aggiungere una guida al Sistema.
+2. L'Amministratore inserisce il suo username e la sua password. Il Sistema verifica la correttezza dei 
+dati immessi e autentica l'Amministratore. Il Sistema mostra l'elenco delle attività che l'Amministratore può svolgere.
+3. L'Amministratore sceglie l'attività 'inserisci monumento'.
+4. L'Amministratore inserisce i dati del monumento.
+5. L'Amministratore conferma la sua volontà di creare un nuovo monumento.  Il Sistema registra la creazione e mostra l'elenco dei monumenti aggiornato. 
+6. L'Amministratore può poi proseguire nell’uso del Sistema.
+
+Caso d'uso UC10: Rimuovere un monumento – Attore primario: un Amministratore. 
+1. Un Amministratore vuole rimuovere una guida  dal Sistema.
+2. L'Amministratore inserisce il suo username e la sua password. Il Sistema verifica la correttezza dei 
+dati immessi e autentica l'Amministratore. Il Sistema mostra l'elenco delle attività che l'Amministratore può svolgere.
+3. L'Amministratore sceglie l'attività 'elenco monumenti'. Il Sistema mostra l'elenco dei monumenti al momento presenti.  L'Amministratore seleziona il monumento che intende eliminare.
+4.L'Amministratore sceglie l'attività 'elimina monumento'. Il Sistema registra l'avvenuta rimozione e mostra l'elenco dei monumenti aggiornato. 
+5. L'Amministratore può poi proseguire nell’uso del Sistema.
+
